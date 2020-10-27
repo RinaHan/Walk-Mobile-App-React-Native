@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   rightPlus: {
     position:"absolute",
     // marginRight:30
-    marginLeft:20
+    marginLeft:-20
   }
 });
 
