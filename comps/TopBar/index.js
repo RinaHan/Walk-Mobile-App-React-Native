@@ -5,11 +5,14 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems:"center",
-    justifyContent:"center",
+    // justifyContent:"center",
     height:44,
     borderBottomColor:"#999",
     borderBottomWidth: 1,
-    justifyContent:"space-between"
+    justifyContent:"space-between",
+    position:"relative"
+  },
+  innerCont: {
     
   },
   title: {
@@ -17,33 +20,51 @@ const styles = StyleSheet.create({
     fontSize:22,
     fontWeight:"bold"
   },
-  text1: {
+  textLeft: {
+    // position:"absolute",
+    marginLeft:20,
     color: "black",
     fontSize:16,
     fontWeight:"bold",
-    
-    // display:"flexBetween"
-    
   },
-  text2: {
+  textRight: {
+    // position:"absolute",
+    marginRight:20,
     color: "#53B7BE",
     fontSize:16,
     fontWeight:"bold"
   },
+  leftArrow: {
+    position:"absolute",
+    marginLeft:20
+  },
+  leftMessage: {
+    position:"absolute",
+    marginLeft:55
+  },
+  rightPlus: {
+    position:"absolute",
+    // marginRight:30
+    marginLeft:20
+  }
 });
 
-const TopBar = ({title, text1, text2, image1, image2}) => {
+const TopBar = ({title, text1, text2, imageLeft1, imageLeft2, imageRight1}) => {
   return (
       <View style={styles.container}>
-        <Text style={styles.text1}>{text1}</Text>
-        <Image
-        style={styles.leftArrow}
-        source={image1}/>
+        <View style={styles.innerCont}>
+        <Text style={styles.textLeft}>{text1}</Text>
+        <Image style={styles.leftArrow}
+        source={imageLeft1}/>
+        <Image style={styles.leftMessage}
+        source={imageLeft2}/>
+        </View>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.text2}>{text2}</Text>
-        <Image
-        style={styles.rightArrow}
-        source={image2}/>
+        <View>
+        <Text style={styles.textRight}>{text2}</Text>
+        <Image style={styles.rightPlus}
+        source={imageRight1}/>
+        </View>
       </View>
   );z
 };
@@ -53,8 +74,9 @@ TopBar.defaultProps = {
     text1: null,
     text2: null,
     // image: require('./leftArrow.png'),
-    image1: null,
-    image2: null,
+    imageLeft1: null,
+    imageLeft2: null,
+    imageRight1: null,
 };
 
 export default TopBar;

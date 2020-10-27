@@ -16,17 +16,21 @@ storiesOf('Top Bar', module)
   .add('02', () => (
     <TopBar 
       title="Events" 
+      imageLeft1={require('../../comps/TopBar/leftArrow.png')}
+      imageRight1={require('../../comps/TopBar/plus.png')}
     />
   ))
   .add('03', () => (
     <TopBar 
       title="Walker Profile" 
-      image1={require('../../comps/TopBar/leftArrow.png')}
-    />
-  ))
-  .add('04', () => (
+      imageLeft1={require('../../comps/TopBar/leftArrow.png')}
+      />
+      ))
+      .add('04', () => (
     <TopBar 
       title="Walker Profile" 
+      imageLeft1={require('../../comps/TopBar/leftArrow.png')}
+      imageLeft2={require('../../comps/TopBar/message.png')}
     />
   ))
   .add('05', () => (
