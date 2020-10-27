@@ -8,14 +8,13 @@ const DropMenu = styled.div`
     height:40px;
     justify-content:center;
     align-items:center;
-   
 `;
 
 const DropBox = styled.div`
     width:100%;
     padding:10px;
-
 `;
+
 
 const Dropdown= ({}) => {
     return <div>
