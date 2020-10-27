@@ -3,3 +3,4 @@
 // import './MyButton.stories';
 import './TopBar.stories';
 import './WButton.stories';
+import './Avatar.stories';
