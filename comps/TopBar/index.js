@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     height:44,
     borderBottomColor:"#999",
-    borderBottomWidth: 1
+    borderBottomWidth: 1,
+    justifyContent:"space-between"
     
   },
   title: {
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize:16,
     fontWeight:"bold",
+    
     // display:"flexBetween"
     
   },
