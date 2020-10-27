@@ -15,12 +15,13 @@ const styles = StyleSheet.create({
 });
 
 const Button = ({
-text, backgroundColor, height}) => {
+text, backgroundColor, height, width}) => {
   return (
       <View 
       style={styles.container} 
       backgroundColor={backgroundColor} 
-      height={height} 
+      height={height}
+      width={width} 
       >
         <Text style={styles.text}>{text}</Text>
       </View>

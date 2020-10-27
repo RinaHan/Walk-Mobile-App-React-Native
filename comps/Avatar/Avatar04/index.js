@@ -30,7 +30,7 @@ const Avatar04 = ({text, image1, image2}) => {
         <Image style={styles.icon}
         source={image2} 
         />
-        {/* <Text style={styles.text}>{text}</Text> */}
+    
       </View>
   );
 };

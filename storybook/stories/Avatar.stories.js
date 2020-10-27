@@ -16,14 +16,16 @@ storiesOf('Avatars', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('01', () => (
     <Avatar01
-        image={require('../../comps/Avatar/face1.jpg')}
+        // image={require('../../comps/Avatar/face1.jpg')}
+        // width={28}
+        // height={28}
     />
   ))
   .add('02', () => (
     <Avatar02
         image={require('../../comps/Avatar/dog1.jpg')}
-        // width={40}
-        // height={40}
+        // width={10}
+        // height={10}
         />
   ))
   .add('03', () => (
@@ -56,7 +58,7 @@ storiesOf('Avatars', module)
     <Avatar07
         // text1="Ethan P."
         // text2="Certified Walker"
-        image1={require('../../comps/Avatar/dog4.jpg')}
+        image1={require('../../comps/Avatar/face3.jpg')}
         />
   ))
   ;

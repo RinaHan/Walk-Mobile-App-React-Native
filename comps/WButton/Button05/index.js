@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet} 
 from "react-native";
-import Button from "../BasicButton"
+import Button from "../Button"
 
 const Button05 = () => {
   return (

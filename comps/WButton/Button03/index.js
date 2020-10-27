@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, 
     // TouchableOpacity 
 } from "react-native";
-import Button from "../BasicButton"
+import Button from "../Button"
 
 
 const Button03 = () => {
