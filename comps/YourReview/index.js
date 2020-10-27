@@ -31,19 +31,11 @@ flex-direction:row;
 `;
 
 const YourReview = () => {
-    const [img, setImg] = useState(false);
-
     return <div>
         <Main>
             <Reviewtext><h1>Your Review</h1></Reviewtext>
             <Starscontainer>
-
-                <Star1 onClick={() => {
-                    setImg(!img);
-                }} img={img}>
-
-                    <img src="bigfilled.png"></img></Star1>
-
+                <Star1><img src="bigunfilled.png"></img></Star1>
                 <Star2><img src="bigunfilled.png"></img></Star2>
                 <Star3><img src="bigunfilled.png"></img></Star3>
                 <Star4><img src="bigunfilled.png"></img></Star4>
@@ -53,8 +45,5 @@ const YourReview = () => {
     </div>
 }
 
-YourReview.defaultProps = {
-    img: "bigunfilled.png"
-};
 
 export default YourReview;
