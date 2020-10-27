@@ -9,8 +9,6 @@ import Avatar from '../../comps/Avatar';
 storiesOf('Avatar', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('01', () => (
-    <TopBar 
-      title="Inbox" 
-    />
+    <Avatar/>
   ))
   ;

@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, Image StyleSheet} from "react-native";
+import { View, Text, Image, StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 4,
-    flexDirection: "row",
-    alignItems:"center",
-    justifyContent:"center",
+    // borderRadius: 4,
+    // flexDirection: "row",
+    // alignItems:"center",
+    // justifyContent:"center",
   },
   text: {
     color: "#FFF",
@@ -16,12 +16,11 @@ const styles = StyleSheet.create({
 
 const Avatar = ({text, backgroundColor, height}) => {
   return (
-      <View 
-      style={styles.container} 
-      backgroundColor={backgroundColor} 
-      height={height} 
+      <View style={styles.container} height={height} 
       >
-          <Image/>
+        <Image
+        style={styles.leftArrow}
+        source={image}/>
         <Text style={styles.text}>{text}</Text>
       </View>
   );

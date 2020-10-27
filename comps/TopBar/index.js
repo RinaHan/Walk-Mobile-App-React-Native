@@ -41,9 +41,9 @@ const TopBar = ({title, text1, text2, image}) => {
         source={image}/>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.text2}>{text2}</Text>
-        {/* <Image
-        style={styles.rightIcon}
-        source={require('@expo/snack-static/react-native-logo.png')}/> */}
+        <Image
+        style={styles.leftArrow}
+        source={image}/>
       </View>
   );
 };
