@@ -21,7 +21,7 @@ storiesOf('Top Bar', module)
   .add('03', () => (
     <TopBar 
       title="Walker Profile" 
-      image={require('../../comps/TopBar/leftArrow.png')}
+      image1={require('../../comps/TopBar/leftArrow.png')}
     />
   ))
   .add('04', () => (

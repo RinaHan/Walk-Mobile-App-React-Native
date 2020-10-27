@@ -32,20 +32,20 @@ const styles = StyleSheet.create({
   },
 });
 
-const TopBar = ({title, text1, text2, image}) => {
+const TopBar = ({title, text1, text2, image1, image2}) => {
   return (
       <View style={styles.container}>
         <Text style={styles.text1}>{text1}</Text>
         <Image
         style={styles.leftArrow}
-        source={image}/>
+        source={image1}/>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.text2}>{text2}</Text>
         <Image
-        style={styles.leftArrow}
-        source={image}/>
+        style={styles.rightArrow}
+        source={image2}/>
       </View>
-  );
+  );z
 };
 
 TopBar.defaultProps = {
@@ -53,7 +53,8 @@ TopBar.defaultProps = {
     text1: null,
     text2: null,
     // image: require('./leftArrow.png'),
-    // image: null
+    image1: null,
+    image2: null,
 };
 
 export default TopBar;

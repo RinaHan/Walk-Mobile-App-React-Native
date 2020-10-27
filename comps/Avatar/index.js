@@ -9,18 +9,18 @@ const styles = StyleSheet.create({
     // justifyContent:"center",
   },
   text: {
-    color: "#FFF",
+    color: "#999",
     fontSize:16
   },
 });
 
-const Avatar = ({text, backgroundColor, height}) => {
+const Avatar = ({text, image1}) => {
   return (
-      <View style={styles.container} height={height} 
+      <View style={styles.container}  
       >
         <Image
         style={styles.leftArrow}
-        source={image}/>
+        source={image1}/>
         <Text style={styles.text}>{text}</Text>
       </View>
   );
@@ -28,8 +28,7 @@ const Avatar = ({text, backgroundColor, height}) => {
 
 Avatar.defaultProps = {
     text: null,
-    backgroundColor: null,
-    height: null
+    // image1: require('./leftArrow.png'),
 };
 
 export default Avatar;

@@ -9,6 +9,8 @@ import Avatar from '../../comps/Avatar';
 storiesOf('Avatar', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('01', () => (
-    <Avatar/>
+    <Avatar
+        text="lala"
+    />
   ))
   ;
