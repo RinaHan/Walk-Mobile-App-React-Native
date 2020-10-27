@@ -6,7 +6,7 @@ import React from 'react';
 import TopBar from '../../comps/TopBar';
 // import CenterView from './CenterView';
 
-storiesOf('Top Bar', module)
+storiesOf('Top Bars', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('01', () => (
     <TopBar 

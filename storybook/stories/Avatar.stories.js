@@ -3,14 +3,24 @@ import { text } from '@storybook/addon-knobs';
 import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import Avatar from '../../comps/Avatar';
+import Avatar01 from '../../comps/Avatar/Avatar01';
+import Avatar02 from '../../comps/Avatar/Avatar02';
 // import CenterView from './CenterView';
 
-storiesOf('Avatar', module)
+storiesOf('Avatars', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('01', () => (
-    <Avatar
-        text="lala"
+    <Avatar01
+        text="hidd"
+        image={require('../../comps/Avatar/face1.jpg')}
     />
+  ))
+  .add('02', () => (
+    <Avatar02
+        text="hidd"
+        image={require('../../comps/Avatar/dog1.jpg')}
+        // width={40}
+        // height={40}
+        />
   ))
   ;
