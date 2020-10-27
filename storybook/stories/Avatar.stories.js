@@ -9,6 +9,7 @@ import Avatar03 from '../../comps/Avatar/Avatar03';
 import Avatar04 from '../../comps/Avatar/Avatar04';
 import Avatar05 from '../../comps/Avatar/Avatar05';
 import Avatar06 from '../../comps/Avatar/Avatar06';
+import Avatar07 from '../../comps/Avatar/Avatar07';
 // import CenterView from './CenterView';
 
 storiesOf('Avatars', module)
@@ -42,13 +43,20 @@ storiesOf('Avatars', module)
   .add('05', () => (
     <Avatar05
         text="Mason K."
-        image1={require('../../comps/Avatar/dog4.jpg')}
+        image1={require('../../comps/Avatar/face2.jpg')}
         />
   ))
   .add('06', () => (
     <Avatar06
         text="Change Profile Photo"
-        image1={require('../../comps/Avatar/dog5.jpg')}
+        image1={require('../../comps/Avatar/dog4.jpg')}
+        />
+  ))
+  .add('07', () => (
+    <Avatar07
+        // text1="Ethan P."
+        // text2="Certified Walker"
+        image1={require('../../comps/Avatar/dog4.jpg')}
         />
   ))
   ;
