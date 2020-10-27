@@ -1,0 +1,47 @@
+import React from 'react';
+import styled, {css} from 'styled-components';
+
+const PopupCont = styled.div`
+    width:324px;
+    height:254px;
+    background-color:red;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+`;
+
+const Exit = styled.div`
+    display:flex;
+    width:100%;
+    height:40px;
+    background-color:#DAD;
+    align-items:ceenter;
+        div {
+            width:30px;
+            height:30px;
+            background-color:blue;
+            margin-right:0px;
+        }
+`;
+
+const Text = styled.div`
+
+`;
+
+const Inputs = styled.div`
+
+`;
+
+const Popup= ({}) => {
+    return <PopupCont>
+        <Exit><div></div></Exit>
+        <Text></Text>
+        <Inputs></Inputs>
+    </PopupCont>
+}
+
+Popup.defaultProps= {
+ 
+}
+
+export default Popup;
