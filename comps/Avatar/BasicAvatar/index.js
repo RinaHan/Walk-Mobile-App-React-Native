@@ -2,17 +2,6 @@ import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
 
 
-// const ButtonCont = styled.TouchableOpacity`
-//   background-color: ${(props) => (props.bgcolor ? props.bgcolor : "#FAD")};
-// `;
-
-// const styles = StyleSheet.create({
-//   cont: {
-//     backgroundColor: "#FAD"
-//   }
-// });
-
-
 const styles = StyleSheet.create({
   container: {
     // flexDirection: "row",
@@ -47,7 +36,7 @@ const BasicAvatar = ({text, image1, width, height}) => {
 };
 
 BasicAvatar.defaultProps = {
-    text: null,
+    // text: null,
     image1: null,
     width: null,
     height: null

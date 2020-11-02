@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, 
     // TouchableOpacity 
 } from "react-native";
-import Button from "../Button"
+import Button from "../BasicButton"
 
 const styles = StyleSheet.create({
   cont: {
@@ -17,18 +17,20 @@ const Button01 = () => {
   return (
       <View style={styles.cont} >
         <View style={styles.contButton1}>
-        <Button 
+        <BasicButton 
         text="Activate Walk"  
         backgroundColor= "#38BC64" 
         height={26}
-        // width={150}
+        width={91}
+        size={14}
         />
         </View>
-        <Button 
+        <BasicButton 
         text="Decline"  
         backgroundColor= "#C74C33" 
         height={26}
-        // width={150}
+        width={91}
+        size={14}
         />
       </View>
     

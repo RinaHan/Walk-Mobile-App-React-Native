@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet} 
 from "react-native";
-import Button from "../Button"
+import Button from "../BasicButton"
 
 const styles = StyleSheet.create({
   cont: {
@@ -18,19 +18,19 @@ const Button04 = () => {
   return (
       <View style={styles.cont}>
         <View style={styles.contButton1}>
-      <Button
+      <BasicButton
         text="Cancel"  
         backgroundColor= "#999" 
         height={45}
-        width={140}
+        width={137}
         />
         </View>
         <View style={styles.contButton2}>
-        <Button
+        <BasicButton
         text="Write a Review"  
         backgroundColor= "#565555" 
         height={45}
-        width={140}
+        width={137}
         />
         </View>
       </View>
