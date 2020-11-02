@@ -20,8 +20,7 @@ text, backgroundColor, height, width}) => {
       <View 
       style={styles.container} 
       backgroundColor={backgroundColor} 
-      height={height}
-      width={width} 
+      
       >
         <Text style={styles.text}>{text}</Text>
       </View>

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
+import Avatar from "../BasicAvatar";
 
 const styles = StyleSheet.create({
   container: {
@@ -8,17 +9,18 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     // backgroundColor:"red"
   },
-  avatar: {
-    // position:"absolute",
-    height:85,
-    width:85,
-    borderRadius:50,
-    // position:"relative"
-  },
+  // avatar: {
+  //   // position:"absolute",
+  //   height:85,
+  //   width:85,
+  //   borderRadius:50,
+  //   // position:"relative"
+  // },
   text: {
     color: "#53B7BE",
     fontSize:10,
-    fontWeight:"bold"
+    fontWeight:"bold",
+    marginTop:7
   },
 });
 
@@ -26,10 +28,12 @@ const Avatar06 = ({text, image1}) => {
   return (
       <View style={styles.container}
       >
-        <Image style={styles.avatar}
-        source={image1} 
-        />
-        <Text style={styles.text}>{text}</Text>
+        <Avatar
+        image1={require('../dog4.jpg')}
+         width={85}
+         height={85}
+         />
+        <Text style={styles.text}>Change Profile Photo</Text>
       </View>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
+import Avatar from "../BasicAvatar";
 
 const styles = StyleSheet.create({
   container: {
@@ -8,13 +9,13 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     
   },
-  avatar: {
-    // position:"absolute",
-    height:134,
-    width:134,
-    borderRadius:70,
-    // position:"relative"
-  },
+  // avatar: {
+  //   // position:"absolute",
+  //   // height:134,
+  //   // width:134,
+  //   borderRadius:70,
+  //   // position:"relative"
+  // },
   icon: {
     marginLeft:100
   },
@@ -24,13 +25,18 @@ const Avatar04 = ({text, image1, image2}) => {
   return (
       <View style={styles.container}
       >
-        <Image style={styles.avatar}
+        {/* <Image style={styles.avatar}
         source={image1} 
         />
-        <Image style={styles.icon}
+         */}
+        <Avatar
+        image1={require('../dog3.jpg')}
+         width={134}
+         height={134}
+         />
+         <Image style={styles.icon}
         source={image2} 
         />
-    
       </View>
   );
 };

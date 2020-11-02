@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
   },
   avatar: {
     // position:"absolute",
-    height:28,
-    width:28,
-    borderRadius:30,
+    // height:"auto",
+    // width:28,
+    borderRadius:70,
     
   },
   // text: {
@@ -33,32 +33,24 @@ const styles = StyleSheet.create({
   // },
 });
 
-const Avatar01 = ({text, image, width, height}) => {
+const BasicAvatar = ({text, image1, width, height}) => {
+  const widthstyles = [{ width: width ? width : 50} , { height: height ? height : 50}] ;
+  const sizestyles = [styles.avatar, widthstyles];
+  
   return (
-      <View style={styles.container}
-      >
-        <Image style={styles.avatar}
-        source={image} 
-        // width={width}
-        // height={height}
+      <View style={styles.container}>
+        <Image style={sizestyles}
+        source={image1} 
         />
-    
-        {/* <Text style={styles.text}>{text}</Text> */}
       </View>
   );
 };
 
-
-
-
-
-
-
-Avatar01.defaultProps = {
-  // text: null,
-    image: null,
+BasicAvatar.defaultProps = {
+    text: null,
+    image1: null,
     width: null,
     height: null
 };
 
-export default Avatar01;
+export default BasicAvatar;
