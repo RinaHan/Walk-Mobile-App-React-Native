@@ -9,13 +9,6 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     
   },
-  // avatar: {
-  //   // position:"absolute",
-  //   // height:134,
-  //   // width:134,
-  //   borderRadius:70,
-  //   // position:"relative"
-  // },
   icon: {
     marginLeft:100
   },

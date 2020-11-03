@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems:"center",
     // justifyContent:"space-between",
+    // width:"100%",
+    
   },
   avatar: {
     marginLeft:20
@@ -15,6 +17,7 @@ const styles = StyleSheet.create({
     // alignItems:"center",
     justifyContent:"center",
     marginLeft:10,
+    width:130
     
   },
   text1: {
@@ -23,46 +26,41 @@ const styles = StyleSheet.create({
     fontWeight:"bold"
   },
   text2: {
-    fontSize: 13,
-    color: "black"
+    fontSize: 9,
+    color: "#53B7BE"
   },
-
-  dotcont: {
-    position:"absolute",
-    right:30,
-    backgroundColor:"#53B7BE",
-    width:15,
-    height:15,
-    borderRadius:10
+  text3: {
+    fontSize: 10,
+    color: "#959494",
+    justifyContent:"flex-end",
   },
 });
 
-const AvatarForm02 = ({}) => {
+const AvatarForm03 = ({}) => {
   
   return (
       <View style={styles.container}>
         <View style={styles.avatar}>
-        <BasicAvatar 
-        image1={require('../../Avatar/face1.jpg')}
-        width={64}
-        height={64}
-        />
+            <BasicAvatar 
+            image1={require('../../Avatar/face2.jpg')}
+            width={64}
+            height={64}
+            />
         </View>
         <View style={styles.textcont}>
-        <Text style={styles.text1}>Bob S.</Text>
-        <Text style={styles.text2}>Such great weather today!</Text>
-        </View>
-        <View style={styles.dotcont}>
+            <Text style={styles.text1}>Mason K.</Text>
+            <Text style={styles.text2}>View Profile</Text>
+            <Text style={styles.text3}>Cute pup! I want to walk him/her!</Text>
         </View>
       </View>
   );
 };
 
-AvatarForm02.defaultProps = {
+AvatarForm03.defaultProps = {
     // size: null,
     text: null,
     backgroundColor: null,
     // height: null
 };
 
-export default AvatarForm02;
+export default AvatarForm03;
