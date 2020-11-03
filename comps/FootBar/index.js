@@ -1,58 +1,59 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components/native";
+import { View, Text } from "react-native";
 
-const Usericon = styled.div`
+const Usericon = styled.View``;
 
+const Chaticon = styled.View``;
+
+const Addicon = styled.View``;
+
+const Eventicon = styled.View``;
+
+const Homeicon = styled.View``;
+
+const Icons = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
 `;
 
-
-const Chaticon = styled.div`
-
+const Footcontainer = styled.View`
+  background: #fff;
+  padding: 15px;
+  width: 375px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
-const Addicon = styled.div`
-
-`;
-
-const Eventicon = styled.div`
-
-
-`;
-
-const Homeicon = styled.div`
-
-
-`;
-
-const Icons = styled.div`
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-direction:row;
-padding-left:5px;
-padding-right:5px;
-
-`;
-
-const Footcontainer = styled.div`
-background: #FFF;
-padding:15px;
-width:375px;
-`;
-
-    const FootBar = () => {
-        return <div>
-            <Footcontainer>
-                <Icons>
-                    <Homeicon><img src="home.png"></img></Homeicon>
-                    <Eventicon><img src="event.png"></img></Eventicon>
-                    <Addicon><img src="new.png"></img></Addicon>
-                    <Chaticon><img src="chat.png"></img></Chaticon>
-                    <Usericon><img src="user.png"></img></Usericon>
-                </Icons>
-            </Footcontainer>
-        </div>
-    }
-
+const FootBar = () => {
+  return (
+    <View>
+      <Footcontainer>
+        <Icons>
+          <Homeicon>
+            <img src="home.png"></img>
+          </Homeicon>
+          <Eventicon>
+            <img src="event.png"></img>
+          </Eventicon>
+          <Addicon>
+            <img src="new.png"></img>
+          </Addicon>
+          <Chaticon>
+            <img src="chat.png"></img>
+          </Chaticon>
+          <Usericon>
+            <img src="user.png"></img>
+          </Usericon>
+        </Icons>
+      </Footcontainer>
+    </View>
+  );
+};
 
 export default FootBar;

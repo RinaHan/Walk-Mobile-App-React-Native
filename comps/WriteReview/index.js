@@ -1,93 +1,110 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components/native";
+import { View, Text } from "react-native";
 
-const Buttontext = styled.div`
-color:#FFF;
-align-items:center;
-justify-content:center;
-display:flex;
+const Buttontext = styled.Text`
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 `;
 
-const Buttoncontainer = styled.div`
-background:${props => props.pressed ? "#565555" : "#C4C4C4"};
-width:137px; 
-border-radius:7px;
-padding:12px
+const Buttoncontainer = styled.View`
+  background: ${(props) => (props.highlight ? "#C4C4C4" : "#565555")};
+  width: 137px;
+  border-radius: 7px;
+  padding: 12px;
+  cursor: pointer;
 `;
 
-const Startext = styled.div`
-padding-left:5px;
+const Startext = styled.Text`
+  padding-left: 5px;
 `;
 
+const Star5 = styled.View``;
 
-const Star5 = styled.div`
+const Star4 = styled.View``;
+
+const Star3 = styled.View``;
+
+const Star2 = styled.View``;
+
+const Star1 = styled.View``;
+
+const Starscontainer = styled.View`
+  width: 124px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
 `;
 
-const Star4 = styled.div`
+const Main = styled.View`
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
-const Star3 = styled.div`
+const Reviewcontainer = styled.View`
+  flex-direction: column;
+  display: flex;
 `;
 
-const Star2 = styled.div`
-`;
-
-const Star1 = styled.div`
-`;
-
-const Starscontainer = styled.div`
-width:124px;
-justify-content:space-between;
-display:flex;
-flex-direction:row;
-`;
-
-const Main = styled.div`
-flex-direction:row;
-display:flex;
-align-items:center;
-width:320px;
-justify-content:space-between;
-`;
-
-const Reviewcontainer = styled.div`
-flex-direction:column;
-display:flex;
-
-`;
-
-const Reviewtext = styled.div`
-margin-bottom:10px;
+const Reviewtext = styled.Text`
+  margin-bottom: 10px;
 `;
 
 const WriteReview = () => {
-    const [pressed, setPressed] = useState(true);
+  const [highlight, setHighlight] = useState(true);
 
-    return <div>
-        <Main>
-            <Reviewcontainer>
-                <Reviewtext>Reviews</Reviewtext>
-                <Starscontainer>
-                    <Star1><img src="unfilled.png"></img></Star1>
-                    <Star2><img src="unfilled.png"></img></Star2>
-                    <Star3><img src="unfilled.png"></img></Star3>
-                    <Star4><img src="unfilled.png"></img></Star4>
-                    <Star5><img src="unfilled.png"></img></Star5>
-                    <Startext>(30)</Startext>
-                </Starscontainer>
-            </Reviewcontainer>
+  return (
+    <View>
+      <Main>
+        <Reviewcontainer>
+          <Reviewtext>
+            <Text>Reviews</Text>
+          </Reviewtext>
+          <Starscontainer>
+            <Star1>
+              <img src="unfilled.png"></img>
+            </Star1>
+            <Star2>
+              <img src="unfilled.png"></img>
+            </Star2>
+            <Star3>
+              <img src="unfilled.png"></img>
+            </Star3>
+            <Star4>
+              <img src="unfilled.png"></img>
+            </Star4>
+            <Star5>
+              <img src="unfilled.png"></img>
+            </Star5>
+            <Startext>
+              <Text>(30)</Text>
+            </Startext>
+          </Starscontainer>
+        </Reviewcontainer>
 
-            <Buttoncontainer onClick={() => {
-                setPressed(!pressed);
-            }} pressed={pressed}>
-
-                <Buttontext>
-                    Write a Review
-            </Buttontext>
-            </Buttoncontainer>
-        </Main>
-    </div>
-}
-
+        <Buttoncontainer
+          onMouseOver={() => {
+            setHighlight(!highlight);
+          }}
+          highlight={highlight}
+          onMouseOver={() => {
+            setHighlight(!highlight);
+          }}
+        >
+          <Buttontext>
+            <Text>Write a Review</Text>
+          </Buttontext>
+        </Buttoncontainer>
+      </Main>
+    </View>
+  );
+};
 
 export default WriteReview;

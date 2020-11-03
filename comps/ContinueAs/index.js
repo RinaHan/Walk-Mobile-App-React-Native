@@ -1,19 +1,22 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components/native";
+import { View, Text } from "react-native";
 
-const Continuetext = styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-color: #53B7BE;
-
+const Continuetext = styled.Text`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #53b7be;
 `;
 
-    const ContinueAs = () => {
-        return <div>
-            <Continuetext>Continue as a</Continuetext>
-        </div>
-    }
-
+const ContinueAs = () => {
+  return (
+    <View>
+      <Continuetext>
+        <Text>Continue as a</Text>
+      </Continuetext>
+    </View>
+  );
+};
 
 export default ContinueAs;

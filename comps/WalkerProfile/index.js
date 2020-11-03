@@ -3,23 +3,22 @@ import styled from "styled-components/native";
 import { View, Text } from "react-native";
 
 const Titletext = styled.Text`
-  color: #97d7da;
+  margin-top: 20px;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
 
-const Title = () => {
+const WalkerProfile = () => {
   return (
     <View>
       <Titletext>
-        <h1>
-          <Text>WALK</Text>
-        </h1>
+        <Text>Walker Profile</Text>
       </Titletext>
     </View>
   );
 };
 
-export default Title;
+export default WalkerProfile;
