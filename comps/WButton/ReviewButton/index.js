@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet} 
 from "react-native";
-import Button from "../BasicButton"
+import BasicButton from "../BasicButton"
 
 const styles = StyleSheet.create({
   cont: {
@@ -9,23 +9,15 @@ const styles = StyleSheet.create({
     alignContent:"center",
     justifyContent:"center",
   },
-  contButton1: {
+  contButton: {
     marginRight:20
   },
 });
 
-const Button04 = () => {
+const ReviewButton = () => {
   return (
       <View style={styles.cont}>
-        <View style={styles.contButton1}>
-      <BasicButton
-        text="Cancel"  
-        backgroundColor= "#999" 
-        height={45}
-        width={137}
-        />
-        </View>
-        <View style={styles.contButton2}>
+        <View style={styles.contButton}>
         <BasicButton
         text="Write a Review"  
         backgroundColor= "#565555" 
@@ -37,4 +29,4 @@ const Button04 = () => {
   );
 };
 
-export default Button04;
+export default ReviewButton;

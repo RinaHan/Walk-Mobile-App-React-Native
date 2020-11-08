@@ -5,26 +5,28 @@ import { View, Text, StyleSheet,
 import BasicButton from "../BasicButton"
 
 const styles = StyleSheet.create({
-    
+    cont: {
+      flexDirection: "column",
+    },
     contButton1: {
       marginBottom: 45,
     },
   });
 
-const DogOwnerButton = () => {
+const ContinueButton = () => {
   return (
-   
+    <View style={styles.cont}>
         <View style={styles.contButton1}>
         <BasicButton 
-        text="Dog Owner"  
+        text="Continue"  
         backgroundColor= "#53B7BE" 
-        width={242}
-        height={55}
+        width={175}
+        height={45}
         size={18}
         />
         </View>
-     
+      </View>
   );
 };
 
-export default DogOwnerButton;
+export default ContinueButton;
