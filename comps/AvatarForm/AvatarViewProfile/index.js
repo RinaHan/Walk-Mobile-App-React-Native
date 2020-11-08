@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
-import BasicAvatar from '../../Avatar/BasicAvatar';
+// import BasicAvatar from '../../Avatar/BasicAvatar';
 
 const styles = StyleSheet.create({
   container: {
@@ -8,10 +8,6 @@ const styles = StyleSheet.create({
     alignItems:"center",
     // justifyContent:"space-between",
     // width:"100%",
-    
-  },
-  avatar: {
-    marginLeft:20
   },
   textcont: {
     // alignItems:"center",
@@ -30,37 +26,30 @@ const styles = StyleSheet.create({
     color: "#53B7BE"
   },
   text3: {
-    fontSize: 10,
+    fontSize: 13,
     color: "#959494",
     justifyContent:"flex-end",
   },
 });
 
-const AvatarForm03 = ({}) => {
+const AvatarViewProfile = ({textName, textView, text}) => {
   
   return (
       <View style={styles.container}>
-        <View style={styles.avatar}>
-            <BasicAvatar 
-            image1={require('../../Avatar/face2.jpg')}
-            width={64}
-            height={64}
-            />
-        </View>
         <View style={styles.textcont}>
-            <Text style={styles.text1}>Mason K.</Text>
+            <Text style={styles.text1}>{textName}</Text>
             <Text style={styles.text2}>View Profile</Text>
-            <Text style={styles.text3}>Cute pup! I want to walk him/her!</Text>
+            <Text style={styles.text3}>{text}</Text>
         </View>
       </View>
   );
 };
 
-AvatarForm03.defaultProps = {
-    // size: null,
+AvatarViewProfile.defaultProps = {
+    textname: null,
     text: null,
     backgroundColor: null,
     // height: null
 };
 
-export default AvatarForm03;
+export default AvatarViewProfile;

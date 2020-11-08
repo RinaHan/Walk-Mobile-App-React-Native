@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
-import AvatarForm03 from "../AvatarForm03";
-import Button01 from "../../WButton/Button01";
+import AvatarViewProfile from "../AvatarViewProfile";
+import ActivateButton from "../../WButton/ActivateButton";
 
 const styles = StyleSheet.create({
   container: {
@@ -15,8 +15,8 @@ const AvatarForm04 = ({}) => {
   
   return (
       <View style={styles.container}>
-        <AvatarForm03/>
-        <Button01 style={styles.button01}/>
+        <AvatarViewProfile/>
+        <ActivateButton style={styles.button01}/>
       </View>
   );
 };

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const Button01 = () => {
+const ActivateButton = () => {
   return (
       <View style={styles.cont} >
         <View style={styles.contButton1}>
@@ -37,4 +37,4 @@ const Button01 = () => {
   );
 };
 
-export default Button01;
+export default ActivateButton;

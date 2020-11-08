@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 import TopBar from '../TopBar';
-import AvatarFormText from '../AvatarForm/AvatarFormText';
+import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
 import BasicAvatar from "../Avatar/BasicAvatar";
 
 const styles = StyleSheet.create({
@@ -26,26 +26,16 @@ const ActivatePage = ({}) => {
         <View>
           <View style={styles.avatarcont}>
             <BasicAvatar
-            image1={require('../../comps/Avatar/face1.jpg')}
+            image1={require('../../comps/Avatar/face3.jpg')}
             width={64}
             height={64}/>
-            <AvatarFormText
-            textname={"Bob S."}
-            text={"Such great weather today!"}
-            backgroundColor={"#53B7BE"}
+            <AvatarViewProfile
+            textName={"Mason K."}
+            textView={"View Profile"}
+            text={"Cute Pup! I want to walk him"}
             />
           </View>
-          <View style={styles.avatarcont}>
-            <BasicAvatar
-            image1={require('../../comps/Avatar/face2.jpg')}
-            width={64}
-            height={64}/>
-            <AvatarFormText
-            textname={"Fred J."}
-            text={"Foresure."}
-            // backgroundColor={"#53B7BE"}
-            />
-          </View>
+          
         </View>
       </View>
   );

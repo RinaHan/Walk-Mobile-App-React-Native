@@ -4,15 +4,15 @@ import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import BasicButton from '../../comps/WButton/BasicButton';
-import Button01 from '../../comps/WButton/Button01';
+import ActivateButton from '../../comps/WButton/ActivateButton';
 import Button02 from '../../comps/WButton/Button02';
 import Button04 from '../../comps/WButton/Button04';
 // import CenterView from './CenterView';
 
 storiesOf('Walk Buttons', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add('01', () => (
-    <Button01/>
+  .add('ActivateButton', () => (
+    <ActivateButton/>
   ))
   .add('02', () => (
     <Button02/>
