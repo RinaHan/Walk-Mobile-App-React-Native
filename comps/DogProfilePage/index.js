@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 import TopBar from '../TopBar';
-import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
+import AvatarDogProfile from "../AvatarForm/AvatarDogProfile";
 
 const styles = StyleSheet.create({
   app: {
@@ -15,7 +15,7 @@ const DogProfilePage = ({}) => {
  
   return (
       <View style={styles.app}>
-        
+        <AvatarDogProfile />
         
       </View>
   );
