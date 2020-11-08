@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
+import ActivateButton from "../../WButton/ActivateButton";
 // import BasicAvatar from '../../Avatar/BasicAvatar';
 
 const styles = StyleSheet.create({
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   },
   text3: {
     fontSize: 13,
-    color: "#959494",
+    color: "#000000",
     justifyContent:"flex-end",
   },
 });
@@ -40,6 +41,8 @@ const AvatarViewProfile = ({textName, textView, text}) => {
             <Text style={styles.text1}>{textName}</Text>
             <Text style={styles.text2}>View Profile</Text>
             <Text style={styles.text3}>{text}</Text>
+        </View>
+        <View>
         </View>
       </View>
   );
