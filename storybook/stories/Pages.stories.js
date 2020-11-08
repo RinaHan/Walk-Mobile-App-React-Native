@@ -5,6 +5,8 @@ import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import RequestPage from '../../comps/RequestPage';
 import ActivatePage from '../../comps/ActivatePage';
+import DashboardPage from '../../comps/DashboardPage';
+import DogProfilePage from '../../comps/DogProfilePage';
 
 // import CenterView from './CenterView';
 
@@ -15,5 +17,11 @@ storiesOf('Pages', module)
   ))
   .add('ActivatePage', () => (
     <ActivatePage/>
+  ))
+  .add('DashboardPage', () => (
+    <DashboardPage/>
+  ))
+  .add('DogProfilePage', () => (
+    <DogProfilePage/>
   ))
   ;
