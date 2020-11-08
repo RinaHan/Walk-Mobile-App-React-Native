@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     marginLeft:10,
     
+    
   },
   text1: {
     color: "black",
@@ -28,8 +29,7 @@ const styles = StyleSheet.create({
   },
 
   dotcont: {
-    position:"absolute",
-    right:30,
+    marginLeft:70,
     width:15,
     height:15,
     borderRadius:10
