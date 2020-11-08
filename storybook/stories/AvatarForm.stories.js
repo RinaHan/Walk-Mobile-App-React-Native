@@ -8,7 +8,7 @@ import AvatarFormText from '../../comps/AvatarForm/AvatarFormText';
 import AvatarViewProfile from '../../comps/AvatarForm/AvatarViewProfile';
 import AvatarForm04 from '../../comps/AvatarForm/AvatarForm04';
 import AvatarForm05 from '../../comps/AvatarForm/AvatarForm05';
-import AvatarForm06 from '../../comps/AvatarForm/AvatarForm06';
+import AvatarDogProfile from '../../comps/AvatarForm/AvatarDogProfile';
 
 
 
@@ -36,8 +36,8 @@ storiesOf('AvatarForms', module)
   .add('05', () => (
     <AvatarForm05/>
   ))
-  .add('06', () => (
-    <AvatarForm06/>
+  .add('AvatarDogProfile', () => (
+    <AvatarDogProfile/>
   ))
   
 ;

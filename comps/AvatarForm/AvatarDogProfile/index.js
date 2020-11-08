@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 
 });
 
-const AvatarForm06 = ({}) => {
+const AvatarDogProfile = ({}) => {
   
   return (
       <View style={styles.container}>
@@ -48,9 +48,9 @@ const AvatarForm06 = ({}) => {
   );
 };
 
-AvatarForm06.defaultProps = {
+AvatarDogProfile.defaultProps = {
     text: null,
     backgroundColor: null,
 };
 
-export default AvatarForm06;
+export default AvatarDogProfile;
