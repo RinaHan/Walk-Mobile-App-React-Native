@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   
 });
 
-const Page01 = ({}) => {
+const AvatarPage = ({}) => {
  
   return (
       <View style={styles.container}>
@@ -33,11 +33,11 @@ const Page01 = ({}) => {
   );
 };
 
-Page01.defaultProps = {
+AvatarPage.defaultProps = {
     // size: null,
     text: null,
     backgroundColor: null,
     // height: null
 };
 
-export default Page01;
+export default AvatarPage;

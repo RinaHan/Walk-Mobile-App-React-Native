@@ -3,13 +3,13 @@ import { text } from '@storybook/addon-knobs';
 import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import Page01 from '../../comps/Page01';
+import AvatarPage from '../../comps/AvatarPage';
 
 // import CenterView from './CenterView';
 
 storiesOf('Pages', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add('Page01', () => (
-    <Page01/>
+  .add('AvatarPage', () => (
+    <PagAvatarPagee01/>
   ))
   ;
