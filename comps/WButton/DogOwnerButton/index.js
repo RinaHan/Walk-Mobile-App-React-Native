@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, 
     // TouchableOpacity 
 } from "react-native";
-import Button from "../BasicButton"
+import BasicButton from "../BasicButton"
 
 const styles = StyleSheet.create({
     cont: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     },
   });
 
-const Button02 = () => {
+const DogOwnerButton = () => {
   return (
     <View style={styles.cont}>
         <View style={styles.contButton1}>
@@ -25,7 +25,7 @@ const Button02 = () => {
         size={18}
         />
         </View>
-        <View style={styles.contButton2}>
+        {/* <View style={styles.contButton2}>
         <BasicButton 
         text="Dog Walker"  
         backgroundColor= "#53B7BE" 
@@ -33,9 +33,9 @@ const Button02 = () => {
         height={55}
         size={18}
         />
-        </View>
+        </View> */}
       </View>
   );
 };
 
-export default Button02;
+export default DogOwnerButton;

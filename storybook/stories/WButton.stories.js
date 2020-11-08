@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import BasicButton from '../../comps/WButton/BasicButton';
 import ActivateButton from '../../comps/WButton/ActivateButton';
-import Button02 from '../../comps/WButton/Button02';
+import DogOwnerButton from '../../comps/WButton/DogOwnerButton';
 import Button04 from '../../comps/WButton/Button04';
 // import CenterView from './CenterView';
 
@@ -14,8 +14,8 @@ storiesOf('Walk Buttons', module)
   .add('ActivateButton', () => (
     <ActivateButton/>
   ))
-  .add('02', () => (
-    <Button02/>
+  .add('DogOwnerButton', () => (
+    <DogOwnerButton/>
   ))
   .add('03', () => (
     <BasicButton 
