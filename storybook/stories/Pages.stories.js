@@ -4,6 +4,7 @@ import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import RequestPage from '../../comps/RequestPage';
+import ActivatePage from '../../comps/ActivatePage';
 
 // import CenterView from './CenterView';
 
@@ -11,5 +12,8 @@ storiesOf('Pages', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('RequestPage', () => (
     <RequestPage/>
+  ))
+  .add('ActivatePage', () => (
+    <ActivatePage/>
   ))
   ;

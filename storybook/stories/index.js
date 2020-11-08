@@ -5,4 +5,4 @@ import './TopBar.stories';
 // import './WButton.stories';
 // import './Avatar.stories';
 import './AvatarForm.stories';
-import './RequestPage.stories';
+import './Pages.stories';
