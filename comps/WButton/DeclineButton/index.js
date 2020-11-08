@@ -9,25 +9,23 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   contButton1: {
-    marginBottom:10
+    marginBottom:15
   }
 });
 
-const ActivateButton = () => {
+const DeclineButton = () => {
   return (
       <View style={styles.cont} >
-        <View style={styles.contButton1}>
         <BasicButton 
-        text="Activate Walk"  
-        backgroundColor= "#38BC64" 
+        text="Decline"  
+        backgroundColor= "#C74C33" 
         height={26}
         width={91}
         size={14}
         />
-        </View>
       </View>
     
   );
 };
 
-export default ActivateButton;
+export default DeclineButton;

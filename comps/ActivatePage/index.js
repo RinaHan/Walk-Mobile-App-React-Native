@@ -3,23 +3,27 @@ import { View, Text, StyleSheet} from "react-native";
 import TopBar from '../TopBar';
 import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
 import BasicAvatar from "../Avatar/BasicAvatar";
-import BasicButton from "../WButton/BasicButton";
+import DeclineButton from "../WButton/DeclineButton";
+import ActivateButton from "../WButton/ActivateButton";
 
 const styles = StyleSheet.create({
   app: {
     // flexDirection: "row",
-    // alignItems:"center",
+   
     // justifyContent:"space-between",
     
   },
   container: {
+    //    alignItems:"center",
       marginTop:30,
-      marginLeft:20,
+      marginBottom:20,
+      marginLeft:30,
       flexDirection:"row"
   },
   buttons: {
-      marginBottom:20,
-
+    // alignItems:"center",
+    // justifyContent:"center"
+    marginLeft:30
   }
 });
 
@@ -40,24 +44,26 @@ const ActivatePage = ({}) => {
             text={"Cute Pup! I want to walk him"}
             />
             <View style={styles.buttons}>
-            <BasicButton  
-            text="Activate Walk"  
-            backgroundColor= "#38BC64" 
-            height={26}
-            width={91}
-            size={14}
+            <ActivateButton />
+            <DeclineButton />
+            </View>  
+          </View>
+
+
+          <View style={styles.container}>
+            <BasicAvatar
+            image1={require('../../comps/Avatar/face6.jpg')}
+            width={64}
+            height={64}/>
+            <AvatarViewProfile
+            textName={"Amy L."}
+            textView={"View Profile"}
+            text={"Cute Pup! I want to walk him"}
             />
-            </View>
-            <View>
-            <BasicButton 
-            text="Decline"  
-            backgroundColor= "#C74C33" 
-            height={26}
-            width={91}
-            size={14}
-            />
-            </View>
-            
+            <View style={styles.buttons}>
+            <ActivateButton />
+            <DeclineButton />
+            </View>  
           </View>
           
         </View>
