@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import AvatarForm01 from '../../comps/AvatarForm/AvatarForm01';
-import AvatarForm02 from '../../comps/AvatarForm/AvatarForm02';
+import AvatarFormText from '../../comps/AvatarForm/AvatarFormText';
 import AvatarForm03 from '../../comps/AvatarForm/AvatarForm03';
 import AvatarForm04 from '../../comps/AvatarForm/AvatarForm04';
 import AvatarForm05 from '../../comps/AvatarForm/AvatarForm05';
@@ -17,8 +17,12 @@ storiesOf('AvatarForms', module)
   .add('01', () => (
     <AvatarForm01/>
   ))
-  .add('02', () => (
-    <AvatarForm02/>
+  .add('AvatarFormText', () => (
+    <AvatarFormText
+    textname={"Bob. S"}
+    text={"Such great weather today!"}
+    backgroundColor={"#53B7BE"}
+    />
   ))
   .add('03', () => (
     <AvatarForm03/>

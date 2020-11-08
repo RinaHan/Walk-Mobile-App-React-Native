@@ -30,39 +30,37 @@ const styles = StyleSheet.create({
   dotcont: {
     position:"absolute",
     right:30,
-    backgroundColor:"#53B7BE",
     width:15,
     height:15,
     borderRadius:10
   },
 });
 
-const AvatarForm02 = ({}) => {
+const AvatarFormText = ({textname, text, backgroundColor}) => {
   
   return (
       <View style={styles.container}>
         <View style={styles.avatar}>
-        <BasicAvatar 
+        {/* <BasicAvatar 
         image1={require('../../Avatar/face1.jpg')}
         width={64}
         height={64}
-        />
+        /> */}
         </View>
         <View style={styles.textcont}>
-        <Text style={styles.text1}>Bob S.</Text>
-        <Text style={styles.text2}>Such great weather today!</Text>
+        <Text style={styles.text1}>{textname}</Text>
+        <Text style={styles.text2}>{text}</Text>
         </View>
-        <View style={styles.dotcont}>
-        </View>
+        <View style={styles.dotcont} backgroundColor={backgroundColor}></View>
       </View>
   );
 };
 
-AvatarForm02.defaultProps = {
-    // size: null,
+AvatarFormText.defaultProps = {
+    textname: null,
     text: null,
     backgroundColor: null,
     // height: null
 };
 
-export default AvatarForm02;
+export default AvatarFormText;
