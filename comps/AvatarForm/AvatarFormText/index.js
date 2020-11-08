@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
-import BasicAvatar from '../../Avatar/BasicAvatar';
 
 const styles = StyleSheet.create({
   container: {
@@ -41,11 +40,6 @@ const AvatarFormText = ({textname, text, backgroundColor}) => {
   return (
       <View style={styles.container}>
         <View style={styles.avatar}>
-        {/* <BasicAvatar 
-        image1={require('../../Avatar/face1.jpg')}
-        width={64}
-        height={64}
-        /> */}
         </View>
         <View style={styles.textcont}>
         <Text style={styles.text1}>{textname}</Text>

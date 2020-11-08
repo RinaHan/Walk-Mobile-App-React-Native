@@ -1,7 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
-import ActivateButton from "../../WButton/ActivateButton";
-// import BasicAvatar from '../../Avatar/BasicAvatar';
 
 const styles = StyleSheet.create({
   container: {
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const AvatarViewProfile = ({textName, textView, text}) => {
+const AvatarViewProfile = ({textName,  text}) => {
   
   return (
       <View style={styles.container}>

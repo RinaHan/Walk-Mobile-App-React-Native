@@ -14,30 +14,26 @@ const styles = StyleSheet.create({
   },
 });
 
-const Avatar04 = ({text, image1, image2}) => {
+const AvatarEdit = ({imageedit}) => {
   return (
       <View style={styles.container}
       >
-        {/* <Image style={styles.avatar}
-        source={image1} 
-        />
-         */}
         <Avatar
         image1={require('../dog3.jpg')}
          width={134}
          height={134}
          />
          <Image style={styles.icon}
-        source={image2} 
+        source={imageedit}
         />
       </View>
   );
 };
 
-Avatar04.defaultProps = {
+AvatarEdit.defaultProps = {
   // text: null,
     image1: null,
-    image2: null,
+    imageedit: null,
 };
 
-export default Avatar04;
+export default AvatarEdit;

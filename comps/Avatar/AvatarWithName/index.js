@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
-import Avatar from "../BasicAvatar";
+import BasicAvatar from "../BasicAvatar";
 
 const styles = StyleSheet.create({
   container: {
@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Avatar05 = ({text, image1}) => {
+const AvatarWithName = ({text, image1}) => {
   return (
       <View style={styles.container}
       >
-        <Avatar
+        <BasicAvatar
         image1={require('../face2.jpg')}
          width={134}
          height={134}
@@ -39,10 +39,10 @@ const Avatar05 = ({text, image1}) => {
   );
 };
 
-Avatar05.defaultProps = {
+AvatarWithName.defaultProps = {
   text: null,
   image1: null,
     // image2: null,
 };
 
-export default Avatar05;
+export default AvatarWithName;

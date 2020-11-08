@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
-import Avatar04 from '../../Avatar/Avatar04';
+import AvatarEdit from '../../Avatar/AvatarEdit';
 
 const styles = StyleSheet.create({
   container: {
@@ -36,7 +36,7 @@ const AvatarForm06 = ({}) => {
   
   return (
       <View style={styles.container}>
-        <Avatar04 
+        <AvatarEdit 
         image2={require('../../Avatar/edit.png')}
         />
         <View style={styles.textcont1}></View>
