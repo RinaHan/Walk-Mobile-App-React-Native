@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 import TopBar from '../TopBar';
-import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
+// import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
 
 const styles = StyleSheet.create({
   app: {
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   
 });
 
-const DashboardPage = ({}) => {
+const OwnerDashPage = ({}) => {
  
   return (
       <View style={styles.app}>
@@ -21,11 +21,11 @@ const DashboardPage = ({}) => {
   );
 };
 
-DashboardPage.defaultProps = {
+OwnerDashPage.defaultProps = {
     // size: null,
     text: null,
     backgroundColor: null,
     // height: null
 };
 
-export default DashboardPage;
+export default OwnerDashPage;
