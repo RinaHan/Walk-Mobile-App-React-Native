@@ -6,10 +6,7 @@ const Reviewtext = styled.Text``;
 
 const Main = styled.View`
   display: flex;
-  justify-content: center;
-  align-items: center;
   top: 200%;
-  margin-left: 50px;
 `;
 
 const Star1 = styled.TouchableOpacity`

@@ -67,7 +67,7 @@ const GoogleButton = () => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-          onMouseOver={() => {
+          onPress={() => {
             setHighlight(!highlight);
           }}
         >

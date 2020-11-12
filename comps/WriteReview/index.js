@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 const Buttontext = styled.Text`
   color: #fff;
@@ -9,8 +9,8 @@ const Buttontext = styled.Text`
   display: flex;
 `;
 
-const Buttoncontainer = styled.View`
-  background: ${(props) => (props.highlight ? "#C4C4C4" : "#565555")};
+const Buttoncontainer = styled.TouchableOpacity`
+  background: ${(props) => (props.highlight ? "#565555" : "#C4C4C4")};
   width: 137px;
   border-radius: 7px;
   padding: 12px;
@@ -59,6 +59,14 @@ const Reviewtext = styled.Text`
   margin-bottom: 10px;
 `;
 
+const StarImg = styled.Image`
+  width: 20px;
+  height: 20px;
+`;
+
+const filled = require("./filled.png");
+const unfilled = require("./unfilled.png");
+
 const WriteReview = () => {
   const [highlight, setHighlight] = useState(true);
 
@@ -71,19 +79,19 @@ const WriteReview = () => {
           </Reviewtext>
           <Starscontainer>
             <Star1>
-              <img src="unfilled.png"></img>
+              <StarImg source={filled} />
             </Star1>
             <Star2>
-              <img src="unfilled.png"></img>
+              <StarImg source={filled} />
             </Star2>
             <Star3>
-              <img src="unfilled.png"></img>
+              <StarImg source={filled} />
             </Star3>
             <Star4>
-              <img src="unfilled.png"></img>
+              <StarImg source={filled} />
             </Star4>
             <Star5>
-              <img src="unfilled.png"></img>
+              <StarImg source={unfilled} />
             </Star5>
             <Startext>
               <Text>(30)</Text>
@@ -92,11 +100,11 @@ const WriteReview = () => {
         </Reviewcontainer>
 
         <Buttoncontainer
-          onMouseOver={() => {
+          onPress={() => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-          onMouseOver={() => {
+          onPress={() => {
             setHighlight(!highlight);
           }}
         >

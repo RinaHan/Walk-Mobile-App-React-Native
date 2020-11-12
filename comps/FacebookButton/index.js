@@ -65,7 +65,7 @@ const FacebookButton = () => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-          onMouseOver={() => {
+          onPress={() => {
             setHighlight(!highlight);
           }}
         >

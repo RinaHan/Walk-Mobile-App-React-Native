@@ -18,8 +18,6 @@ const Titletext = styled.Text`
 const TextCont = styled.View`
   display: flex;
   align-items: column;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 const ShareFeedback = () => {
