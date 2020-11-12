@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import styled from "styled-components/native";
-import { View, TextInput } from "react-native";
+import { View, Text } from "react-native";
 
 const MainCont = styled.View`
   width: 304px;
-  height: 360px;
+  height: 40px;
   display: flex;
   /* background-color:#DBD; */
-  margin:30px 30px;
+  /* margin:30px 30px; */
  justify-content:flex-end;
 `;
 const Cont = styled.View`
@@ -26,9 +26,8 @@ const Month = styled.View`
 const ChildMonth = styled.View`
   width: 108px;
   height: 34px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #E5E5E5;
-  box-sizing: border-box;
   border-radius: 4px;
   display:flex;
   align-items:flex-end;
@@ -43,8 +42,8 @@ const MonthDrop = styled.View`
 `;
 const MonthOption = styled.View`
   flex:1;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  border:.5px solid lightgrey;
 `;
 const Day = styled.View`
   flex:2;
@@ -55,9 +54,8 @@ const Day = styled.View`
 const ChildDay = styled.View`
   width: 66px;
   height: 34px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #E5E5E5;
-  box-sizing: border-box;
   border-radius: 4px;
   display:flex;
   align-items:flex-end;
@@ -70,13 +68,12 @@ const DayDrop = styled.View`
   display:${props=>props.expandD ? "none" : "inline-flex"};
   flex-direction:column;
   overflow-y:scroll;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
 `;
 const DayOption = styled.View`
   height:30px;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 5px rgba(0, 0.25, 0, 0.25);
+  background-color: #FFFFFF;
+  border:.5px solid lightgrey;
   display:flex;
   justify-content:center;
 `;
@@ -89,9 +86,8 @@ const Year = styled.View`
 const ChildYear = styled.View`
   width: 108px;
   height: 34px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #E5E5E5;
-  box-sizing: border-box;
   border-radius: 4px;
   display:flex;
   align-items:flex-end;
@@ -104,22 +100,26 @@ const YearDrop = styled.View`
   display:${props=>props.expandY ? "none" : "inline-flex"};
   flex-direction:column;
   overflow-y:scroll;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+ 
 `;
 const YearOption = styled.View`
   width:108px;
   height:30px;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  border:.5px solid lightgrey;
   display:flex;
   justify-content:center;
 `;
-const ImgCont = styled.View`
-  width:12px;
-  height:12px;
+const ImgCont = styled.TouchableOpacity`
+  width:15px;
+  height:8px;
   margin-right:8px;
   margin-top:6px;
+`;
+const Arrow = styled.Image`
+width:100%;
+height:100%;
 `;
 const Birthday = ({}) => {
   const [expandM, setExpandM] = useState(true)
@@ -128,109 +128,109 @@ const Birthday = ({}) => {
   return (
     <View>
       <MainCont>
-        <text>Birthday</text>
+        <Text>Birthday</Text>
         <Cont>
         <Month>
           <ChildMonth>
-            <ImgCont onClick={()=>{
+            <ImgCont onPress={()=>{
               setExpandM(!expandM);
             }}>
-              <img src="downarrow.png" />
+              <Arrow source={require=("./downarrow.png")} />
             </ImgCont>
           </ChildMonth>
           <MonthDrop expandM={expandM}>
-            <MonthOption><text>January</text></MonthOption>
-            <MonthOption><text>February</text></MonthOption>
-            <MonthOption><text>March</text></MonthOption>
-            <MonthOption><text>April</text></MonthOption>
-            <MonthOption><text>May</text></MonthOption>
-            <MonthOption><text>June</text></MonthOption>
-            <MonthOption><text>July</text></MonthOption>
-            <MonthOption><text>August</text></MonthOption>
-            <MonthOption><text>September</text></MonthOption>
-            <MonthOption><text>October</text></MonthOption>
-            <MonthOption><text>November</text></MonthOption>
-            <MonthOption><text>December</text></MonthOption>
+            <MonthOption><Text>January</Text></MonthOption>
+            <MonthOption><Text>February</Text></MonthOption>
+            <MonthOption><Text>March</Text></MonthOption>
+            <MonthOption><Text>April</Text></MonthOption>
+            <MonthOption><Text>May</Text></MonthOption>
+            <MonthOption><Text>June</Text></MonthOption>
+            <MonthOption><Text>July</Text></MonthOption>
+            <MonthOption><Text>August</Text></MonthOption>
+            <MonthOption><Text>September</Text></MonthOption>
+            <MonthOption><Text>October</Text></MonthOption>
+            <MonthOption><Text>November</Text></MonthOption>
+            <MonthOption><Text>December</Text></MonthOption>
           </MonthDrop>
         </Month>
         <Day>
           <ChildDay>
-            <ImgCont onClick={()=>{
+            <ImgCont onPress={()=>{
               setExpandD(!expandD);
             }}>
-              <img src="downarrow.png" />
+              <Arrow source={require=("./downarrow.png")} />
             </ImgCont>
           </ChildDay>
           <DayDrop expandD={expandD}>
-            <DayOption><text>1</text></DayOption>
-            <DayOption><text>2</text></DayOption>
-            <DayOption><text>3</text></DayOption>
-            <DayOption><text>4</text></DayOption>
-            <DayOption><text>5</text></DayOption>
-            <DayOption><text>6</text></DayOption>
-            <DayOption><text>7</text></DayOption>
-            <DayOption><text>8</text></DayOption>
-            <DayOption><text>9</text></DayOption>
-            <DayOption><text>10</text></DayOption>
-            <DayOption><text>11</text></DayOption>
-            <DayOption><text>12</text></DayOption>
-            <DayOption><text>13</text></DayOption>
-            <DayOption><text>14</text></DayOption>
-            <DayOption><text>15</text></DayOption>
-            <DayOption><text>16</text></DayOption>
-            <DayOption><text>17</text></DayOption>
-            <DayOption><text>18</text></DayOption>
-            <DayOption><text>19</text></DayOption>
-            <DayOption><text>20</text></DayOption>
-            <DayOption><text>21</text></DayOption>
-            <DayOption><text>22</text></DayOption>
-            <DayOption><text>23</text></DayOption>
-            <DayOption><text>24</text></DayOption>
-            <DayOption><text>25</text></DayOption>
-            <DayOption><text>26</text></DayOption>
-            <DayOption><text>27</text></DayOption>
-            <DayOption><text>28</text></DayOption>
-            <DayOption><text>29</text></DayOption>
-            <DayOption><text>30</text></DayOption>
-            <DayOption><text>31</text></DayOption>
+            <DayOption><Text>1</Text></DayOption>
+            <DayOption><Text>2</Text></DayOption>
+            <DayOption><Text>3</Text></DayOption>
+            <DayOption><Text>4</Text></DayOption>
+            <DayOption><Text>5</Text></DayOption>
+            <DayOption><Text>6</Text></DayOption>
+            <DayOption><Text>7</Text></DayOption>
+            <DayOption><Text>8</Text></DayOption>
+            <DayOption><Text>9</Text></DayOption>
+            <DayOption><Text>10</Text></DayOption>
+            <DayOption><Text>11</Text></DayOption>
+            <DayOption><Text>12</Text></DayOption>
+            <DayOption><Text>13</Text></DayOption>
+            <DayOption><Text>14</Text></DayOption>
+            <DayOption><Text>15</Text></DayOption>
+            <DayOption><Text>16</Text></DayOption>
+            <DayOption><Text>17</Text></DayOption>
+            <DayOption><Text>18</Text></DayOption>
+            <DayOption><Text>19</Text></DayOption>
+            <DayOption><Text>20</Text></DayOption>
+            <DayOption><Text>21</Text></DayOption>
+            <DayOption><Text>22</Text></DayOption>
+            <DayOption><Text>23</Text></DayOption>
+            <DayOption><Text>24</Text></DayOption>
+            <DayOption><Text>25</Text></DayOption>
+            <DayOption><Text>26</Text></DayOption>
+            <DayOption><Text>27</Text></DayOption>
+            <DayOption><Text>28</Text></DayOption>
+            <DayOption><Text>29</Text></DayOption>
+            <DayOption><Text>30</Text></DayOption>
+            <DayOption><Text>31</Text></DayOption>
           </DayDrop>
         </Day>
         <Year>
           <ChildYear>
-            <ImgCont onClick={()=>{
+            <ImgCont onPress={()=>{
               setExpandY(!expandY);
             }}>
-            <img src="downarrow.png" />
+            <Arrow source={require=("./downarrow.png")} />
             </ImgCont>
           </ChildYear>
           <YearDrop expandY={expandY}>
-            <YearOption><text>2002</text></YearOption>
-            <YearOption><text>2001</text></YearOption>
-            <YearOption><text>2000</text></YearOption>
-            <YearOption><text>1999</text></YearOption>
-            <YearOption><text>1998</text></YearOption>
-            <YearOption><text>1997</text></YearOption>
-            <YearOption><text>1996</text></YearOption>
-            <YearOption><text>1995</text></YearOption>
-            <YearOption><text>1994</text></YearOption>
-            <YearOption><text>1993</text></YearOption>
-            <YearOption><text>1992</text></YearOption>
-            <YearOption><text>1991</text></YearOption>
-            <YearOption><text>1990</text></YearOption>
-            <YearOption><text>1989</text></YearOption>
-            <YearOption><text>1987</text></YearOption>
-            <YearOption><text>1986</text></YearOption>
-            <YearOption><text>1985</text></YearOption>
-            <YearOption><text>1984</text></YearOption>
-            <YearOption><text>1983</text></YearOption>
-            <YearOption><text>1982</text></YearOption>
-            <YearOption><text>1981</text></YearOption>
-            <YearOption><text>1980</text></YearOption>
-            <YearOption><text>1979</text></YearOption>
-            <YearOption><text>1978</text></YearOption>
-            <YearOption><text>1977</text></YearOption>
-            <YearOption><text>1976</text></YearOption>
-            <YearOption><text>1975</text></YearOption>
+            <YearOption><Text>2002</Text></YearOption>
+            <YearOption><Text>2001</Text></YearOption>
+            <YearOption><Text>2000</Text></YearOption>
+            <YearOption><Text>1999</Text></YearOption>
+            <YearOption><Text>1998</Text></YearOption>
+            <YearOption><Text>1997</Text></YearOption>
+            <YearOption><Text>1996</Text></YearOption>
+            <YearOption><Text>1995</Text></YearOption>
+            <YearOption><Text>1994</Text></YearOption>
+            <YearOption><Text>1993</Text></YearOption>
+            <YearOption><Text>1992</Text></YearOption>
+            <YearOption><Text>1991</Text></YearOption>
+            <YearOption><Text>1990</Text></YearOption>
+            <YearOption><Text>1989</Text></YearOption>
+            <YearOption><Text>1987</Text></YearOption>
+            <YearOption><Text>1986</Text></YearOption>
+            <YearOption><Text>1985</Text></YearOption>
+            <YearOption><Text>1984</Text></YearOption>
+            <YearOption><Text>1983</Text></YearOption>
+            <YearOption><Text>1982</Text></YearOption>
+            <YearOption><Text>1981</Text></YearOption>
+            <YearOption><Text>1980</Text></YearOption>
+            <YearOption><Text>1979</Text></YearOption>
+            <YearOption><Text>1978</Text></YearOption>
+            <YearOption><Text>1977</Text></YearOption>
+            <YearOption><Text>1976</Text></YearOption>
+            <YearOption><Text>1975</Text></YearOption>
           </YearDrop>
         </Year>
         </Cont>

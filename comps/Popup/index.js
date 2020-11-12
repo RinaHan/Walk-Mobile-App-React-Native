@@ -9,10 +9,9 @@ const PopupCont = styled.View`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // border:1px solid grey;
+  border:1px solid grey;
   border-radius: 8px;
-  mix-blend-mode: normal;
-  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.25));
+ 
 `;
 
 const Exit = styled.View`
@@ -26,13 +25,9 @@ const Exit = styled.View`
 
 const ImgBox = styled.View`
   width: 17px;
-  height: 17px;
+  height: 16px;
+  margin-right:10px;
   /* background-color: blue; */
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 const TextDisplay = styled.View`
@@ -51,7 +46,7 @@ const Inputs = styled.View`
   justify-content: center;
   height: 50%;
   width: 100%;
-  // background-color:#ABC;
+  /* background-color:#ABC; */
 `;
 
 const InputsCont = styled.View`
@@ -69,29 +64,22 @@ const TextInput = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
-  input {
-    width: 97%;
-    height: 92%;
-    border-radius: 10px;
-    border: none;
-  }
+  border:1px solid lightgrey;
+  border-radius:12px;
 `;
 
 const ImgInput = styled.View`
   flex: 1;
   height: 44px;
-  View {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+`;
+const Close = styled.Image`
+width:100%;
+height:100%;
+`;
+
+const InputT = styled.TextInput`
+  width:100%;
+  height:100%;
 `;
 
 const Popup = ({}) => {
@@ -100,19 +88,17 @@ const Popup = ({}) => {
       <PopupCont>
         <Exit>
           <ImgBox>
-            <img src="close.png" />
+          <Close source={require=("./close.png")} />
           </ImgBox>
         </Exit>
         <TextDisplay>Send a Message</TextDisplay>
         <Inputs>
           <InputsCont>
             <TextInput>
-              <input placeholder="Type a Message..." />
+              <InputT placeholder="Type a Message..." />
             </TextInput>
             <ImgInput>
-              <div>
-                <img src="nextarrow.png" />
-              </div>
+                <Close source={require=("./nextarrow.png")} />
             </ImgInput>
           </InputsCont>
         </Inputs>

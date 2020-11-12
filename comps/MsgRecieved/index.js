@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 const MainCont = styled.View`
   /* background-color: red; */
@@ -16,6 +16,7 @@ const Cont = styled.View`
   height: 84px;
   display: flex;
   flex-direction: row;
+  
 `;
 
 const LeftSide = styled.View`
@@ -28,7 +29,8 @@ const LeftSide = styled.View`
 
 const RightSide = styled.View`
   flex: 8;
-  /* background-color: #bdb; */
+  background-color: #EAF6F7;
+  border-radius: 0px 6px 6px 6px;
 `;
 
 const ImgCont = styled.View`
@@ -36,25 +38,26 @@ const ImgCont = styled.View`
   height: 28px;
   border-radius: 14px;
   /* background-color: blue; */
-  img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
 `;
+const Img = styled.Image`
+  width:100%;
+  height:100%;
+  border-radius:16px;
+`;
+const avatar = require("./selfie.jpg");
 
-const MsgRecieved = ({ avatar, msgRecieve }) => {
+const MsgRecieved = ({msgRecieve }) => {
   return (
     <View>
       <MainCont>
         <Cont>
           <LeftSide>
             <ImgCont>
-              <img src={avatar} width="28px" height="28px"/>
+            <Img source={avatar} />
             </ImgCont>
           </LeftSide>
           <RightSide>
-            <text>{msgRecieve}</text>
+            <Text multiline>{msgRecieve}</Text>
           </RightSide>
         </Cont>
       </MainCont>

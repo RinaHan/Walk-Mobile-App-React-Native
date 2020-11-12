@@ -9,6 +9,7 @@ const InputCont = styled.View`
   align-items: center;
   width: 268px;
   height: 48px;
+  /* background-color:#DBD; */
 `;
 
 const InputTitle = styled.View`
@@ -16,19 +17,20 @@ const InputTitle = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const InputBox = styled.View`
-  display: flex;
-  flex: 3;
-  input {
-    width: 100%;
-    height: ${(props) => (props.height ? props.height : 22)}px;
-    border: none;
-  }
+  /* background-color:#CBD; */
 `;
 const Spacer = styled.View`
   flex: 1;
+`;
+const InputBox = styled.View`
+  display: flex;
+  flex: 3;
+  /* background-color:#DDD; */
+  height:${props=>props.height ? props.height : "27px"};
+`;
+const TextInput = styled.TextInput`
+  width:100%;
+  height:${props=>props.height ? props.height : "27px"};
 `;
 
 const Input = ({ text, placeholder, height }) => {
@@ -39,8 +41,8 @@ const Input = ({ text, placeholder, height }) => {
           <Text>{text}</Text>
         </InputTitle>
         <Spacer />
-        <InputBox height={height}>
-          <input placeholder={placeholder}></input>
+        <InputBox  height={height}>
+          <TextInput placeholder={placeholder}  height={height} multiline/>
         </InputBox>
       </InputCont>
     </View>
@@ -51,7 +53,7 @@ Input.defaultProps = {
   text: "default",
   placeholder: "default",
   width: "22px",
-  height: "40px"
+  height: "27px"
 };
 
 export default Input;

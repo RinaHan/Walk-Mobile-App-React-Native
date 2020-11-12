@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View } from "react-native";
+import { View, Text } from "react-native";
+
+import global from '../../Pages/globaj';
 
 const MainCont = styled.View`
   width:353px;
   height:196px;
-  background: #FFFFFF;
-  mix-blend-mode: normal;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
   border-radius: 26px;
   display:flex;
   flex-direction:row;
   justify-content:flex-end;
-  /* margin:30px 30px; */
+  border:.5px solid lightgrey;
 `;
 
 const LeftCont = styled.View`
@@ -26,29 +26,26 @@ const LeftCont = styled.View`
 const Location = styled.View`
   flex:1;
   /* background-color:red; */
-  width:55%;
+  width:70%;
   margin-top:10px;
-  margin-right:26px;
   display:flex;
   flex-direction:row;
   align-items:center;
+`;
+const RegText = styled.Text`
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  justify-content:space-between;
-
+  padding-left:8px;
 `;
-
-const Title = styled.View`
+const TitleText = styled.Text`
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
-  
 `;
-
 const Age = styled.View`
   flex:1;
-  width:20%;
+  width:70%;
   /* background-color:#CCA; */
   display:flex;
   flex-direction:row;
@@ -56,9 +53,6 @@ const Age = styled.View`
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  margin-right:88px;
-  justify-content:space-between;
-
 `;
 const Bio = styled.View`
   flex:3;
@@ -69,38 +63,33 @@ const Bio = styled.View`
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  justify-content:space-between;
 `;
-
 const BioCont = styled.View`
   width:100px;
 `;
-
 const ViewProfile = styled.View`
   flex:1;
   width:70%;
   /* background-color:blue; */
-  font-style: normal;
-  font-weight: normal;
-  font-size: 8px;
-  color: #565555;
   display:flex;
   justify-content:flex-end;
   align-items:center;
   flex-direction:row;
 `;
-
-const ImgCont = styled.View`
-  width:12px;
-  height:12px;
-  /* background-color:red; */
-  img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
+const ViewText = styled.Text`
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+color: #565555;
 `;
-
+const ImgCont = styled.View`
+  width:8px;
+  height:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  /* background-color:red; */ 
+`;
 const RightCont = styled.View`
   flex:1;
   /* background-color:#ADA; */
@@ -108,7 +97,6 @@ const RightCont = styled.View`
   align-items:center;
   justify-content:center;
 `;
-
 const Cont = styled.View`
   height:158px;
   width:148px;
@@ -121,17 +109,16 @@ const Cont = styled.View`
   font-size: 11px;
   color: #000000;
 `;
-
-const ProfPic = styled.View`
+const ProfImgCont = styled.View`
   width:85px;
   height:85px;
-  background-color:blue;
+  /* background-color:blue; */
+  object-fit:cover;
+`;
+const ProfileImage = styled.Image`
+  width:100%;
+  height:100%;
   border-radius:44px;
-  img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
 `;
 const Name = styled.View`
   /* background-color:red; */
@@ -143,27 +130,35 @@ const Name = styled.View`
   font-weight: 500;
   font-size: 16px;
 `;
-
 const Rating = styled.View`
   width:100%;
   height:20px;
 `;
-
-const WalkerProfile = ({city, age, bio, name, pic}) => {
+const OtherText = styled.Text`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+`;
+const Img = styled.Image`
+  width:100%;
+  height:100%;
+`;
+const walkerpicture = require("./selfie.jpg");
+const WalkerProfile = ({city, age, bio, name}) => {
   return (
-    <View>
-      <MainCont>
+    <View >
+      <MainCont style={global.bg}>
         <LeftCont>
-          <Location><Title><text>Location</text></Title><text>{city}</text></Location>
-          <Age><Title><text>Age</text></Title><text>{age}</text></Age>
-          <Bio><Title><text>Bio</text></Title><BioCont><text>{bio}</text></BioCont></Bio>
-          <ViewProfile><text>View full profile</text><ImgCont><img width="10px" height="10px" object-fit="cover" src="right.png"/></ImgCont></ViewProfile>
+          <Location><TitleText>Location</TitleText><RegText>{city}</RegText></Location>
+          <Age><TitleText>Age</TitleText><RegText>{age}</RegText></Age>
+          <Bio><TitleText>Bio</TitleText><BioCont><RegText>{bio}</RegText></BioCont></Bio>
+          <ViewProfile><ViewText>View full profile</ViewText><ImgCont><Img source={require=("./right.png")} /></ImgCont></ViewProfile>
         </LeftCont>
         <RightCont>
           <Cont>
-            <ProfPic><img height="80" width="80" object-fit="cover" src={pic}/></ProfPic>
+            <ProfImgCont><ProfileImage source={walkerpicture} /></ProfImgCont>
             <Name>{name}</Name>
-            <text>Certified Walker</text>
+            <OtherText>Certified Walker</OtherText>
             <Rating></Rating>
           </Cont>
         </RightCont>
@@ -175,8 +170,8 @@ const WalkerProfile = ({city, age, bio, name, pic}) => {
 WalkerProfile.defaultProps = {
   city:"Burnaby, BC",
   age:"23",
-  bio:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or sure there",
+  bio:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
   name:"Ethan P",
-  pic:"ethan.jpeg"
+  pic:"selfie.jpg"
 };
 export default WalkerProfile;

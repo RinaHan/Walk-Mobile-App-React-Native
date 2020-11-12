@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import { View, Text } from "react-native";
 
 const InputCont = styled.View`
-  width: 532px;
+  width: 344px;
   height: 119px;
   /* background-color:#DBB; */
   display: flex;
@@ -25,27 +25,13 @@ const Add = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
-  div {
-    width: 18px;
-    height: 18px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 const Textbox = styled.View`
-  flex: 6;
+  flex: 7;
   display: flex;
   justify-content: center;
   /* background-color: blue; */
-  input {
-    padding: 20px 20px;
-    height: 100%;
-    box-sizing: border-box;
-  }
 `;
 
 const NextArrow = styled.View`
@@ -57,32 +43,42 @@ const NextArrow = styled.View`
 `;
 
 const ArrowCont = styled.View`
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   /* background-color: red; */
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
-
+const AddCont = styled.View`
+  width: 20px;
+  height: 20px;
+  /* background-color: red; */
+`;
+const IconPics = styled.Image`
+  width:100%;
+  height:100%;
+`;
+const TextInput = styled.TextInput`
+  width:100%;
+  height:100%;
+  background-color:white;
+  border-radius: 12px;
+  border:1px solid lightgrey;
+`;
 const Texting = ({}) => {
   return (
     <View>
       <InputCont>
         <Inputs>
           <Add>
-            <div>
-              <img src="plus.png" />
-            </div>
+            <AddCont>
+            <IconPics source={require=("./plus.png")} />
+            </AddCont>
           </Add>
           <Textbox>
-            <input placeholder="Type a message..." />
+            <TextInput placeholder="Type a message..." />
           </Textbox>
           <NextArrow>
             <ArrowCont>
-              <img src="nextarrow.png" />
+            <IconPics source={require=("./nextarrow.png")} />
             </ArrowCont>
           </NextArrow>
         </Inputs>
