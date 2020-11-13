@@ -14,8 +14,7 @@ const Buttoncontainer = styled.TouchableOpacity`
   width: 137px;
   border-radius: 7px;
   padding: 12px;
-  cursor: pointer;
-  bottom: -300px;
+  /* bottom: -300px; */
 `;
 
 const Startext = styled.Text`
@@ -45,14 +44,14 @@ const Main = styled.View`
   align-items: center;
   width: 320px;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 `;
 
 const Reviewcontainer = styled.View`
   flex-direction: column;
   display: flex;
-  bottom: -300px;
+  /* bottom: -300px; */
 `;
 
 const Reviewtext = styled.Text`
@@ -104,9 +103,6 @@ const WriteReview = () => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-          onPress={() => {
-            setHighlight(!highlight);
-          }}
         >
           <Buttontext>
             <Text>Write a Review</Text>
@@ -115,6 +111,10 @@ const WriteReview = () => {
       </Main>
     </View>
   );
+};
+
+WriteReview.defaultProps = {
+  onPress: () => {}
 };
 
 export default WriteReview;

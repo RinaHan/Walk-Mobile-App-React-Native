@@ -21,6 +21,9 @@ const Starscontainer = styled.View`
   justify-content: space-between;
   display: flex;
   flex-direction: row;
+  /* margin-left: 20px; */
+  /* margin-top: 10px; */
+  padding-top: 88px;
 `;
 
 const StarImg = styled.Image`

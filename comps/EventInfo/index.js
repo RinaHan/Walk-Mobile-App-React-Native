@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components/native";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 const EventCont = styled.View`
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
 `;
 
 const Buttontext = styled.Text`
@@ -15,8 +17,8 @@ const Buttontext = styled.Text`
   color: #fff;
 `;
 
-const Buttonbox = styled.View`
-  background: ${(props) => (props.highlight ? "#C4C4C4" : "#959494")};
+const Buttonbox = styled.TouchableOpacity`
+  background: ${(props) => (props.highlight ? "#959494" : "#53B7BE")};
   border-radius: 4px;
   width: 107px;
   padding: 10px;
@@ -24,13 +26,14 @@ const Buttonbox = styled.View`
   align-items: right;
   justify-content: right;
   margin-top: 8px;
-  cursor: pointer;
 `;
 
 const Details = styled.Text`
   display: flex;
   justify-content: left;
   align-items: left;
+  font-weight: 400;
+  padding: 5px;
 `;
 
 const AttendCont = styled.View`
@@ -38,6 +41,7 @@ const AttendCont = styled.View`
   flex-direction: row;
   justify-content: left;
   align-items: left;
+  padding: 5px;
 `;
 
 const Paw = styled.View`
@@ -56,24 +60,35 @@ const Paw = styled.View`
 const Number = styled.Text`
   justify-content: left;
   align-items: left;
+  font-weight: 500;
 `;
 
 const Subhead = styled.Text`
   color: #53b7be;
+  font-weight: 400;
+  padding-top: 5px;
 `;
 
-const Title = styled.Text``;
+const Title = styled.Text`
+  font-weight: 700;
+`;
 
-const EventInfo = () => {
+const PawImg = styled.Image`
+  width: 20px;
+  height: 20px;
+  font-weight: 700;
+`;
+
+const paw = require("./paw.png");
+
+const EventInfo = ({ text }) => {
   const [highlight, setHighlight] = useState(true);
 
   return (
     <View>
       <EventCont>
         <Title>
-          <Text>
-            <h2>Rocky Point Park</h2>
-          </Text>
+          <Text>Rocky Point Park</Text>
         </Title>
         <Subhead>
           <Text>Wednesday, Oct 6th 2020</Text>
@@ -83,25 +98,22 @@ const EventInfo = () => {
             <Text>6</Text>
           </Number>
           <Paw>
-            <img src="paw.svg"></img>
+            <PawImg source={paw} />
           </Paw>
         </AttendCont>
         <Details>
           <Text>
-            2:00pm <br></br>more details here<br></br>more details here
+            2:00pm <br></br>Dog friendly park<br></br>Weather permitting
           </Text>
         </Details>
         <Buttonbox
-          onMouseOver={() => {
+          onPress={() => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-          onMouseOver={() => {
-            setHighlight(!highlight);
-          }}
         >
           <Buttontext>
-            <Text>Interested</Text>
+            <Text>{highlight ? text : "Going"}</Text>
           </Buttontext>
         </Buttonbox>
       </EventCont>
@@ -110,3 +122,8 @@ const EventInfo = () => {
 };
 
 export default EventInfo;
+
+EventInfo.defaultProps = {
+  text: "Interested",
+  onPress: () => {}
+};

@@ -17,16 +17,16 @@ const TextCont = styled.View`
   text-align: center;
 `;
 
-const DogInfo = () => {
+const DogDislikes = () => {
   return (
     <View>
       <TextCont>
         <Titletext>
-          <Text>Milly</Text>
+          <Text>Dislikes</Text>
         </Titletext>
         <Description>
           <Text>
-            Border Collie <br></br> Age 6
+            Touching her paws <br></br> The smell of oranges
           </Text>
         </Description>
       </TextCont>
@@ -34,4 +34,4 @@ const DogInfo = () => {
   );
 };
 
-export default DogInfo;
+export default DogDislikes;

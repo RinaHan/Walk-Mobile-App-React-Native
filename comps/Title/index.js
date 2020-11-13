@@ -1,26 +1,23 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View, Text } from "react-native";
-
-const Titletext = styled.Text`
-  color: #97d7da;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
+import { View } from "react-native";
 
 const Main = styled.View``;
+
+const TitleImg = styled.Image`
+  width: 276px;
+  height: 70px;
+  display: flex;
+  margin-top: 20px;
+`;
+
+const title = require("./textlogo.png");
 
 const Title = () => {
   return (
     <View>
       <Main>
-        <Titletext>
-          <h1>
-            <Text>WALK</Text>
-          </h1>
-        </Titletext>
+        <TitleImg source={title} />
       </Main>
     </View>
   );

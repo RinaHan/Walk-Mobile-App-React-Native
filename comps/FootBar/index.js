@@ -26,7 +26,6 @@ const Footcontainer = styled.View`
   padding: 15px;
   width: 375px;
   bottom: 0;
-  position: fixed;
 `;
 
 const UserImg = styled.Image`
@@ -64,11 +63,14 @@ const activechat = require("./activechat.png");
 const user = require("./user.png");
 const activeuser = require("./activeuser.png");
 
-const FootBar = () => {
+const FootBar = ({ onPress }) => {
+  /*
   const [Activehome, setActivehome] = useState(false);
   const [Activechat, setActivechat] = useState(false);
   const [Activeevents, setActiveevents] = useState(false);
-  const [Activeuser, setActiveuser] = useState(false);
+  const [Activeuser, setActiveuser] = useState(false);*/
+
+  const [active, setActive] = useState(4);
 
   return (
     <View>
@@ -76,34 +78,38 @@ const FootBar = () => {
         <Icons>
           <Homeicon
             onPress={() => {
-              setActivehome(true);
+              setActive(1);
+              onPress(1);
             }}
           >
-            <HomeImg source={Activehome !== true ? home : activehome} />
+            <HomeImg source={active !== 1 ? home : activehome} />
           </Homeicon>
           <Eventicon
             onPress={() => {
-              setActiveevents(true);
+              setActive(2);
+              onPress(2);
             }}
           >
-            <EventImg source={Activeevents !== true ? events : activeevents} />
+            <EventImg source={active !== 2 ? events : activeevents} />
           </Eventicon>
           <Addicon>
             <NewImg source={add} />
           </Addicon>
           <Chaticon
             onPress={() => {
-              setActivechat(true);
+              setActive(3);
+              onPress(3);
             }}
           >
-            <ChatImg source={Activechat !== true ? chat : activechat} />
+            <ChatImg source={active !== 3 ? chat : activechat} />
           </Chaticon>
           <Usericon
             onPress={() => {
-              setActiveuser(true);
+              setActive(4);
+              onPress(4);
             }}
           >
-            <UserImg source={Activeuser !== true ? user : activeuser} />
+            <UserImg source={active !== 4 ? user : activeuser} />
           </Usericon>
         </Icons>
       </Footcontainer>
@@ -111,4 +117,7 @@ const FootBar = () => {
   );
 };
 
+FootBar.defaultProps = {
+  onPress: () => {}
+};
 export default FootBar;

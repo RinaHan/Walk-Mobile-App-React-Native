@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components/native";
 import { View, Text, TouchableOpacity } from "react-native";
 
-const Reviewtext = styled.Text``;
+const Reviewtext = styled.Text`
+  font-weight: 700;
+  color: #000;
+`;
 
 const Main = styled.View`
   display: flex;
-  top: 200%;
+  /* margin-left: 20px; */
 `;
 
 const Star1 = styled.TouchableOpacity`
@@ -86,6 +89,8 @@ const YourReview = ({ numstar }) => {
   );
 };
 
-Starscontainer.defaultProps = {};
+Starscontainer.defaultProps = {
+  onPress: () => {}
+};
 
 export default YourReview;

@@ -3,9 +3,9 @@ import styled from "styled-components/native";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Button = styled.TouchableOpacity`
-  align-items: center;
-  justify-content: center;
-  top: 50%;
+  /* align-items: center;
+  justify-content: center; */
+  /* top: 50%; */
 `;
 
 const FBlogo = styled.View`
@@ -33,8 +33,8 @@ const ButtonBox = styled.TouchableOpacity`
   width: 288px;
   padding: 6px;
   border: 0.5px solid #959494;
-  box-sizing: border-box;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+  /* box-sizing: border-box;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25); */
 `;
 
 const Buttontext = styled.Text`
@@ -44,6 +44,7 @@ const Buttontext = styled.Text`
   color: #000;
   width: 300px;
   margin-right: 25px;
+  font-weight: 400;
 `;
 
 const FacebookImg = styled.Image`
@@ -65,9 +66,6 @@ const FacebookButton = () => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-          onPress={() => {
-            setHighlight(!highlight);
-          }}
         >
           <FBlogo>
             <ImgCont>
@@ -81,6 +79,10 @@ const FacebookButton = () => {
       </Button>
     </View>
   );
+};
+
+FacebookButton.defaultProps = {
+  onPress: () => {}
 };
 
 export default FacebookButton;

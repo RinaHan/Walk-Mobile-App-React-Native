@@ -7,17 +7,22 @@ const Description = styled.Text`
   justify-content: left;
   align-items: left;
   text-align: left;
+  font-weight: 400;
 `;
 const Titletext = styled.Text`
   color: #000;
   justify-content: left;
   align-items: left;
   text-align: left;
+  font-weight: 500;
 `;
 
 const TextCont = styled.View`
   display: flex;
+  /* top: 300%; */
+  padding-top: 40px;
   align-items: column;
+  /* margin-left: 20px; */
 `;
 
 const ShareFeedback = () => {
@@ -25,9 +30,7 @@ const ShareFeedback = () => {
     <View>
       <TextCont>
         <Titletext>
-          <Text>
-            <b>Help others by sharing feedback</b>
-          </Text>
+          <Text>Help others by sharing feedback</Text>
         </Titletext>
         <Description>
           <Text>Describe your experience with this walker.</Text>

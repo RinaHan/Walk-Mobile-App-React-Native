@@ -7,20 +7,23 @@ const Description = styled.Text`
   justify-content: left;
   align-items: left;
   text-align: left;
+  font-weight: 400;
 `;
 const Titletext = styled.Text`
   color: #000;
   justify-content: left;
   align-items: left;
   text-align: left;
+  font-weight: 500;
 `;
 
 const TextCont = styled.View`
   display: flex;
   align-items: column;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* margin-top: 20px; */
+  margin-left: 30px;
 `;
 
 const Posts = () => {
@@ -28,9 +31,7 @@ const Posts = () => {
     <View>
       <TextCont>
         <Titletext>
-          <Text>
-            <b>Posts</b>
-          </Text>
+          <Text>Posts</Text>
         </Titletext>
         <Description>
           <Text>Show people what you've been up to!</Text>

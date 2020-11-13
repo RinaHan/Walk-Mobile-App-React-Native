@@ -4,9 +4,10 @@ import { View, Text } from "react-native";
 
 const Ortext = styled.Text`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 50px;
+  /* align-items: center;
+  justify-content: center; */
+  /* padding-top: 20px; */
+  /* margin-left: 144px; */
 `;
 
 const Or = () => {
