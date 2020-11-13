@@ -63,7 +63,7 @@ const activechat = require("./activechat.png");
 const user = require("./user.png");
 const activeuser = require("./activeuser.png");
 
-const FootBar = ({ onPress }) => {
+const FooterBar = ({ onPress }) => {
   /*
   const [Activehome, setActivehome] = useState(false);
   const [Activechat, setActivechat] = useState(false);
@@ -117,7 +117,7 @@ const FootBar = ({ onPress }) => {
   );
 };
 
-FootBar.defaultProps = {
+FooterBar.defaultProps = {
   onPress: () => {}
 };
-export default FootBar;
+export default FooterBar;

@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 import ReviewStars from "./Comps/ReviewStars";
 import YourReview from "./Comps/YourReview";
 import ShareFeedback from "./Comps/ShareFeedback";
-import FootBar from "./Comps/FootBar";
+import FooterBar from "./Comps/FooterBar";
 
 const LeaveReview = () => {
   return (
@@ -19,7 +19,7 @@ const LeaveReview = () => {
           </View>
         </View>
         <View style={styles.footerCont}>
-          <FootBar />
+          <FooterBar />
         </View>
       </View>
     </View>

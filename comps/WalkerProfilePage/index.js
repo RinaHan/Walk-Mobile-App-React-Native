@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import WriteReview from "./Comps/WriteReview";
 import UserInfo from "./Comps/UserInfo";
-import FootBar from "./Comps/FootBar";
+import FooterBar from "./Comps/FooterBar";
 
 const WalkProfile = () => {
   return (
@@ -13,7 +13,7 @@ const WalkProfile = () => {
           <WriteReview />
         </View>
         <View style={styles.footerCont}>
-          <FootBar />
+          <FooterBar />
         </View>
       </View>
     </View>
