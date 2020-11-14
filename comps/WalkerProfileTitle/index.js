@@ -10,18 +10,19 @@ const Titletext = styled.Text`
   justify-content: center; */
   margin-left: 20px;
   flex-direction: column;
+  font-weight:bold
 `;
 
-const WalkerProfile = () => {
+const WalkerProfileTitle = () => {
   return (
     <View>
       <Titletext>
         <Text>
-          <b>Walker Profile</b>
+          Walker Profile
         </Text>
       </Titletext>
     </View>
   );
 };
 
-export default WalkerProfile;
+export default WalkerProfileTitle;

@@ -1,19 +1,19 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import WriteReview from "./Comps/WriteReview";
-import UserInfo from "./Comps/UserInfo";
-import FooterBar from "./Comps/FooterBar";
+// import WriteReview from "./Comps/WriteReview";
+// import UserInfo from "./Comps/UserInfo";
+// import FooterBar from "./Comps/FooterBar";
 
-const WalkProfile = () => {
+const WalkerProfilePage = () => {
   return (
     <View>
       <View style={styles.walkprofileCont}>
-        <UserInfo />
-        <View style={styles.writereviewCont}>
+        {/* <UserInfo /> */}
+        {/* <View style={styles.writereviewCont}>
           <WriteReview />
-        </View>
+        </View> */}
         <View style={styles.footerCont}>
-          <FooterBar />
+          {/* <FooterBar /> */}
         </View>
       </View>
     </View>
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default WalkProfile;
+export default WalkerProfilePage;
