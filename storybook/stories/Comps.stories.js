@@ -7,13 +7,14 @@ import WalkerProfileTitle from '../../comps/WalkerProfileTitle';
 import WalkerProfilePage from '../../comps/WalkerProfilePage';
 import UserInfo from '../../comps/UserInfo';
 import UserBio from '../../comps/UserBio';
-// import WalkerProfile from '../../comps/WalkerProfile';
-// import AvatarForm01 from '../../comps/AvatarForm/AvatarForm01';
-
-
+import Title from '../../comps/Title';
+import Texting from '../../comps/Texting';
+import Spacer from '../../comps/Spacer';
+import SignIn from '../../comps/SignIn';
+import ShareFeedback from '../../comps/ShareFeedback';
 
 storiesOf('Comps', module)
- //checked
+ //completed
   .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
@@ -21,16 +22,36 @@ storiesOf('Comps', module)
   .add('WalkProfilePage', () => (
     <WalkerProfilePage/>
   ))
-//   checked, impossible, it break Android
+// impossible, it break Android
 //   .add('WalkerProfile', () => (
 //     <WalkerProfile/>
 //   ))
-//connected, need to modify code
+//error occured, need to modify code
 .add('UserInfo', () => (
     <UserInfo/>
   ))
-  //connected, need to modify code
+  //error break Android. need to modify code
 .add('UserBio', () => (
     <UserBio/>
   ))
+  //completed
+.add('Title', () => (
+    <Title/>
+  ))
+  //completed
+.add('Texting', () => (
+    <Texting/>
+  ))
+//empty screen. need to modify code
+.add('Spacer', () => (
+    <Spacer/>
+  ))
+//error occured, need to modify code
+.add('SignIn', () => (
+    <SignIn/>
+  ))
+//error break Android, need to modify code
+// .add('ShareFeedback', () => (
+//     <ShareFeedback/>
+//   ))
 ;
