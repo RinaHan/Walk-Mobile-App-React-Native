@@ -22,8 +22,10 @@ import TopBar from '../TopBar';
 const RequestPage = ({}) => {
  
   return (
-      <View style={styles.container}>
-        <TopBar title="Inbox" />
+      <View 
+      // style={styles.container}
+      >
+        {/* <TopBar title="Inbox" /> */}
         {/* <View>
           <View style={styles.avatarcont}>
             <BasicAvatar

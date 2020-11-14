@@ -27,7 +27,7 @@ const TextCont = styled.View`
 const LocationAge = () => {
   return (
     <View>
-      <TextCont>
+      {/* <TextCont>
         <Locationtext>
           <Text>
             <b>Location</b> Burnaby, BC
@@ -38,7 +38,7 @@ const LocationAge = () => {
             <b>Age</b> 24
           </Text>
         </Agetext>
-      </TextCont>
+      </TextCont> */}
     </View>
   );
 };

@@ -35,7 +35,7 @@ const Input1 = styled.TextInput`
 const Likes = ({ maintext}) => {
   return (
     <View>
-      <MainCont>
+      {/* <MainCont>
         <LeftSide>
           <Text>{maintext}</Text>
         </LeftSide>
@@ -50,7 +50,7 @@ const Likes = ({ maintext}) => {
             <Input1 placeholder="Type something..." />
           </OpOne>
         </RightSide>
-      </MainCont>
+      </MainCont> */}
     </View>
   );
 };

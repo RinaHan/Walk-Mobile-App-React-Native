@@ -12,13 +12,29 @@ import Texting from '../../comps/Texting';
 import Spacer from '../../comps/Spacer';
 import SignIn from '../../comps/SignIn';
 import ShareFeedback from '../../comps/ShareFeedback';
+import ReviewStars from '../../comps/ShareFeedback';
+import RequestPage from '../../comps/RequestPage';
+import Posts from '../../comps/Posts';
+import Post from '../../comps/Post';
+import Popup from '../../comps/Popup';
+import Or from '../../comps/Or';
+import MsgSent from '../../comps/MsgSent';
+import MsgSelection from '../../comps/MsgSelection';
+import LocationAge from '../../comps/LocationAge';
+import Likes from '../../comps/Likes';
+import LeaveReviewPage from '../../comps/LeaveReviewPage';
+import Input from '../../comps/Input';
+import GoogleButton from '../../comps/GoogleButton';
+import FooterBar from '../../comps/FooterBar';
+import EventInfo from '../../comps/EventInfo';
+
 
 storiesOf('Comps', module)
  //completed
   .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
-  //했는데, 손보지않은 파일들 연결된거 잠궈놈
+  //need to modify code
   .add('WalkProfilePage', () => (
     <WalkerProfilePage/>
   ))
@@ -50,8 +66,59 @@ storiesOf('Comps', module)
 .add('SignIn', () => (
     <SignIn/>
   ))
-//error break Android, need to modify code
-// .add('ShareFeedback', () => (
-//     <ShareFeedback/>
-//   ))
+.add('ShareFeedback', () => (
+    <ShareFeedback/>
+  ))
+// error break Android, need to modify code
+.add('ReviewStars', () => (
+    <ReviewStars/>
+  ))
+.add('RequestPage', () => (
+    <RequestPage/>
+  ))
+.add('Posts', () => (
+    <Posts/>
+  ))
+.add('Post', () => (
+    <Post/>
+  ))
+.add('Popup', () => (
+    <Popup/>
+  ))
+.add('Or', () => (
+    <Or/>
+  ))
+.add('MsgSent', () => (
+    <MsgSent/>
+  ))
+.add('MsgSelection', () => (
+    <MsgSelection/>
+  ))
+.add('MsgRecieved', () => (
+    <MsgRecieved/>
+  ))
+.add('LocationAge', () => (
+    <LocationAge/>
+  ))
+.add('Likes', () => (
+    <Likes/>
+  ))
+.add('LeaveReviewPage', () => (
+    <LeaveReviewPage/>
+  ))
+.add('Input', () => (
+    <Input/>
+  ))
+.add('GoogleButton', () => (
+    <GoogleButton/>
+  ))
+.add('FooterBar', () => (
+    <FooterBar/>
+  ))
+.add('FacebookButton', () => (
+    <FacebookButton/>
+  ))
+.add('EventInfo', () => (
+    <EventInfo/>
+  ))
 ;

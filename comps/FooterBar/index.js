@@ -74,7 +74,7 @@ const FooterBar = ({ onPress }) => {
 
   return (
     <View>
-      <Footcontainer>
+      {/* <Footcontainer>
         <Icons>
           <Homeicon
             onPress={() => {
@@ -112,7 +112,7 @@ const FooterBar = ({ onPress }) => {
             <UserImg source={active !== 4 ? user : activeuser} />
           </Usericon>
         </Icons>
-      </Footcontainer>
+      </Footcontainer> */}
     </View>
   );
 };

@@ -5,5 +5,5 @@
 // import './WButton.stories';
 // import './Avatar.stories';
 // import './AvatarForm.stories';
-import './Pages.stories';
-// import './Comps.stories';
+// import './Pages.stories';
+import './Comps.stories';
