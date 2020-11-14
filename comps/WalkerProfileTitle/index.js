@@ -1,27 +1,19 @@
 import React from "react";
-import styled from "styled-components/native";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet} from "react-native";
 
-const Titletext = styled.Text`
-  margin-top: 20px;
-  color: #000;
-  display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  margin-left: 20px;
-  flex-direction: column;
-  font-weight:bold
-`;
-
+const styles = StyleSheet.create({
+  text: {
+    color: "black",
+    fontWeight:"bold"
+  }
+});
 
 const WalkerProfileTitle = () => {
   return (
     <View>
-      <Titletext>
-        <Text>
+        <Text style={styles.text}>
           Walker Profile
         </Text>
-      </Titletext>
     </View>
   );
 }

@@ -5,23 +5,32 @@ import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import WalkerProfileTitle from '../../comps/WalkerProfileTitle';
 import WalkerProfilePage from '../../comps/WalkerProfilePage';
+import UserInfo from '../../comps/UserInfo';
+import UserBio from '../../comps/UserBio';
 // import WalkerProfile from '../../comps/WalkerProfile';
 // import AvatarForm01 from '../../comps/AvatarForm/AvatarForm01';
 
 
 
 storiesOf('Comps', module)
- //했는데 스토리북에 안보임
-  .add('WalkerProfile', () => (
+ //checked
+  .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
-  //했는데, 잠궈놈
+  //했는데, 손보지않은 파일들 연결된거 잠궈놈
   .add('WalkProfilePage', () => (
     <WalkerProfilePage/>
   ))
-  //했는데, 화면에 아무것도 안보임, 에러떠서 잠궈놈
+//   checked, impossible, it break Android
 //   .add('WalkerProfile', () => (
 //     <WalkerProfile/>
 //   ))
-  
+//connected, need to modify code
+.add('UserInfo', () => (
+    <UserInfo/>
+  ))
+  //connected, need to modify code
+.add('UserBio', () => (
+    <UserBio/>
+  ))
 ;
