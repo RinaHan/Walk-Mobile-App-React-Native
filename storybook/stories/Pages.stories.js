@@ -7,7 +7,7 @@ import RequestPage from '../../comps/RequestPage';
 import ActivatePage from '../../comps/ActivatePage';
 import OwnerDashPage from '../../comps/OwnerDashPage';
 import DogProfilePage from '../../comps/DogProfilePage';
-import FootBar from '../../comps/FootBar';
+// import FootBar from '../../comps/FootBar';
 
 // import CenterView from './CenterView';
 
@@ -25,7 +25,7 @@ storiesOf('Pages', module)
   .add('DogProfilePage', () => (
     <DogProfilePage/>
   ))
-  .add('FootBar', () => (
-    <FootBar/>
-  ))
+  // .add('FootBar', () => (
+  //   <FootBar/>
+  // ))
   ;

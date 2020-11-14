@@ -86,7 +86,7 @@ const EventInfo = ({ text }) => {
 
   return (
     <View>
-      <EventCont>
+      {/* <EventCont>
         <Title>
           <Text>Rocky Point Park</Text>
         </Title>
@@ -116,14 +116,15 @@ const EventInfo = ({ text }) => {
             <Text>{highlight ? text : "Going"}</Text>
           </Buttontext>
         </Buttonbox>
-      </EventCont>
+      </EventCont> */}
     </View>
   );
 };
-
-export default EventInfo;
 
 EventInfo.defaultProps = {
   text: "Interested",
   onPress: () => {}
 };
+
+export default EventInfo;
+

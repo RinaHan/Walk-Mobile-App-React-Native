@@ -1,24 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import WriteReview from "./Comps/WriteReview";
-import UserInfo from "./Comps/UserInfo";
-import FooterBar from "./Comps/FooterBar";
-
-const WalkProfile = () => {
-  return (
-    <View>
-      <View style={styles.walkprofileCont}>
-        <UserInfo />
-        <View style={styles.writereviewCont}>
-          <WriteReview />
-        </View>
-        <View style={styles.footerCont}>
-          <FooterBar />
-        </View>
-      </View>
-    </View>
-  );
-};
+// import WriteReview from "./Comps/WriteReview";
+// import UserInfo from "./Comps/UserInfo";
+// import FooterBar from "./Comps/FooterBar";
 
 const styles = StyleSheet.create({
   walkprofileCont: {
@@ -34,4 +18,21 @@ const styles = StyleSheet.create({
   }
 });
 
-export default WalkProfile;
+const WalkerProfilePage = () => {
+  return (
+    <View>
+      <View style={styles.walkprofileCont}>
+        {/* <UserInfo /> */}
+        {/* <View style={styles.writereviewCont}>
+          <WriteReview />
+        </View> */}
+        <View style={styles.footerCont}>
+          {/* <FooterBar /> */}
+        </View>
+      </View>
+    </View>
+  );
+};
+
+
+export default WalkerProfilePage;

@@ -2,38 +2,38 @@ import React from "react";
 import styled from "styled-components/native";
 import { View, Text } from "react-native";
 
-const Biotext = styled.Text`
-  color: #000;
-  align-items: left;
-  text-align: left;
-`;
+// const Biotext = styled.Text`
+//   color: #000;
+//   align-items: left;
+//   text-align: left;
+// `;
 
-const Agetext = styled.Text`
-  color: #000;
-  align-items: left;
-  text-align: left;
-  margin-bottom: 10px;
-`;
-const Locationtext = styled.Text`
-  color: #000;
-  align-items: left;
-  text-align: left;
-  margin-bottom: 10px;
-`;
+// const Agetext = styled.Text`
+//   color: #000;
+//   align-items: left;
+//   text-align: left;
+//   margin-bottom: 10px;
+// `;
+// const Locationtext = styled.Text`
+//   color: #000;
+//   align-items: left;
+//   text-align: left;
+//   margin-bottom: 10px;
+// `;
 
-const TextCont = styled.View`
-  display: flex;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* margin-left: 20px; */
-  width: 155px;
-  padding-top: 30px;
-`;
+// const TextCont = styled.View`
+//   display: flex;
+//   /* margin-left: auto;
+//   margin-right: auto; */
+//   /* margin-left: 20px; */
+//   width: 155px;
+//   padding-top: 30px;
+// `;
 
 const UserInfo = () => {
   return (
     <View>
-      <TextCont>
+      {/* <TextCont>
         <Locationtext>
           <Text>
             <b>Location</b> Burnaby, BC
@@ -51,7 +51,7 @@ const UserInfo = () => {
             nature and ...”
           </Text>
         </Biotext>
-      </TextCont>
+      </TextCont> */}
     </View>
   );
 };

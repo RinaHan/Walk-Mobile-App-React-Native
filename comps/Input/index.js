@@ -36,7 +36,7 @@ const TextInput = styled.TextInput`
 const Input = ({ text, placeholder, height }) => {
   return (
     <View>
-      <InputCont>
+      {/* <InputCont>
         <InputTitle>
           <Text>{text}</Text>
         </InputTitle>
@@ -44,16 +44,16 @@ const Input = ({ text, placeholder, height }) => {
         <InputBox  height={height}>
           <TextInput placeholder={placeholder}  height={height} multiline/>
         </InputBox>
-      </InputCont>
+      </InputCont> */}
     </View>
   );
 };
 
-Input.defaultProps = {
-  text: "default",
-  placeholder: "default",
-  width: "22px",
-  height: "27px"
-};
+// Input.defaultProps = {
+//   text: "default",
+//   placeholder: "default",
+//   width: "22px",
+//   height: "27px"
+// };
 
 export default Input;

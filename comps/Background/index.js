@@ -17,7 +17,7 @@ const Bgcolor = styled.View`
 const Background = () => {
   return (
     <View>
-      <Bgcolor></Bgcolor>
+      {/* <Bgcolor></Bgcolor> */}
     </View>
   );
 };

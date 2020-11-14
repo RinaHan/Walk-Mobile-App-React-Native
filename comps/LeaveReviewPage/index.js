@@ -1,16 +1,16 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import ReviewStars from "./Comps/ReviewStars";
-import YourReview from "./Comps/YourReview";
-import ShareFeedback from "./Comps/ShareFeedback";
-import FooterBar from "./Comps/FooterBar";
+// import ReviewStars from "./Comps/ReviewStars";
+// import YourReview from "./Comps/YourReview";
+// import ShareFeedback from "./Comps/ShareFeedback";
+// import FooterBar from "./Comps/FooterBar";
 
-const LeaveReview = () => {
+const LeaveReviewPage = () => {
   return (
     <View>
       <View style={styles.mainCont}>
         <View style={styles.leavereviewCont}>
-          <ReviewStars />
+          {/* <ReviewStars />
           <View style={styles.feedbackstarsCont}>
             <View style={styles.shareCont}>
               <ShareFeedback />
@@ -19,7 +19,7 @@ const LeaveReview = () => {
           </View>
         </View>
         <View style={styles.footerCont}>
-          <FooterBar />
+          <FooterBar /> */}
         </View>
       </View>
     </View>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LeaveReview;
+export default LeaveReviewPage;

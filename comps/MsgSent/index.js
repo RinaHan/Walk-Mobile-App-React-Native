@@ -49,7 +49,7 @@ const avatar = require("./selfie.jpg");
 const MsgSent = ({msgSent }) => {
   return (
     <View>
-      <MainCont>
+      {/* <MainCont>
         <Cont>
           <RightSide>
             <Text multiline>{msgSent}</Text>
@@ -60,7 +60,7 @@ const MsgSent = ({msgSent }) => {
             </ImgCont>
           </LeftSide>
         </Cont>
-      </MainCont>
+      </MainCont> */}
     </View>
   );
 };

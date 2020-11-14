@@ -1,15 +1,15 @@
 import React from "react";
 import { View } from "react-native";
-import Title from "./Comps/Title";
-import ContinueAs from "./Comps/ContinueAs";
+// import Title from "./Comps/Title";
+// import Continue from "./Comps/Continue";
 
-const Continue = () => {
+const ContinuePage = () => {
   return (
     <View>
-      <Title />
-      <ContinueAs />
+      {/* <Title />
+      <ContinueAs /> */}
     </View>
   );
 };
 
-export default Continue;
+export default ContinuePage;

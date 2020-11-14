@@ -151,7 +151,7 @@ const dogpicture = require("./Lucky.png");
 const DashDog = ({dogname, age, breed, likes}) => {
   return (
     <View>
-      <MainCont>
+      {/* <MainCont>
         <TitleCont><TitleText>Dog Profile</TitleText></TitleCont>
         <InfoCont>
           <TopInfo>
@@ -182,7 +182,7 @@ const DashDog = ({dogname, age, breed, likes}) => {
             </BottomCont>
           </BottomInfo>
         </InfoCont>
-      </MainCont>
+      </MainCont> */}
     </View>
   );
 };

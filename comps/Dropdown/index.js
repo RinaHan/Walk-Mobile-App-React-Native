@@ -68,7 +68,7 @@ useEffect(()=>{
 
   return (
     <View>
-      <Component>
+      {/* <Component>
       <MainCont>
         <Text>{text}</Text>
         <Cont><Text>{tCountry}</Text>
@@ -89,7 +89,7 @@ useEffect(()=>{
           setCountry("United States")
         }}><Text>United States</Text></Country>
       </Options>
-      </Component>
+      </Component> */}
     </View>
   );
 };
