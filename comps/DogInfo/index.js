@@ -20,7 +20,7 @@ const TextCont = styled.View`
 const DogInfo = () => {
   return (
     <View>
-      <TextCont>
+      {/* <TextCont>
         <Titletext>
           <Text>Milly</Text>
         </Titletext>
@@ -29,7 +29,7 @@ const DogInfo = () => {
             Border Collie <br></br> Age 6
           </Text>
         </Description>
-      </TextCont>
+      </TextCont> */}
     </View>
   );
 };

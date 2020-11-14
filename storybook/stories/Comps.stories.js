@@ -27,6 +27,16 @@ import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
 import FooterBar from '../../comps/FooterBar';
 import EventInfo from '../../comps/EventInfo';
+import Dropdown from '../../comps/Dropdown';
+import DogInfoTitle from '../../comps/DogInfoTitle';
+import DogInfo from '../../comps/DogInfo';
+import DashOwner from '../../comps/DashOwner';
+import DashDog from '../../comps/DashDog';
+import Continue from '../../comps/ContinueAs';
+
+import ContinuePage from '../../comps/ContinueAsPage';
+// import Birthday from '../../comps/Birthday';
+import Background from '../../comps/Background';
 
 
 storiesOf('Comps', module)
@@ -120,5 +130,41 @@ storiesOf('Comps', module)
   ))
 .add('EventInfo', () => (
     <EventInfo/>
+  ))
+.add('Dropdown', () => (
+    <Dropdown/>
+  ))
+.add('DogLikes', () => (
+    <DogLikes/>
+  ))
+.add('DogInfoTitle', () => (
+    <DogInfoTitle/>
+  ))
+.add('DogInfo', () => (
+    <DogInfo/>
+  ))
+.add('DogDislikes', () => (
+    <DogDislikes/>
+  ))
+.add('Description', () => (
+    <Description/>
+  ))
+.add('DashOwner', () => (
+    <DashOwner/>
+  ))
+.add('DashDog', () => (
+    <DashDog/>
+  ))
+.add('ContinuePage', () => (
+    <ContinuePage/>
+  ))
+.add('Continue', () => (
+    <Continue/>
+  ))
+// .add('Birthday', () => (
+//     <Birthday/>
+//   ))
+.add('Background', () => (
+    <Background/>
   ))
 ;

@@ -23,7 +23,7 @@ const TextCont = styled.View`
 const DogLikes = () => {
   return (
     <View>
-      <TextCont>
+      {/* <TextCont>
         <Titletext>
           <Text>
             <h2>Dislikes</h2>
@@ -34,7 +34,7 @@ const DogLikes = () => {
             Touching her paws <br></br> The smell of oranges
           </Text>
         </Description>
-      </TextCont>
+      </TextCont> */}
     </View>
   );
 };
