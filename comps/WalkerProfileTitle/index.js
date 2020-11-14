@@ -13,6 +13,7 @@ const Titletext = styled.Text`
   font-weight:bold
 `;
 
+
 const WalkerProfileTitle = () => {
   return (
     <View>
@@ -23,6 +24,6 @@ const WalkerProfileTitle = () => {
       </Titletext>
     </View>
   );
-};
+}
 
 export default WalkerProfileTitle;
