@@ -40,11 +40,11 @@ import Background from '../../comps/Background';
 
 
 storiesOf('Comps', module)
- //completed
+ //modified. done
   .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
-  //need to modify code
+  //need to solve 2 import, 
   .add('WalkProfilePage', () => (
     <WalkerProfilePage/>
   ))
@@ -52,119 +52,120 @@ storiesOf('Comps', module)
 //   .add('WalkerProfile', () => (
 //     <WalkerProfile/>
 //   ))
-//error occured, need to modify code
+//modified. done
 .add('UserInfo', () => (
     <UserInfo/>
   ))
   //error break Android. need to modify code
-.add('UserBio', () => (
-    <UserBio/>
-  ))
-  //completed
-.add('Title', () => (
-    <Title/>
-  ))
-  //completed
-.add('Texting', () => (
-    <Texting/>
-  ))
-//empty screen. need to modify code
-.add('Spacer', () => (
-    <Spacer/>
-  ))
-//error occured, need to modify code
-.add('SignIn', () => (
-    <SignIn/>
-  ))
-.add('ShareFeedback', () => (
-    <ShareFeedback/>
-  ))
-// error break Android, need to modify code
-.add('ReviewStars', () => (
-    <ReviewStars/>
-  ))
-.add('RequestPage', () => (
-    <RequestPage/>
-  ))
-.add('Posts', () => (
-    <Posts/>
-  ))
-.add('Post', () => (
-    <Post/>
-  ))
-.add('Popup', () => (
-    <Popup/>
-  ))
-.add('Or', () => (
-    <Or/>
-  ))
-.add('MsgSent', () => (
-    <MsgSent/>
-  ))
-.add('MsgSelection', () => (
-    <MsgSelection/>
-  ))
-.add('MsgRecieved', () => (
-    <MsgRecieved/>
-  ))
-.add('LocationAge', () => (
-    <LocationAge/>
-  ))
-.add('Likes', () => (
-    <Likes/>
-  ))
-.add('LeaveReviewPage', () => (
-    <LeaveReviewPage/>
-  ))
-.add('Input', () => (
-    <Input/>
-  ))
-.add('GoogleButton', () => (
-    <GoogleButton/>
-  ))
-.add('FooterBar', () => (
-    <FooterBar/>
-  ))
-.add('FacebookButton', () => (
-    <FacebookButton/>
-  ))
-.add('EventInfo', () => (
-    <EventInfo/>
-  ))
-.add('Dropdown', () => (
-    <Dropdown/>
-  ))
-.add('DogLikes', () => (
-    <DogLikes/>
-  ))
-.add('DogInfoTitle', () => (
-    <DogInfoTitle/>
-  ))
-.add('DogInfo', () => (
-    <DogInfo/>
-  ))
-.add('DogDislikes', () => (
-    <DogDislikes/>
-  ))
-.add('Description', () => (
-    <Description/>
-  ))
-.add('DashOwner', () => (
-    <DashOwner/>
-  ))
-.add('DashDog', () => (
-    <DashDog/>
-  ))
-.add('ContinuePage', () => (
-    <ContinuePage/>
-  ))
-.add('Continue', () => (
-    <Continue/>
-  ))
-// .add('Birthday', () => (
-//     <Birthday/>
+// .add('UserBio', () => (
+//     <UserBio/>
 //   ))
-.add('Background', () => (
-    <Background/>
-  ))
+//   //completed
+// .add('Title', () => (
+//     <Title/>
+//   ))
+//   //completed
+// .add('Texting', () => (
+//     <Texting/>
+//   ))
+// //empty screen. need to modify code
+// .add('Spacer', () => (
+//     <Spacer/>
+//   ))
+// //error occured, need to modify code
+// .add('SignIn', () => (
+//     <SignIn/>
+//   ))
+// .add('ShareFeedback', () => (
+//     <ShareFeedback/>
+//   ))
+// // error break Android, need to modify code
+// .add('ReviewStars', () => (
+//     <ReviewStars/>
+//   ))
+// .add('RequestPage', () => (
+//     <RequestPage/>
+//   ))
+// .add('Posts', () => (
+//     <Posts/>
+//   ))
+// .add('Post', () => (
+//     <Post/>
+//   ))
+// .add('Popup', () => (
+//     <Popup/>
+//   ))
+// .add('Or', () => (
+//     <Or/>
+//   ))
+// .add('MsgSent', () => (
+//     <MsgSent/>
+//   ))
+// .add('MsgSelection', () => (
+//     <MsgSelection/>
+//   ))
+// .add('MsgRecieved', () => (
+//     <MsgRecieved/>
+//   ))
+// .add('LocationAge', () => (
+//     <LocationAge/>
+//   ))
+// .add('Likes', () => (
+//     <Likes/>
+//   ))
+// .add('LeaveReviewPage', () => (
+//     <LeaveReviewPage/>
+//   ))
+// .add('Input', () => (
+//     <Input/>
+//   ))
+// .add('GoogleButton', () => (
+//     <GoogleButton/>
+//   ))
+//   //ok
+// .add('FooterBar', () => (
+//     <FooterBar/>
+//   ))
+// .add('FacebookButton', () => (
+//     <FacebookButton/>
+//   ))
+// .add('EventInfo', () => (
+//     <EventInfo/>
+//   ))
+// .add('Dropdown', () => (
+//     <Dropdown/>
+//   ))
+// .add('DogLikes', () => (
+//     <DogLikes/>
+//   ))
+// .add('DogInfoTitle', () => (
+//     <DogInfoTitle/>
+//   ))
+// .add('DogInfo', () => (
+//     <DogInfo/>
+//   ))
+// .add('DogDislikes', () => (
+//     <DogDislikes/>
+//   ))
+// .add('Description', () => (
+//     <Description/>
+//   ))
+// .add('DashOwner', () => (
+//     <DashOwner/>
+//   ))
+// .add('DashDog', () => (
+//     <DashDog/>
+//   ))
+// .add('ContinuePage', () => (
+//     <ContinuePage/>
+//   ))
+// .add('Continue', () => (
+//     <Continue/>
+//   ))
+// // .add('Birthday', () => (
+// //     <Birthday/>
+// //   ))
+// .add('Background', () => (
+//     <Background/>
+//   ))
 ;
