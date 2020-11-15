@@ -17,7 +17,7 @@ const WalkerProfileTitle = () => {
   return (
     <View>
       <Titletext>
-        <Text>Walker Profile</Text>
+        <Text style={{fontWeight:"bold"}}>Walker Profile</Text>
       </Titletext>
     </View>
   );

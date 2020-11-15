@@ -59,16 +59,16 @@ const UserInfo = () => {
       <TextCont>
         <LocationCont>
           <LocationTitle>
-            <Text>Location</Text>
+            <Text style={{fontWeight:"bold"}}>Location: </Text>
           </LocationTitle>
           <Locationtext>
-            <Text>Burnaby, BC</Text>
+            <Text >Burnaby, BC</Text>
           </Locationtext>
         </LocationCont>
 
         <AgeCont>
           <AgeTitle>
-            <Text>Age</Text>
+            <Text style={{fontWeight:"bold"}}>Age: </Text>
           </AgeTitle>
           <Agetext>
             <Text>22</Text>
@@ -77,7 +77,7 @@ const UserInfo = () => {
 
         <BioCont>
           <BioTitle>
-            <Text>Bio</Text>
+            <Text style={{fontWeight:"bold"}}>Bio: </Text>
           </BioTitle>
           <Biotext>
             <Text>
