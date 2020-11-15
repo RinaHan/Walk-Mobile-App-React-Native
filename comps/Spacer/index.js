@@ -9,7 +9,7 @@ const MainCont = styled.View`
 const Spacerr = styled.View`
   width:100%;
   height:0px;
-  border: 1px solid #BEC2C4;
+  border: 1px solid #e0e0e0;
 `;
 
 const Spacer = ({}) => {

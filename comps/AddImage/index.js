@@ -5,7 +5,7 @@ import {View} from "react-native";
 const MainCont = styled.View`
   width:271px;
   height:124px;
-  background-color:white;
+  /* background-color:white; */
   /* margin:30px 30px; */
   display:flex;
   flex-direction:row;
@@ -31,16 +31,17 @@ const Img = styled.Image`
   height:100%;
 `;
 
+const union = require("./Union.png");
 const AddImage = ({}) => {
   return (
     <View>
       <MainCont>
-        <AddBox><ImgCont><Img source={require=("./Union.png")} /></ImgCont></AddBox>
-        <AddBox><ImgCont><Img source={require=("./Union.png")} /></ImgCont></AddBox>
-        <AddBox><ImgCont><Img source={require=("./Union.png")} /></ImgCont></AddBox>
-        <AddBox><ImgCont><Img source={require=("./Union.png")} /></ImgCont></AddBox>
-        <AddBox><ImgCont><Img source={require=("./Union.png")} /></ImgCont></AddBox>
-        <AddBox><ImgCont><Img source={require=("./Union.png")} /></ImgCont></AddBox>
+        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
+        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
+        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
+        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
+        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
+        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
       </MainCont>
     </View>
   );
