@@ -44,6 +44,7 @@ const RequestPage = ({}) => {
             <AvatarFormText
             textname={"Fred J."}
             text={"Foresure."}
+            backgroundColor={"#53B7BE"}
             
             />
             {/* <FootBar/> */}
