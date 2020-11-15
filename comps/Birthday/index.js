@@ -121,10 +121,12 @@ const Arrow = styled.Image`
 width:100%;
 height:100%;
 `;
-const Birthday = ({}) => {
+const downarrow = require("./downarrow.png");
+const Birthday = ({onPress}) => {
   const [expandM, setExpandM] = useState(true)
   const [expandD, setExpandD] = useState(true)
   const [expandY, setExpandY] = useState(true)
+  
   return (
     <View>
       <MainCont>
@@ -135,7 +137,7 @@ const Birthday = ({}) => {
             <ImgCont onPress={()=>{
               setExpandM(!expandM);
             }}>
-              <Arrow source={require=("./downarrow.png")} />
+              <Arrow source={downarrow} />
             </ImgCont>
           </ChildMonth>
           <MonthDrop expandM={expandM}>
@@ -158,7 +160,7 @@ const Birthday = ({}) => {
             <ImgCont onPress={()=>{
               setExpandD(!expandD);
             }}>
-              <Arrow source={require=("./downarrow.png")} />
+              <Arrow source={downarrow} />
             </ImgCont>
           </ChildDay>
           <DayDrop expandD={expandD}>
@@ -200,7 +202,7 @@ const Birthday = ({}) => {
             <ImgCont onPress={()=>{
               setExpandY(!expandY);
             }}>
-            <Arrow source={require=("./downarrow.png")} />
+            <Arrow source={downarrow} />
             </ImgCont>
           </ChildYear>
           <YearDrop expandY={expandY}>

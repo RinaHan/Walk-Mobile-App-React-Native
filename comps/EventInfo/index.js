@@ -6,8 +6,8 @@ const EventCont = styled.View`
   /* margin-left: auto;
   margin-right: auto; */
   display: flex;
-  margin-left: 20px;
-  margin-top: 20px;
+  /* margin-left: 20px; */
+  /* margin-top: 20px; */
 `;
 
 const Buttontext = styled.Text`
@@ -34,6 +34,7 @@ const Details = styled.Text`
   align-items: left;
   font-weight: 400;
   padding: 5px;
+  flex-direction: column;
 `;
 
 const AttendCont = styled.View`
@@ -86,7 +87,7 @@ const EventInfo = ({ text }) => {
 
   return (
     <View>
-      {/* <EventCont>
+      <EventCont>
         <Title>
           <Text>Rocky Point Park</Text>
         </Title>
@@ -102,9 +103,9 @@ const EventInfo = ({ text }) => {
           </Paw>
         </AttendCont>
         <Details>
-          <Text>
-            2:00pm <br></br>Dog friendly park<br></br>Weather permitting
-          </Text>
+          <Text>2:00pm</Text>
+          <Text>Dog friendly park</Text>
+          <Text>Weather permitting</Text>
         </Details>
         <Buttonbox
           onPress={() => {
@@ -116,15 +117,14 @@ const EventInfo = ({ text }) => {
             <Text>{highlight ? text : "Going"}</Text>
           </Buttontext>
         </Buttonbox>
-      </EventCont> */}
+      </EventCont>
     </View>
   );
 };
+
+export default EventInfo;
 
 EventInfo.defaultProps = {
   text: "Interested",
   onPress: () => {}
 };
-
-export default EventInfo;
-

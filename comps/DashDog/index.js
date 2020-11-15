@@ -147,11 +147,12 @@ const InfoText = styled.View`
 `;
 
 const dogpicture = require("./Lucky.png");
+const rightarrow = require("./right.png");
 
 const DashDog = ({dogname, age, breed, likes}) => {
   return (
     <View>
-      {/* <MainCont>
+      <MainCont>
         <TitleCont><TitleText>Dog Profile</TitleText></TitleCont>
         <InfoCont>
           <TopInfo>
@@ -161,7 +162,7 @@ const DashDog = ({dogname, age, breed, likes}) => {
               </ProfPicCont>
               <ProfTextCont>
                 <Name><Text>{dogname}</Text></Name>
-                <ViewProfile><PText>View full profile</PText><ArrowCont><Arrow source={require=("./right.png")}/></ArrowCont></ViewProfile>
+                <ViewProfile><PText>View full profile</PText><ArrowCont><Arrow source={rightarrow}/></ArrowCont></ViewProfile>
               </ProfTextCont>
             </TopCont>
           </TopInfo>
@@ -182,7 +183,7 @@ const DashDog = ({dogname, age, breed, likes}) => {
             </BottomCont>
           </BottomInfo>
         </InfoCont>
-      </MainCont> */}
+      </MainCont>
     </View>
   );
 };

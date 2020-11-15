@@ -5,6 +5,8 @@ import { View, Text } from "react-native";
 const Description = styled.Text`
   color: #000;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
 `;
 const Titletext = styled.Text`
   color: #000;
@@ -20,16 +22,15 @@ const TextCont = styled.View`
 const DogDislikes = () => {
   return (
     <View>
-      {/* <TextCont>
+      <TextCont>
         <Titletext>
           <Text>Dislikes</Text>
         </Titletext>
         <Description>
-          <Text>
-            Touching her paws <br></br> The smell of oranges
-          </Text>
+          <Text>Touching her paws</Text>
+          <Text>The smell of oranges</Text>
         </Description>
-      </TextCont> */}
+      </TextCont>
     </View>
   );
 };

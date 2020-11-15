@@ -2,32 +2,32 @@ import React from "react";
 import styled from "styled-components/native";
 import { View, Text } from "react-native";
 
-// const Biodesc = styled.Text`
-//   color: #565555;
-//   font-weight: 400;
-//   margin-left: 5px;
-// `;
+const Biodesc = styled.Text`
+  color: #565555;
+  font-weight: 400;
+  margin-left: 5px;
+`;
 
-// const Biotitle = styled.Text`
-//   font-weight: 500;
-//   color: #000;
-//   padding-bottom: 5px;
-// `;
+const Biotitle = styled.Text`
+  font-weight: 500;
+  color: #000;
+  padding-bottom: 5px;
+`;
 
-// const TextCont = styled.View`
-//   display: flex;
-//   /* margin-left: 20px; */
-//   padding-top: 30px;
-//   width: 309px;
-//   height: 133px;
-//   align-items: left;
-//   text-align: left;
-// `;
+const TextCont = styled.View`
+  display: flex;
+  /* margin-left: 20px; */
+  padding-top: 30px;
+  width: 255px;
+  height: 133px;
+  align-items: left;
+  text-align: left;
+`;
 
 const UserBio = () => {
   return (
     <View>
-      {/* <TextCont>
+      <TextCont>
         <Biotitle>
           <Text>Biography</Text>
         </Biotitle>
@@ -39,7 +39,7 @@ const UserBio = () => {
             stay busy by picking up new hobbies such as reading and tennis.”
           </Text>
         </Biodesc>
-      </TextCont> */}
+      </TextCont>
     </View>
   );
 };
