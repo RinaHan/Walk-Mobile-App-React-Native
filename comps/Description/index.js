@@ -19,9 +19,9 @@ const Input1 = styled.TextInput`
 const Description = ({}) => {
   return (
     <View>
-      {/* <MainCont>
+      <MainCont>
         <Input1 multiline placeholder="Type at least 5 words"/>
-      </MainCont> */}
+      </MainCont>
     </View>
   );
 };

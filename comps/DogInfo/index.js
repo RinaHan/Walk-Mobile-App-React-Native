@@ -5,6 +5,8 @@ import { View, Text } from "react-native";
 const Description = styled.Text`
   color: #000;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
 `;
 const Titletext = styled.Text`
   color: #000;
@@ -13,23 +15,21 @@ const Titletext = styled.Text`
 
 const TextCont = styled.View`
   display: flex;
-  align-items: column;
   text-align: center;
 `;
 
 const DogInfo = () => {
   return (
     <View>
-      {/* <TextCont>
+      <TextCont>
         <Titletext>
           <Text>Milly</Text>
         </Titletext>
         <Description>
-          <Text>
-            Border Collie <br></br> Age 6
-          </Text>
+          <Text>Border Collie</Text>
+          <Text>Age 6</Text>
         </Description>
-      </TextCont> */}
+      </TextCont>
     </View>
   );
 };

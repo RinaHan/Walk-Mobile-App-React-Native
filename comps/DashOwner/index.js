@@ -130,7 +130,7 @@ const ownerpicture = require("./ethan.jpeg");
 const DashOwner = ({ownername, ownerphone, owneremail, owneradress}) => {
   return (
     <View>
-      {/* <MainCont>
+      <MainCont>
         <TitleCont><TitleText>Owner Profile</TitleText></TitleCont>
         <InfoCont>
           <TopInfo>
@@ -163,7 +163,7 @@ const DashOwner = ({ownername, ownerphone, owneremail, owneradress}) => {
             </BottomCont>
           </BottomInfo>
         </InfoCont>
-      </MainCont> */}
+      </MainCont>
     </View>
   );
 };
