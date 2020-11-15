@@ -13,9 +13,9 @@ const Ortext = styled.Text`
 const Or = () => {
   return (
     <View>
-      {/* <Ortext>
+      <Ortext>
         <Text>or</Text>
-      </Ortext> */}
+      </Ortext>
     </View>
   );
 };
