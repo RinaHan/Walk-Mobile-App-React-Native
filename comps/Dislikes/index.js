@@ -32,10 +32,10 @@ const Input1 = styled.TextInput`
   /* background-color:#FAD; */
   height:100%;
 `
-const Likes = ({ maintext}) => {
-  const [likeone, setLikeOne] = useState("");
-  const [liketwo, setLikeTwo] = useState("");
-  const [likethree, setLikeThree] = useState("");
+const Dislikes = ({ maintext}) => {
+  const [dislikeone, setDislikeOne] = useState("");
+  const [disliketwo, setDislikeTwo] = useState("");
+  const [dislikethree, setDislikeThree] = useState("");
   return (
     <View>
       <MainCont>
@@ -46,19 +46,19 @@ const Likes = ({ maintext}) => {
           <OpOne>
           <Input1 placeholder="Type something..." onChangeText={(t)=>{
               alert(t)
-              setLikeOne(likeone);
+              setDislikeOne(dislikeone);
             }}/>
           </OpOne>
           <OpOne>
           <Input1 placeholder="Type something..." onChangeText={(t)=>{
               alert(t)
-              setLikeTwo(liketwo);
+              setDislikeTwo(disliketwo);
             }}/>
           </OpOne>
           <OpOne>
             <Input1 placeholder="Type something..." onChangeText={(t)=>{
               alert(t)
-              setLikeThree(likethree);
+              setDislikeThree(dislikethree);
             }}/>
           </OpOne>
         </RightSide>
@@ -67,7 +67,7 @@ const Likes = ({ maintext}) => {
   );
 };
 
-Likes.defaultProps = {
+Dislikes.defaultProps = {
   maintext: "default",
 };
-export default Likes;
+export default Dislikes;

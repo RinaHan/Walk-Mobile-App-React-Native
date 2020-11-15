@@ -66,7 +66,7 @@ const TopBar = ({title, text1, text2, imageLeft1, imageLeft2, imageRight1}) => {
         source={imageRight1}/>
         </View>
       </View>
-  );z
+  );
 };
 
 TopBar.defaultProps = {
