@@ -14,9 +14,9 @@ const Titletext = styled.Text`
 const DogInfoTitle = () => {
   return (
     <View>
-      {/* <Titletext>
+      <Titletext>
         <Text>Dog Information</Text>
-      </Titletext> */}
+      </Titletext>
     </View>
   );
 };

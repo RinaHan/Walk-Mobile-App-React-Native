@@ -53,7 +53,7 @@ const MsgSelection = ({}) => {
   const [general, setGeneral] = useState(false)
   return (
     <View>
-      {/* <MainCont onClick={()=>{
+      <MainCont onClick={()=>{
         setGeneral(!general);
       }}>
        <Left>
@@ -64,7 +64,7 @@ const MsgSelection = ({}) => {
        <TextRight  general={general}>Walk Requests</TextRight>
          <RightBar general={general}></RightBar>
        </Right>
-      </MainCont> */}
+      </MainCont>
     </View>
   );
 };
