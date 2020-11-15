@@ -60,7 +60,7 @@ const FacebookButton = () => {
 
   return (
     <View>
-      {/* <Button>
+      <Button>
         <ButtonBox
           onPress={() => {
             setHighlight(!highlight);
@@ -76,7 +76,7 @@ const FacebookButton = () => {
             </Buttontext>
           </FBlogo>
         </ButtonBox>
-      </Button> */}
+      </Button>
     </View>
   );
 };
