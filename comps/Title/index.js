@@ -9,6 +9,7 @@ const TitleImg = styled.Image`
   height: 70px;
   display: flex;
   margin-top: 20px;
+  display:flex; 
 `;
 
 const title = require("./textlogo.png");
