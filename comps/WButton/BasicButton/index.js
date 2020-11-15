@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, onPress} from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -22,12 +22,14 @@ const BasicButton = ({text, size, backgroundColor, height, width}) => {
   const fontstyle = [styles.text, fontSize];
   
   return (
+      <TouchableOpacity onPress={onPress}>
       <View 
       style={sizestyles} 
       backgroundColor={backgroundColor} 
       >
-        <Text style={fontstyle}>{text}</Text>
+      <Text style={fontstyle}>{text}</Text>
       </View>
+      </TouchableOpacity>
   );
 };
 

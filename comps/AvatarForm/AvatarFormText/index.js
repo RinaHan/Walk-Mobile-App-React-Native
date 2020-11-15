@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, onPress} from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const AvatarFormText = ({textname, text, backgroundColor}) => {
+const AvatarFormText = ({textname, text, backgroundColor, }) => {
   
   return (
       <View style={styles.container}>
@@ -45,7 +45,9 @@ const AvatarFormText = ({textname, text, backgroundColor}) => {
         <Text style={styles.text1}>{textname}</Text>
         <Text style={styles.text2}>{text}</Text>
         </View>
+        <TouchableOpacity onPress={onPress}>
         <View style={styles.dotcont} backgroundColor={backgroundColor}></View>
+        </TouchableOpacity>
       </View>
   );
 };
