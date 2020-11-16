@@ -6,6 +6,7 @@ import React from 'react';
 import WalkerProfileTitle from '../../comps/WalkerProfileTitle';
 import WalkerProfilePage from '../../comps/WalkerProfilePage';
 import UserInfo from '../../comps/UserInfo';
+import FooterBar from '../../comps/FooterBar';
 import UserBio from '../../comps/UserBio';
 import Title from '../../comps/Title';
 import Texting from '../../comps/Texting';
@@ -25,7 +26,7 @@ import Likes from '../../comps/Likes';
 import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
-import FooterBar from '../../comps/FooterBar';
+
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
 import DogInfoTitle from '../../comps/DogInfoTitle';
@@ -44,38 +45,34 @@ storiesOf('Comps', module)
   .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
-  //need to solve 2 import, 
+  //modified. done
+  .add('UserInfo', () => (
+    <UserInfo/>
+  ))
+  //only checked. need to solve 2 import, ----------->
   .add('WalkProfilePage', () => (
     <WalkerProfilePage/>
   ))
-// impossible, it break Android
-//   .add('WalkerProfile', () => (
-//     <WalkerProfile/>
-//   ))
-//modified. done
-.add('UserInfo', () => (
-    <UserInfo/>
+  //only checked. many components or tags are invisible
+  .add('Texting', () => (
+      <Texting/>
+    ))
+//okay
+.add('FooterBar', () => (
+    <FooterBar/>
   ))
-  //error break Android. need to modify code
-// .add('UserBio', () => (
-//     <UserBio/>
-//   ))
-//   //completed
-// .add('Title', () => (
-//     <Title/>
-//   ))
-//   //completed
-// .add('Texting', () => (
-//     <Texting/>
-//   ))
-// //empty screen. need to modify code
-// .add('Spacer', () => (
-//     <Spacer/>
-//   ))
-// //error occured, need to modify code
-// .add('SignIn', () => (
-//     <SignIn/>
-//   ))
+  //okay
+  .add('Title', () => (
+    <Title/>
+  ))
+//okay
+.add('Spacer', () => (
+    <Spacer/>
+  ))
+//check and a little modified. need to solve 2 import, ----------->
+.add('SignIn', () => (
+    <SignIn/>
+  ))
 // .add('ShareFeedback', () => (
 //     <ShareFeedback/>
 //   ))
@@ -122,10 +119,7 @@ storiesOf('Comps', module)
 // .add('GoogleButton', () => (
 //     <GoogleButton/>
 //   ))
-//   //ok
-// .add('FooterBar', () => (
-//     <FooterBar/>
-//   ))
+
 // .add('FacebookButton', () => (
 //     <FacebookButton/>
 //   ))
@@ -168,4 +162,14 @@ storiesOf('Comps', module)
 // .add('Background', () => (
 //     <Background/>
 //   ))
+// impossible, it break Android
+//   .add('WalkerProfile', () => (
+//     <WalkerProfile/>
+//   ))
+
+  //error break Android. need to modify code
+// .add('UserBio', () => (
+//     <UserBio/>
+//   ))
+
 ;

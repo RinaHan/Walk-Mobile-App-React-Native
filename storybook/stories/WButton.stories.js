@@ -33,4 +33,4 @@ storiesOf('Walk Buttons', module)
   .add('GoingButton', () => (
     <GoingButton />
   ))
-  ;
+  ; 
