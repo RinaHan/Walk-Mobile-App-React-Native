@@ -14,7 +14,7 @@ import Spacer from '../../comps/Spacer';
 import SignIn from '../../comps/SignIn';
 import FacebookButton from '../../comps/FacebookButton';
 import ShareFeedback from '../../comps/ShareFeedback';
-import ReviewStars from '../../comps/ShareFeedback';
+import ReviewStars from '../../comps/ReviewStars';
 import RequestPage from '../../comps/RequestPage';
 import Posts from '../../comps/Posts';
 import Post from '../../comps/Post';
@@ -27,6 +27,7 @@ import Likes from '../../comps/Likes';
 import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
+import ActivatePage from '../../comps/ActivatePage';
 
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
@@ -35,7 +36,6 @@ import DogInfo from '../../comps/DogInfo';
 import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
 import ContinueAs from '../../comps/ContinueAs';
-
 import ContinuePage from '../../comps/ContinueAsPage';
 // import Birthday from '../../comps/Birthday';
 import Background from '../../comps/Background';
@@ -78,9 +78,9 @@ storiesOf('Comps', module)
 //     <ShareFeedback/>
 //   ))
 // // error break Android, need to modify code
-// .add('ReviewStars', () => (
-//     <ReviewStars/>
-//   ))
+.add('ReviewStars', () => (
+    <ReviewStars/>
+  ))
 // .add('RequestPage', () => (
 //     <RequestPage/>
 //   ))
@@ -99,9 +99,9 @@ storiesOf('Comps', module)
 // .add('MsgSent', () => (
 //     <MsgSent/>
 //   ))
-// .add('MsgSelection', () => (
-//     <MsgSelection/>
-//   ))
+.add('MsgSelection', () => (
+    <MsgSelection/>
+  ))
 // .add('MsgRecieved', () => (
 //     <MsgRecieved/>
 //   ))
@@ -136,9 +136,9 @@ storiesOf('Comps', module)
 // .add('DogInfoTitle', () => (
 //     <DogInfoTitle/>
 //   ))
-// .add('DogInfo', () => (
-//     <DogInfo/>
-//   ))
+.add('DogInfo', () => (
+    <DogInfo/>
+  ))
 // .add('DogDislikes', () => (
 //     <DogDislikes/>
 //   ))
@@ -156,6 +156,12 @@ storiesOf('Comps', module)
   ))
 .add('ContinueAs', () => (
     <ContinueAs/>
+  ))
+.add('RequestPage', () => (
+    <RequestPage/>
+  ))
+.add('ActivatePage', () => (
+    <ActivatePage/>
   ))
 // // .add('Birthday', () => (
 // //     <Birthday/>
@@ -186,5 +192,21 @@ const styles = StyleSheet.create({
     height:"100%"
   },
 });
+image1={require('../../comps/Avatar/face3.jpg')}
+const activehome = require("./activehome.png");
+
+
+AvatarViewProfile.defaultProps = {
+    textname: null,
+    text: null,
+    backgroundColor: null,
+    // height: null
+};
+
+
+<ScrollView>
+</ScrollView>
+
+
 */
 ;

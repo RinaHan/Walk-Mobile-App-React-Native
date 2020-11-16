@@ -3,13 +3,13 @@ import styled from "styled-components/native";
 import { View, Text } from "react-native";
 
 const MainCont = styled.View`
-  width:375px;
-  height:30px;
+  width:100%;
+  height:60px;
   /* background-color:#BDB; */
- 
+  align-items:center;
   display:flex;
   flex-direction:row;
-  cursor: pointer;
+  /* cursor: pointer; */
 `;
 
 const Left = styled.View`
