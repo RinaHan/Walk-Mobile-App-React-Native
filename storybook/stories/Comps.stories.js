@@ -12,6 +12,7 @@ import Title from '../../comps/Title';
 import Texting from '../../comps/Texting';
 import Spacer from '../../comps/Spacer';
 import SignIn from '../../comps/SignIn';
+import FacebookButton from '../../comps/FacebookButton';
 import ShareFeedback from '../../comps/ShareFeedback';
 import ReviewStars from '../../comps/ShareFeedback';
 import RequestPage from '../../comps/RequestPage';
@@ -61,7 +62,7 @@ storiesOf('Comps', module)
 .add('FooterBar', () => (
     <FooterBar/>
   ))
-  //okay
+//okay
   .add('Title', () => (
     <Title/>
   ))
@@ -69,7 +70,7 @@ storiesOf('Comps', module)
 .add('Spacer', () => (
     <Spacer/>
   ))
-//check and a little modified. need to solve 2 import, ----------->
+//modified. still need to solve 2 import, ----------->
 .add('SignIn', () => (
     <SignIn/>
   ))
@@ -120,9 +121,9 @@ storiesOf('Comps', module)
 //     <GoogleButton/>
 //   ))
 
-// .add('FacebookButton', () => (
-//     <FacebookButton/>
-//   ))
+.add('FacebookButton', () => (
+    <FacebookButton/>
+  ))
 // .add('EventInfo', () => (
 //     <EventInfo/>
 //   ))
