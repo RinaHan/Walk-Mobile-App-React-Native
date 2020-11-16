@@ -157,6 +157,9 @@ storiesOf('Comps', module)
 .add('ContinueAs', () => (
     <ContinueAs/>
   ))
+.add('RequestPage', () => (
+    <RequestPage/>
+  ))
 // // .add('Birthday', () => (
 // //     <Birthday/>
 // //   ))

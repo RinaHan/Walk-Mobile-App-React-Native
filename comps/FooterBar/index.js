@@ -12,6 +12,18 @@ const Eventicon = styled.TouchableOpacity``;
 
 const Homeicon = styled.TouchableOpacity``;
 
+const App = styled.View`
+  display: flex;
+  width:100%;
+  position:absolute;
+  bottom: 0;
+`;
+
+const Footcontainer = styled.View`
+  background: #fff;
+  padding: 15px;
+`;
+
 const Icons = styled.View`
   display: flex;
   align-items: center;
@@ -19,13 +31,6 @@ const Icons = styled.View`
   flex-direction: row;
   padding-left: 5px;
   padding-right: 5px;
-`;
-
-const Footcontainer = styled.View`
-  background: #fff;
-  padding: 15px;
-  width: 375px;
-  bottom: 0;
 `;
 
 const UserImg = styled.Image`
@@ -73,7 +78,7 @@ const FooterBar = ({ onPress }) => {
   const [active, setActive] = useState(4);
 
   return (
-    <View>
+    <App>
       <Footcontainer>
         <Icons>
           <Homeicon
@@ -113,7 +118,7 @@ const FooterBar = ({ onPress }) => {
           </Usericon>
         </Icons>
       </Footcontainer>
-    </View>
+    </App>
   );
 };
 
