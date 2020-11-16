@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 import AvatarEdit from '../../Avatar/AvatarEdit';
+import DogDislikes from "../../DogDislikes";
 
 const styles = StyleSheet.create({
   container: {
@@ -9,7 +10,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
   },
   textcont1: {
-      backgroundColor: "lightgray",
+      backgroundColor: "red",
       width:100,
       height:100
   },
@@ -22,12 +23,14 @@ const styles = StyleSheet.create({
   textcont2: {
       backgroundColor: "lightgray",
       width:100,
-      height:100
+      height:100,
+      alignItems:"center",
   },
   textcont3: {
       backgroundColor: "lightgray",
       width:100,
-      height:100
+      height:100,
+      alignItems:"center",
   }
 
 });
@@ -41,8 +44,12 @@ const AvatarDogProfile = ({}) => {
         />
         <View style={styles.textcont1}></View>
         <View style={styles.textcont23}>
-            <View style={styles.textcont2}></View>
-            <View style={styles.textcont3}></View>
+            <View style={styles.textcont2}>
+              <DogDislikes/>
+            </View>
+            <View style={styles.textcont3}>
+            <DogDislikes/>
+            </View>
         </View>
       </View>
   );

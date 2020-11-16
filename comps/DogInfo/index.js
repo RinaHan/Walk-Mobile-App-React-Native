@@ -6,7 +6,7 @@ import { View, Text } from "react-native";
 const TextCont = styled.View`
   display: flex;
   align-items:center;
-  justify-content:center;
+  /* justify-content:center; */
   width:100;
   height:70;
 `;
