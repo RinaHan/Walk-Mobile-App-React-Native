@@ -34,7 +34,7 @@ import DogInfoTitle from '../../comps/DogInfoTitle';
 import DogInfo from '../../comps/DogInfo';
 import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
-import Continue from '../../comps/ContinueAs';
+import ContinueAs from '../../comps/ContinueAs';
 
 import ContinuePage from '../../comps/ContinueAsPage';
 // import Birthday from '../../comps/Birthday';
@@ -151,12 +151,12 @@ storiesOf('Comps', module)
 // .add('DashDog', () => (
 //     <DashDog/>
 //   ))
-// .add('ContinuePage', () => (
-//     <ContinuePage/>
-//   ))
-// .add('Continue', () => (
-//     <Continue/>
-//   ))
+.add('ContinuePage', () => (
+    <ContinuePage/>
+  ))
+.add('ContinueAs', () => (
+    <ContinueAs/>
+  ))
 // // .add('Birthday', () => (
 // //     <Birthday/>
 // //   ))
@@ -173,4 +173,18 @@ storiesOf('Comps', module)
 //     <UserBio/>
 //   ))
 
+
+/* 
+justifyContent:"center"
+style={{width:300, height:100 }} 
+
+const styles = StyleSheet.create({ 
+  app: {
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"red",
+    height:"100%"
+  },
+});
+*/
 ;

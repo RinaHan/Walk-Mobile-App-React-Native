@@ -1,33 +1,44 @@
 import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
 import Title from "../Title";
-// import GoogleButton from "./Comps/GoogleButton";
+import GoogleButton from "../GoogleButton";
 // import Or from "./Comps/Or";
-// import FacebookButton from "./Comps/FacebookButton";
+import FacebookButton from "../FacebookButton";
 
 const SignIn = () => {
   return (
-    <View>
+    <View style={styles.background}>
       <View style={styles.signinCont}>
         <Title />
         <View style={styles.buttonCont}>
-          {/* <GoogleButton />
-          <Or />
-          <FacebookButton /> */}
+          <GoogleButton style={styles.GoogleButton} />
+          <Text>or</Text>
+          <FacebookButton />
         </View>
       </View>
-    </View>
+      </View>
   );
 };
 
 const styles = StyleSheet.create({
+  background: {
+    height:"100%",
+    backgroundColor:"#F5FEFE"
+  },
   signinCont: {
     flexDirection: "column",
     alignItems:"center",
-    justifyContent:"center"
+    justifyContent:"center",
+    top:130,
   },
   buttonCont: {
-    top: 50
+    justifyContent:"space-between",
+    alignItems:"center",
+    height:200,
+    top: 130
+  },
+  GoogleButton: {
+    marginBottom: 100
   }
 });
 
