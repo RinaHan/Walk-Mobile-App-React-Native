@@ -27,6 +27,7 @@ import Likes from '../../comps/Likes';
 import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
+import ActivatePage from '../../comps/ActivatePage';
 
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
@@ -35,7 +36,6 @@ import DogInfo from '../../comps/DogInfo';
 import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
 import ContinueAs from '../../comps/ContinueAs';
-
 import ContinuePage from '../../comps/ContinueAsPage';
 // import Birthday from '../../comps/Birthday';
 import Background from '../../comps/Background';
@@ -99,9 +99,9 @@ storiesOf('Comps', module)
 // .add('MsgSent', () => (
 //     <MsgSent/>
 //   ))
-// .add('MsgSelection', () => (
-//     <MsgSelection/>
-//   ))
+.add('MsgSelection', () => (
+    <MsgSelection/>
+  ))
 // .add('MsgRecieved', () => (
 //     <MsgRecieved/>
 //   ))
@@ -159,6 +159,9 @@ storiesOf('Comps', module)
   ))
 .add('RequestPage', () => (
     <RequestPage/>
+  ))
+.add('ActivatePage', () => (
+    <ActivatePage/>
   ))
 // // .add('Birthday', () => (
 // //     <Birthday/>

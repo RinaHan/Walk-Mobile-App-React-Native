@@ -5,24 +5,19 @@ import AvatarFormText from '../AvatarForm/AvatarFormText';
 import BasicAvatar from "../Avatar/BasicAvatar";
 import Spacer from "../Spacer";
 import FooterBar from "../FooterBar";
+import MsgSelection from "../MsgSelection";
 
 const styles = StyleSheet.create({
   container: {
-    // flexDirection: "row",
-    // alignItems:"center",
-    // justifyContent:"space-between",
     height:"100%",
-    // backgroundColor:"pink"
   },
   spacer: {
     height:10
   },
   avatarcont: {
-      // marginTop:30,
       marginLeft:20,
       flexDirection:"row",
       height:130,
-      // backgroundColor:"red"
   }
 });
 
@@ -31,7 +26,9 @@ const RequestPage = ({}) => {
   return (
     <View style={styles.container}>
       <TopBar title="Inbox" />
+      <MsgSelection/>
       <ScrollView>
+
         <View>
           <View style={styles.avatarcont}>
             <BasicAvatar
