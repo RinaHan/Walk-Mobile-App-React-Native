@@ -14,7 +14,7 @@ import Spacer from '../../comps/Spacer';
 import SignIn from '../../comps/SignIn';
 import FacebookButton from '../../comps/FacebookButton';
 import ShareFeedback from '../../comps/ShareFeedback';
-import ReviewStars from '../../comps/ShareFeedback';
+import ReviewStars from '../../comps/ReviewStars';
 import RequestPage from '../../comps/RequestPage';
 import Posts from '../../comps/Posts';
 import Post from '../../comps/Post';
@@ -78,9 +78,9 @@ storiesOf('Comps', module)
 //     <ShareFeedback/>
 //   ))
 // // error break Android, need to modify code
-// .add('ReviewStars', () => (
-//     <ReviewStars/>
-//   ))
+.add('ReviewStars', () => (
+    <ReviewStars/>
+  ))
 // .add('RequestPage', () => (
 //     <RequestPage/>
 //   ))
@@ -192,6 +192,17 @@ const styles = StyleSheet.create({
     height:"100%"
   },
 });
+image1={require('../../comps/Avatar/face3.jpg')}
+const activehome = require("./activehome.png");
+
+
+AvatarViewProfile.defaultProps = {
+    textname: null,
+    text: null,
+    backgroundColor: null,
+    // height: null
+};
+
 
 <ScrollView>
 </ScrollView>

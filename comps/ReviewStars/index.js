@@ -29,7 +29,7 @@ const Starscontainer = styled.View`
 const StarImg = styled.Image`
   width: 20px;
   height: 20px;
-  object-fit: contain;
+  /* object-fit: contain; */
 `;
 
 const unfilled = require("./unfilled.png");
