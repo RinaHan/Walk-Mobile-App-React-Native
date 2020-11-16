@@ -136,9 +136,9 @@ storiesOf('Comps', module)
 // .add('DogInfoTitle', () => (
 //     <DogInfoTitle/>
 //   ))
-// .add('DogInfo', () => (
-//     <DogInfo/>
-//   ))
+.add('DogInfo', () => (
+    <DogInfo/>
+  ))
 // .add('DogDislikes', () => (
 //     <DogDislikes/>
 //   ))
