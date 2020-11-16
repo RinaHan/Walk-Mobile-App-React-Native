@@ -26,6 +26,16 @@ import { View, Text, TouchableOpacity } from "react-native";
 //   }
 // `;
 
+// const Buttontext = styled.Text`
+//   color: #000;
+//   margin-left:65;
+//   align-items: center;
+//   justify-content: center;
+//   display: flex; 
+//   width: 300px; 
+//   margin-right: 25px;
+// `;
+
 const ButtonBox = styled.TouchableOpacity`
   display: flex;
   flex-direction:row;
@@ -38,16 +48,6 @@ const ButtonBox = styled.TouchableOpacity`
   /* box-sizing: border-box;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25); */
 `;
-
-// const Buttontext = styled.Text`
-//   color: #000;
-//   margin-left:65;
-//   align-items: center;
-//   justify-content: center;
-//   display: flex; 
-//   width: 300px; 
-//   margin-right: 25px;
-// `;
 
 const FacebookImg = styled.Image`
   margin-left:20;

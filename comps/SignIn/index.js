@@ -23,7 +23,7 @@ const SignIn = () => {
 const styles = StyleSheet.create({
   background: {
     height:"100%",
-    backgroundColor:"#EFFAFB"
+    backgroundColor:"#F5FEFE"
   },
   signinCont: {
     flexDirection: "column",
