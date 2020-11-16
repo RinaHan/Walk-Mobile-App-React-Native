@@ -117,9 +117,9 @@ storiesOf('Comps', module)
 // .add('Input', () => (
 //     <Input/>
 //   ))
-// .add('GoogleButton', () => (
-//     <GoogleButton/>
-//   ))
+.add('GoogleButton', () => (
+    <GoogleButton/>
+  ))
 
 .add('FacebookButton', () => (
     <FacebookButton/>

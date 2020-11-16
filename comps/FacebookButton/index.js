@@ -41,7 +41,7 @@ const ButtonBox = styled.TouchableOpacity`
 
 const Buttontext = styled.Text`
   color: #000;
-  margin-left:45;
+  /* margin-left:65; */
   /* align-items: center;
   justify-content: center; */
   /* display: flex; */
@@ -51,6 +51,7 @@ const Buttontext = styled.Text`
 
 const FacebookImg = styled.Image`
   margin-left:20;
+  margin-right:40;
   /* width: 30px;
   height: 30px; */
   /* object-fit: contain; */
@@ -74,9 +75,9 @@ const FacebookButton = () => {
             {/* <ImgCont> */}
               <FacebookImg source={facebook} />
             {/* </ImgCont> */}
-            <Buttontext>
+            {/* <Buttontext> */}
               <Text>Sign in With Facebook</Text>
-            </Buttontext>
+            {/* </Buttontext> */}
           {/* </FBlogo> */}
         </ButtonBox>
       {/* </Button> */}
