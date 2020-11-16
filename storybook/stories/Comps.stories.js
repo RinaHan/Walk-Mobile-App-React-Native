@@ -33,12 +33,15 @@ import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
 import DogInfoTitle from '../../comps/DogInfoTitle';
 import DogInfo from '../../comps/DogInfo';
+import DogDislikes from '../../comps/DogDislikes';
 import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
 import ContinueAs from '../../comps/ContinueAs';
 import ContinuePage from '../../comps/ContinueAsPage';
 // import Birthday from '../../comps/Birthday';
 import Background from '../../comps/Background';
+import WriteReview from '../../comps/WriteReview';
+import YourReview from '../../comps/YourReview';
 
 
 storiesOf('Comps', module)
@@ -102,6 +105,12 @@ storiesOf('Comps', module)
 .add('MsgSelection', () => (
     <MsgSelection/>
   ))
+.add('WriteReview', () => (
+    <WriteReview/>
+  ))
+.add('YourReview', () => (
+    <YourReview/>
+  ))
 // .add('MsgRecieved', () => (
 //     <MsgRecieved/>
 //   ))
@@ -139,9 +148,9 @@ storiesOf('Comps', module)
 .add('DogInfo', () => (
     <DogInfo/>
   ))
-// .add('DogDislikes', () => (
-//     <DogDislikes/>
-//   ))
+.add('DogDislikes', () => (
+    <DogDislikes/>
+  ))
 // .add('Description', () => (
 //     <Description/>
 //   ))
