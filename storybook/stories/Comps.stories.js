@@ -11,7 +11,6 @@ import UserBio from '../../comps/UserBio';
 import Title from '../../comps/Title';
 import Texting from '../../comps/Texting';
 import Spacer from '../../comps/Spacer';
-import SignIn from '../../comps/SignIn';
 import FacebookButton from '../../comps/FacebookButton';
 import ShareFeedback from '../../comps/ShareFeedback';
 import ReviewStars from '../../comps/ReviewStars';
@@ -24,25 +23,28 @@ import MsgSent from '../../comps/MsgSent';
 import MsgSelection from '../../comps/MsgSelection';
 import LocationAge from '../../comps/LocationAge';
 import Likes from '../../comps/Likes';
-import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
-import ActivatePage from '../../comps/ActivatePage';
 
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
 import DogInfoTitle from '../../comps/DogInfoTitle';
 import DogInfo from '../../comps/DogInfo';
 import DogDislikes from '../../comps/DogDislikes';
+import DogLikes from '../../comps/DogLikes';
 import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
-import ContinueAs from '../../comps/ContinueAs';
-import ContinuePage from '../../comps/ContinueAsPage';
 // import Birthday from '../../comps/Birthday';
 import Background from '../../comps/Background';
 import WriteReview from '../../comps/WriteReview';
 import YourReview from '../../comps/YourReview';
 
+import ContinueAs from '../../comps/ContinueAs';
+import SignIn from '../../comps/SignIn';
+import LeaveReviewPage from '../../comps/LeaveReviewPage';
+import ActivatePage from '../../comps/ActivatePage';
+import ContinuePage from '../../comps/ContinueAsPage';
+import DogProfilePage from '../../comps/DogProfilePage';
 
 storiesOf('Comps', module)
  //modified. done
@@ -54,42 +56,37 @@ storiesOf('Comps', module)
     <UserInfo/>
   ))
   //only checked. need to solve 2 import, ----------->
-  .add('WalkProfilePage', () => (
-    <WalkerProfilePage/>
-  ))
   //only checked. many components or tags are invisible
   .add('Texting', () => (
-      <Texting/>
+    <Texting/>
     ))
-//okay
-.add('FooterBar', () => (
-    <FooterBar/>
-  ))
-//okay
-  .add('Title', () => (
-    <Title/>
-  ))
-//okay
-.add('Spacer', () => (
-    <Spacer/>
-  ))
-//modified. still need to solve 2 import, ----------->
-.add('SignIn', () => (
-    <SignIn/>
-  ))
-// .add('ShareFeedback', () => (
-//     <ShareFeedback/>
-//   ))
-// // error break Android, need to modify code
-.add('ReviewStars', () => (
-    <ReviewStars/>
-  ))
-// .add('RequestPage', () => (
-//     <RequestPage/>
-//   ))
-// .add('Posts', () => (
-//     <Posts/>
-//   ))
+    //okay
+    .add('FooterBar', () => (
+      <FooterBar/>
+      ))
+      //okay
+      .add('Title', () => (
+        <Title/>
+        ))
+        //okay
+        .add('Spacer', () => (
+          <Spacer/>
+          ))
+          //modified. still need to solve 2 import, ----------->
+          // .add('ShareFeedback', () => (
+            //     <ShareFeedback/>
+            //   ))
+            // // error break Android, need to modify code
+            .add('ReviewStars', () => (
+              <ReviewStars/>
+              ))
+              // .add('RequestPage', () => (
+                //     <RequestPage/>
+                //   ))
+                // .add('Posts', () => (
+                  //     <Posts/>
+                  //   ))
+                          
 // .add('Post', () => (
 //     <Post/>
 //   ))
@@ -139,17 +136,17 @@ storiesOf('Comps', module)
 // .add('Dropdown', () => (
 //     <Dropdown/>
 //   ))
-// .add('DogLikes', () => (
-//     <DogLikes/>
-//   ))
+.add('DogLikes', () => (
+    <DogLikes/>
+  ))
+  .add('DogDislikes', () => (
+      <DogDislikes/>
+    ))
 // .add('DogInfoTitle', () => (
 //     <DogInfoTitle/>
 //   ))
 .add('DogInfo', () => (
     <DogInfo/>
-  ))
-.add('DogDislikes', () => (
-    <DogDislikes/>
   ))
 // .add('Description', () => (
 //     <Description/>
@@ -160,8 +157,17 @@ storiesOf('Comps', module)
 // .add('DashDog', () => (
 //     <DashDog/>
 //   ))
+.add('DogProfilePage', () => (
+    <DogProfilePage/>
+  ))
 .add('ContinuePage', () => (
     <ContinuePage/>
+  ))
+  .add('WalkProfilePage', () => (
+    <WalkerProfilePage/>
+  ))
+.add('SignIn', () => (
+    <SignIn/>
   ))
 .add('ContinueAs', () => (
     <ContinueAs/>
