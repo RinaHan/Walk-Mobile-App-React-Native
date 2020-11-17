@@ -3,12 +3,12 @@ import styled from "styled-components/native";
 import { View, Text, TouchableOpacity } from "react-native";
 import BasicButton from '../WButton/BasicButton';
 
-const Buttontext = styled.Text`
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-`;
+// const Buttontext = styled.Text`
+//   color: #fff;
+//   align-items: center;
+//   justify-content: center;
+//   display: flex;
+// `;
 
 // const Buttoncontainer = styled.TouchableOpacity`
 //   background: ${(props) => (props.highlight ? "#565555" : "#C4C4C4")};
@@ -126,4 +126,4 @@ WriteReview.defaultProps = {
   onPress: () => {}
 };
 
-export default WriteReview;
+export default WriteReview; 

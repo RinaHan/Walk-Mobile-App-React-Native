@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 // import WriteReview from "./Comps/WriteReview";
-// import UserInfo from "./Comps/UserInfo";
+import UserInfo from "../UserInfo";
 import FooterBar from "../FooterBar";
 
 const styles = StyleSheet.create({
@@ -22,9 +22,9 @@ const WalkerProfilePage = () => {
   return (
     <View>
       <View style={styles.walkprofileCont}>
-        {/* <UserInfo /> */}
+        <UserInfo />
         {/* <View style={styles.writereviewCont}>
-          <WriteReview />
+          // <WriteReview />
         </View> */}
         <View style={styles.footerCont}>
           <FooterBar />

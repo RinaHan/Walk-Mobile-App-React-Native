@@ -161,6 +161,9 @@ storiesOf('Comps', module)
   .add('AvatarDogProfile', () => (
       <AvatarDogProfile/>
     ))
+  .add('WriteReview', () => (
+      <WriteReview/>
+    ))
 // .add('Description', () => (
 //     <Description/>
 //   ))
