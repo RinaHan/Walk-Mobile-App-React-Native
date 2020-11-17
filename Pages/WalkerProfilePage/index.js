@@ -8,6 +8,8 @@ import FooterBar from "./Comps/FooterBar";
 import AvatarWithName from "./Comps/./Avatar/AvatarWithName";
 import TopBar from "./Comps/TopBar";
 
+import global from '../../Pages/globaj';
+
 const WriteReviewCont = styled.View`
   margin-top: 150px;
   margin-bottom: 30px;
