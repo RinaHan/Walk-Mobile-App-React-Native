@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 import { View, Text } from "react-native";
+import WalkerProfile from "../WalkerProfile";
 
 const Titletext = styled.Text`
   /* margin-top: 20px; */
@@ -13,14 +14,20 @@ const Titletext = styled.Text`
   font-weight: 400;
 `;
 
-const WalkerProfileTitle = () => {
+const WalkerProfileTitle = ({ text }) => {
   return (
     <View>
       <Titletext>
+
         <Text style={{fontWeight:"bold"}}>Walker Profile</Text>
+
       </Titletext>
     </View>
   );
 };
 
 export default WalkerProfileTitle;
+
+WalkerProfileTitle.defaultProps = {
+  text: "Walker Profile"
+};
