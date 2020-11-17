@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   Cont: {
     marginLeft:20,
-    height:"100%",
+    // height:"100%",
     display:"flex",
     flexDirection: "column",
     justifyContent:"space-between"
@@ -27,29 +27,28 @@ const styles = StyleSheet.create({
 const WalkerProfilePage = () => {
   return (
     <View style={styles.app}>
-      <TopBar 
-      title="Walker Profile" 
-      imageLeft1={require('../../comps/TopBar/leftArrow.png')}
-      imageLeft2={require('../../comps/TopBar/message.png')}
-    />
-      
+      <TopBar
+        title="Walker Profile"
+        imageLeft1={require('../../comps/TopBar/leftArrow.png')}
+        imageLeft2={require('../../comps/TopBar/message.png')}
+      />
       <ScrollView>
         <View style={styles.Cont}>
           <View style={styles.elements}>
-          <AvatarWithName text="Mason K."/>
+            <AvatarWithName text="Mason K." />
           </View>
           <View style={styles.elements}>
-          <LocationAge/>
+            <LocationAge />
           </View>
           <View style={styles.elements}>
-          <UserBio />
+            <UserBio />
           </View>
           <View style={styles.elements}>
-          <WriteReview />
+            <WriteReview />
           </View>
         </View>
       </ScrollView>
-          <FooterBar />
+      <FooterBar />
     </View>
   );
 };
