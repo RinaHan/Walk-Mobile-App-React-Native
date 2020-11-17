@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
-import Avatar from "../BasicAvatar";
+import BasicAvatar from "../BasicAvatar";
 
 const styles = StyleSheet.create({
   container: {
@@ -14,17 +14,17 @@ const styles = StyleSheet.create({
   },
 });
 
-const AvatarEdit = ({imageedit}) => {
+const AvatarEdit = ({}) => {
   return (
       <View style={styles.container}
       >
-        <Avatar
+        <BasicAvatar
         image1={require('../dog3.jpg')}
          width={134}
          height={134}
          />
          <Image style={styles.icon}
-        source={imageedit}
+        source={require('../edit.png')}
         />
       </View>
   );

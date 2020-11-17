@@ -1,12 +1,17 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, ScrollView} from "react-native";
 import TopBar from '../TopBar';
+import DogPhotos from '../DogPhotos';
+import FooterBar from '../FooterBar';
 import AvatarDogProfile from "../AvatarForm/AvatarDogProfile";
 
 const styles = StyleSheet.create({
   app: {
-    // flexDirection: "row",
-    // justifyContent:"space-between",
+    height:"100%",
+  },
+  AvatarDogProfile: {
+    marginBottom:0,
+    marginTop:20,
   },
   
 });
@@ -15,8 +20,13 @@ const DogProfilePage = ({}) => {
  
   return (
       <View style={styles.app}>
-        <AvatarDogProfile />
-        
+        <ScrollView>
+          <View style={styles.AvatarDogProfile}>
+          <AvatarDogProfile />
+          </View>
+          <DogPhotos/>
+        </ScrollView>
+        <FooterBar />
       </View>
   );
 };

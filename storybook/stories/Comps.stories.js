@@ -25,6 +25,8 @@ import LocationAge from '../../comps/LocationAge';
 import Likes from '../../comps/Likes';
 import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
+import AvatarEdit from '../../comps/Avatar/AvatarEdit';
+import DogPhotos from '../../comps/DogPhotos';
 
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
@@ -38,6 +40,7 @@ import DashDog from '../../comps/DashDog';
 import Background from '../../comps/Background';
 import WriteReview from '../../comps/WriteReview';
 import YourReview from '../../comps/YourReview';
+import AvatarDogProfile from '../../comps/AvatarForm/AvatarDogProfile';
 
 import ContinueAs from '../../comps/ContinueAs';
 import SignIn from '../../comps/SignIn';
@@ -142,12 +145,22 @@ storiesOf('Comps', module)
   .add('DogDislikes', () => (
       <DogDislikes/>
     ))
+  .add('DogPhotos', () => (
+      <DogPhotos/>
+    ))
+  
 // .add('DogInfoTitle', () => (
 //     <DogInfoTitle/>
 //   ))
 .add('DogInfo', () => (
     <DogInfo/>
   ))
+.add('AvatarEdit', () => (
+    <AvatarEdit/>
+  ))
+  .add('AvatarDogProfile', () => (
+      <AvatarDogProfile/>
+    ))
 // .add('Description', () => (
 //     <Description/>
 //   ))
@@ -157,9 +170,6 @@ storiesOf('Comps', module)
 // .add('DashDog', () => (
 //     <DashDog/>
 //   ))
-.add('DogProfilePage', () => (
-    <DogProfilePage/>
-  ))
 .add('ContinuePage', () => (
     <ContinuePage/>
   ))
@@ -177,6 +187,9 @@ storiesOf('Comps', module)
   ))
 .add('ActivatePage', () => (
     <ActivatePage/>
+  ))
+.add('DogProfilePage', () => (
+    <DogProfilePage/>
   ))
 // // .add('Birthday', () => (
 // //     <Birthday/>
