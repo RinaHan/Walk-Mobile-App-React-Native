@@ -15,6 +15,7 @@ import FacebookButton from '../../comps/FacebookButton';
 import ShareFeedback from '../../comps/ShareFeedback';
 import ReviewStars from '../../comps/ReviewStars';
 import RequestPage from '../../comps/RequestPage';
+import WalkerProfile from '../../comps/WalkerProfile';
 import Posts from '../../comps/Posts';
 import Post from '../../comps/Post';
 import Popup from '../../comps/Popup';
@@ -168,6 +169,9 @@ storiesOf('Comps', module)
   .add('LocationAge', () => (
     <LocationAge />
   ))
+  .add('LocationAge', () => (
+    <LocationAge />
+  ))
 // .add('Description', () => (
 //     <Description/>
 //   ))
@@ -204,10 +208,10 @@ storiesOf('Comps', module)
 // .add('Background', () => (
 //     <Background/>
 //   ))
-// impossible, it break Android
-//   .add('WalkerProfile', () => (
-//     <WalkerProfile/>
-//   ))
+
+  .add('WalkerProfile', () => (
+    <WalkerProfile/>
+  ))
 
 
 
@@ -228,7 +232,7 @@ const styles = StyleSheet.create({
     height:"100%"
   },
 });
-image1={require('../../comps/Avatar/face3.jpg')}
+<BasicAvatar image1={require('../../comps/Avatar/face3.jpg')}/>
 const activehome = require("./activehome.png");
 
 
