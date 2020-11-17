@@ -7,7 +7,8 @@ const TextCont = styled.View`
   /* margin-left: auto;
   margin-right: auto; */
   /* margin-left: 20px; */
-  padding-top: 30px;
+  padding-top: 20px;
+  width:150;
 `;
 
 const LocationTitle = styled.Text`
@@ -50,7 +51,8 @@ const Biotext = styled.Text`
 
 const BioCont = styled.Text`
   flex-direction: row;
-  width: 170px;
+  width: 150px;
+
 `;
 
 const UserInfo = () => {
@@ -62,7 +64,7 @@ const UserInfo = () => {
             <Text style={{fontWeight:"bold"}}>Location: </Text>
           </LocationTitle>
           <Locationtext>
-            <Text >Burnaby, BC</Text>
+            <Text style={{fontSize:12}}>Burnaby, BC</Text>
           </Locationtext>
         </LocationCont>
 
@@ -71,7 +73,7 @@ const UserInfo = () => {
             <Text style={{fontWeight:"bold"}}>Age: </Text>
           </AgeTitle>
           <Agetext>
-            <Text>22</Text>
+            <Text style={{fontSize:12}}>22</Text>
           </Agetext>
         </AgeCont>
 
@@ -80,7 +82,7 @@ const UserInfo = () => {
             <Text style={{fontWeight:"bold"}}>Bio: </Text>
           </BioTitle>
           <Biotext>
-            <Text>
+            <Text style={{fontSize:10}}>
               “Hi there! My name is Ethan and I love all animals. Dogs, cats,
               birds, you name it. I really love spending time outdoors in nature
               and ...”
