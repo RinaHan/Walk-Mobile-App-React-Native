@@ -58,6 +58,9 @@ storiesOf('Comps', module)
   .add('UserInfo', () => (
     <UserInfo/>
   ))
+  .add('UserBio', () => (
+    <UserBio/>
+  ))
   //only checked. need to solve 2 import, ----------->
   //only checked. many components or tags are invisible
   .add('Texting', () => (
@@ -205,10 +208,6 @@ storiesOf('Comps', module)
 //     <WalkerProfile/>
 //   ))
 
-  //error break Android. need to modify code
-// .add('UserBio', () => (
-//     <UserBio/>
-//   ))
 
 
 /* 
