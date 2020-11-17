@@ -7,7 +7,7 @@ const TextCont = styled.View`
   /* margin-left: auto;
   margin-right: auto; */
   /* margin-left: 20px; */
-  padding-top: 30px;
+  padding-top: 20px;
   width:150;
 `;
 
