@@ -1,13 +1,19 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-// import WriteReview from "./Comps/WriteReview";
-// import UserInfo from "../UserInfo";
+import TopBar from "../TopBar";
 import FooterBar from "../FooterBar";
+import UserBio from "../UserBio";
 import WriteReview from "../WriteReview";
 
 const styles = StyleSheet.create({
-  walkprofileCont: {
-    flexDirection: "column"
+  app: {
+    height:"100%",
+
+  },
+  Cont: {
+    display:"flex",
+    flexDirection: "column",
+    backgroundColor:"red"
   },
   // writereviewCont: {
   //   marginTop: 280,
@@ -15,24 +21,25 @@ const styles = StyleSheet.create({
   // },
   footerCont: {
   
-    marginTop: 600
+    // marginTop: 600
   }
 });
 
 const WalkerProfilePage = () => {
   return (
-    <View>
+    <View style={styles.app}>
+      <TopBar title="Inbox" />
       <ScrollView>
-      <View style={styles.walkprofileCont}>
-        {/* <UserInfo /> */}
-        <View style={styles.writereviewCont}>
+        <View style={styles.Cont}>
+        
+          <UserBio />
           <WriteReview />
+        
         </View>
-      </View>
-        <View style={styles.footerCont}>
-          <FooterBar />
-        </View>
+        
+        
       </ScrollView>
+          <FooterBar />
     </View>
   );
 };

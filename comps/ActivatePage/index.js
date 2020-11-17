@@ -20,12 +20,7 @@ const styles = StyleSheet.create({
       alignItems:"center"
   },
   buttons: {
-    // alignItems:"center",
-    // justifyContent:"center"
     marginLeft:30
-  },
-  selection: {
-    // height:50
   },
   spacer: {
     height:20

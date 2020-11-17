@@ -233,10 +233,14 @@ AvatarViewProfile.defaultProps = {
     // height: null
 };
 
-
+<View style={styles.app}>
+<TopBar title="Inbox" />
 <ScrollView>
-</ScrollView>
+<View style={styles.container}>
 
+</View>
+</ScrollView>
+<FooterBar style={styles.footerBar} />
 
 */
 ;
