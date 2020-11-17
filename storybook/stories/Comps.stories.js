@@ -27,6 +27,7 @@ import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
 import AvatarEdit from '../../comps/Avatar/AvatarEdit';
 import DogPhotos from '../../comps/DogPhotos';
+import AvatarWithName from '../../comps/Avatar/AvatarWithName';
 
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
@@ -50,19 +51,15 @@ import ContinuePage from '../../comps/ContinueAsPage';
 import DogProfilePage from '../../comps/DogProfilePage';
 
 storiesOf('Comps', module)
- //modified. done
   .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
-  //modified. done
   .add('UserInfo', () => (
     <UserInfo/>
   ))
   .add('UserBio', () => (
     <UserBio/>
   ))
-  //only checked. need to solve 2 import, ----------->
-  //only checked. many components or tags are invisible
   .add('Texting', () => (
     <Texting/>
     ))
@@ -77,6 +74,9 @@ storiesOf('Comps', module)
         //okay
         .add('Spacer', () => (
           <Spacer/>
+          ))
+        .add('AvatarWithName', () => (
+          <AvatarWithName/>
           ))
           //modified. still need to solve 2 import, ----------->
           // .add('ShareFeedback', () => (
