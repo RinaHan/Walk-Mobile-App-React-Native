@@ -42,26 +42,26 @@ const NextArrow = styled.View`
   /* background-color: green; */
 `;
 
-const ArrowCont = styled.View`
+const ArrowCont = styled.TouchableOpacity`
   width: 30px;
   height: 30px;
   /* background-color: red; */
 `;
-const AddCont = styled.View`
+const AddCont = styled.TouchableOpacity`
   width: 20px;
   height: 20px;
   /* background-color: red; */
 `;
 const IconPics = styled.Image`
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 `;
 const TextInput = styled.TextInput`
-  width:100%;
-  height:100%;
-  background-color:white;
+  width: 100%;
+  height: 100%;
+  background-color: white;
   border-radius: 12px;
-  border:1px solid lightgrey;
+  border: 1px solid lightgrey;
 `;
 const Texting = ({}) => {
   return (
@@ -69,16 +69,24 @@ const Texting = ({}) => {
       <InputCont>
         <Inputs>
           <Add>
-            <AddCont>
-            <IconPics source={require=("./plus.png")} />
+            <AddCont
+              onPress={() => {
+                alert("Send picture in the chat");
+              }}
+            >
+              <IconPics source={(require = "./plus.png")} />
             </AddCont>
           </Add>
           <Textbox>
             <TextInput placeholder="Type a message..." />
           </Textbox>
           <NextArrow>
-            <ArrowCont>
-            <IconPics source={require=("./nextarrow.png")} />
+            <ArrowCont
+              onPress={() => {
+                alert("Message Sent!");
+              }}
+            >
+              <IconPics source={(require = "./nextarrow.png")} />
             </ArrowCont>
           </NextArrow>
         </Inputs>

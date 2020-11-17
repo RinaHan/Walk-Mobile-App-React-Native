@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components/native";
 
-import { View, Text, StyleSheet } from "react-native";
 import UserInfo from "../UserInfo";
 import Avatar07 from '../../comps/Avatar/Avatar07';
 import ReviewStars from "../ReviewStars";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-import global from '../../Pages/globaj';
+// import global from "../../Pages/globaj";
 
 // const MainCont = styled.View`
 //   width:353px;
@@ -219,11 +219,13 @@ const WalkerProfile = ({city, age, bio, name}) => {
   );
 };
 
-// WalkerProfile.defaultProps = {
-//   city:"Burnaby, BC",
-//   age:"23",
-//   bio:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-//   name:"Ethan P",
-//   pic:"selfie.jpg"
-// };
+WalkerProfile.defaultProps = {
+  city: "Burnaby, BC",
+  age: "23",
+  bio:
+    "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+  name: "Ethan P",
+  pic: "selfie.jpg"
+};
+
 export default WalkerProfile;

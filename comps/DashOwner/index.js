@@ -1,120 +1,120 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View} from "react-native";
+import { View } from "react-native";
 
 const MainCont = styled.View`
-  width:170px;
-  height:266px;
-  display:flex;
-  flex-direction:column;
+  width: 170px;
+  height: 266px;
+  display: flex;
+  flex-direction: column;
   /* margin:30px 30px; */
   /* background-color:#BBD; */
 `;
 const TitleCont = styled.View`
-  width:100%;
-  height:23px;
+  width: 100%;
+  height: 23px;
   /* background-color:#DBD; */
 `;
 const TitleText = styled.Text`
-  font-size:16px;
-  font-weight:bold;
+  font-size: 16px;
+  font-weight: bold;
 `;
 const InfoCont = styled.View`
-  width:100%;
-  height:243px;
+  width: 100%;
+  height: 243px;
   /* background-color:#CCC; */
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
-  border:1px solid #d9d9d9;
+  border: 1px solid #d9d9d9;
 `;
 const TopInfo = styled.View`
-  flex:3;
+  flex: 3;
   /* background-color:#CBD; */
-  justify-content:center;
+  justify-content: center;
 `;
 const BottomInfo = styled.View`
-  flex:4;
+  flex: 4;
   /* background-color:#DCC; */
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 `;
 const TopCont = styled.View`
-  width:100%;
-  height:50px;
+  width: 100%;
+  height: 50px;
   /* background-color:#BBD; */
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
 `;
 const ProfPicCont = styled.View`
-  width:49px;
-  margin-left:12px;
+  width: 49px;
+  margin-left: 12px;
   /* background-color:#ABC; */
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const ImgCont = styled.View`
-  width:49px;
-  height:49px;
+  width: 49px;
+  height: 49px;
   /* background-color:#BAC; */
 `;
 const Img = styled.Image`
-  width:100%;
-  height:100%;
-  border-radius:24px;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
 `;
 const BottomCont = styled.View`
   /* background-color:#DAC; */
-  width:80%;
-  height:80%;
-  display:flex;
-  flex-direction:column;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
 `;
 const NameCont = styled.View`
-  flex:1;
+  flex: 1;
   /* background-color:#BBB; */
-  width:100%;
-  display:flex;
-  flex-direction:row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;
 const PhoneCont = styled.View`
-  flex:1;
+  flex: 1;
   /* background-color:#BBB; */
-  width:100%;
-  display:flex;
-  flex-direction:row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;
 const EmailCont = styled.View`
-  flex:1;
+  flex: 1;
   /* background-color:#BBB; */
-  width:100%;
-  display:flex;
-  flex-direction:row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;
 const AdressCont = styled.View`
-  flex:1;
+  flex: 1;
   /* background-color:#BBB; */
-  width:100%;
-  display:flex;
-  flex-direction:row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;
 const Title = styled.View`
-  height:100%;
-  flex:2;
+  height: 100%;
+  flex: 2;
   /* background-color:#CCC; */
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const Info = styled.View`
-  height:100%;
-  flex:5;
+  height: 100%;
+  flex: 5;
   /* background-color:#CAC; */
-  align-items:flex-start;
-  justify-content:center;
-  padding-left:4px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 4px;
 `;
 const TitleText2 = styled.View`
   font-weight: Bold;
@@ -127,38 +127,56 @@ const InfoText = styled.View`
 `;
 
 const ownerpicture = require("./ethan.jpeg");
-const DashOwner = ({ownername, ownerphone, owneremail, owneradress}) => {
+const DashOwner = ({ ownername, ownerphone, owneremail, owneradress }) => {
   return (
     <View>
       <MainCont>
-        <TitleCont><TitleText>Owner Profile</TitleText></TitleCont>
+        <TitleCont>
+          <TitleText>Owner Profile</TitleText>
+        </TitleCont>
         <InfoCont>
           <TopInfo>
             <TopCont>
               <ProfPicCont>
                 <ImgCont>
                   <Img source={ownerpicture} />
-                </ImgCont>  
+                </ImgCont>
               </ProfPicCont>
             </TopCont>
           </TopInfo>
           <BottomInfo>
             <BottomCont>
               <NameCont>
-                <Title><TitleText2>Name</TitleText2></Title>
-                <Info><InfoText>{ownername}</InfoText></Info>
+                <Title>
+                  <TitleText2>Name</TitleText2>
+                </Title>
+                <Info>
+                  <InfoText>{ownername}</InfoText>
+                </Info>
               </NameCont>
               <PhoneCont>
-                <Title><TitleText2>Phone</TitleText2></Title>
-                <Info><InfoText>{ownerphone}</InfoText></Info>
+                <Title>
+                  <TitleText2>Phone</TitleText2>
+                </Title>
+                <Info>
+                  <InfoText>{ownerphone}</InfoText>
+                </Info>
               </PhoneCont>
               <EmailCont>
-                <Title><TitleText2>Email</TitleText2></Title>
-                <Info><InfoText>{owneremail}</InfoText></Info>
+                <Title>
+                  <TitleText2>Email</TitleText2>
+                </Title>
+                <Info>
+                  <InfoText>{owneremail}</InfoText>
+                </Info>
               </EmailCont>
               <AdressCont>
-                <Title><TitleText2>Adress</TitleText2></Title>
-                <Info><InfoText>{owneradress}</InfoText></Info>
+                <Title>
+                  <TitleText2>Address</TitleText2>
+                </Title>
+                <Info>
+                  <InfoText>{owneradress}</InfoText>
+                </Info>
               </AdressCont>
             </BottomCont>
           </BottomInfo>
@@ -169,10 +187,10 @@ const DashOwner = ({ownername, ownerphone, owneremail, owneradress}) => {
 };
 
 DashOwner.defaultProps = {
-  picture:"ethan.jpeg",
-  ownername:"Ethan",
-  ownerphone:"604.435.3456",
-  owneremail:"ian@mycomp.com",
-  owneradress:"2020 Steel st."
+  picture: "ethan.jpeg",
+  ownername: "Ethan",
+  ownerphone: "604.435.3456",
+  owneremail: "ian@mycomp.com",
+  owneradress: "2020 Steel st."
 };
 export default DashOwner;

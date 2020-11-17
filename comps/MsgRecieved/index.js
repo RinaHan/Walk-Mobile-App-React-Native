@@ -5,31 +5,35 @@ import { View, Text } from "react-native";
 const MainCont = styled.View`
   /* background-color: red; */
   width: 375px;
-  height: 146px;
+  min-height: 16px;
+  max-height: 120px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  /* background-color: blue; */
+  margin-top: 40px;
 `;
 
 const Cont = styled.View`
-  width: 344px;
-  height: 84px;
+  width: 330px;
+  min-height: 16px;
+  max-height: 120px;
   display: flex;
   flex-direction: row;
-  
+  /* background-color: red; */
 `;
 
 const LeftSide = styled.View`
   flex: 1;
   /* background-color: #bbb; */
   display: flex;
-  align-items: flex-start;
-  padding-right: 10epx;
+  align-items: center;
+  padding-left: 6px;
 `;
 
 const RightSide = styled.View`
   flex: 8;
-  background-color: #EAF6F7;
+  background-color: #eaf6f7;
   border-radius: 0px 6px 6px 6px;
 `;
 
@@ -40,20 +44,20 @@ const ImgCont = styled.View`
   /* background-color: blue; */
 `;
 const Img = styled.Image`
-  width:100%;
-  height:100%;
-  border-radius:16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 `;
 const avatar = require("./selfie.jpg");
 
-const MsgRecieved = ({msgRecieve }) => {
+const MsgRecieved = ({ msgRecieve }) => {
   return (
     <View>
       <MainCont>
         <Cont>
           <LeftSide>
             <ImgCont>
-            <Img source={avatar} />
+              <Img source={avatar} />
             </ImgCont>
           </LeftSide>
           <RightSide>
@@ -66,7 +70,7 @@ const MsgRecieved = ({msgRecieve }) => {
 };
 
 MsgRecieved.defaultProps = {
-  avatar:"selfie.jpg",
-  msgRecieve:"defaultmessage"
+  avatar: "selfie.jpg",
+  msgRecieve: "defaultmessage"
 };
 export default MsgRecieved;
