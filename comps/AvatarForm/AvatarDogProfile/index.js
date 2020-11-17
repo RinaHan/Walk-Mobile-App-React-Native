@@ -1,16 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, Image, StyleSheet} from "react-native";
+import BasicAvatar from '../../Avatar/BasicAvatar';
 import AvatarEdit from '../../Avatar/AvatarEdit';
 import DogDislikes from "../../DogDislikes";
+import DogInfo from "../../DogInfo";
+import DogLikes from "../../DogLikes";
 
 const styles = StyleSheet.create({
   container: {
-    // flexDirection: "row",
     alignItems:"center",
-    justifyContent:"center",
+    marginTop:10,
+    height:360
   },
-  textcont1: {
-      backgroundColor: "red",
+  doginfo: {
       width:100,
       height:100
   },
@@ -20,35 +22,31 @@ const styles = StyleSheet.create({
       width:300,
       height:300
   },
-  textcont2: {
-      backgroundColor: "lightgray",
+  dogliks: {
       width:100,
-      height:100,
       alignItems:"center",
   },
-  textcont3: {
-      backgroundColor: "lightgray",
+  dogdisliks: {
       width:100,
-      height:100,
       alignItems:"center",
   }
 
 });
-
+ 
 const AvatarDogProfile = ({}) => {
   
   return (
       <View style={styles.container}>
-        <AvatarEdit 
-        image2={require('../../Avatar/edit.png')}
-        />
-        <View style={styles.textcont1}></View>
+        <AvatarEdit/>
+        <View style={styles.doginfo}>
+          <DogInfo/>
+        </View>
         <View style={styles.textcont23}>
-            <View style={styles.textcont2}>
-              <DogDislikes/>
+            <View style={styles.dogliks}>
+              <DogLikes/>
             </View>
-            <View style={styles.textcont3}>
-            <DogDislikes/>
+            <View style={styles.dogdisliks}>
+              <DogDislikes/>
             </View>
         </View>
       </View>
