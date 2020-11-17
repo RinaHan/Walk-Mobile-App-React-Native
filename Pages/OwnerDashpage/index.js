@@ -2,7 +2,24 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 import FooterBar from "./Comps/FooterBar";
+import WalkerProfile from "./Comps/WalkerProfile";
+import ReviewStars from "./Comps/ReviewStars";
+import WalkerProfileTitle from "./Comps/WalkerProfileTitle";
 import TopBar from "./Comps/TopBar";
+
+const WalkerTitleCont = styled.View`
+  margin-left: 50px;
+  margin-bottom: 10px;
+`;
+
+const ReviewStarsCont = styled.View`
+  bottom: 17%;
+  margin-left: 200px;
+`;
+const WalkerProfileCont = styled.View`
+  /* position: relative; */
+  top: 60%;
+`;
 
 const Header = styled.View``;
 
@@ -42,9 +59,19 @@ const OwnerDash = () => {
       <Main>
         <MainCont>
           <Header>
-            <TopBar title="Walker Profile" />
+            <TopBar title="Dashboard" />
           </Header>
-          <Cont></Cont>
+          <Cont>
+            <WalkerProfileCont>
+              <WalkerTitleCont>
+                <WalkerProfileTitle />
+              </WalkerTitleCont>
+              <WalkerProfile />
+              <ReviewStarsCont>
+                <ReviewStars />
+              </ReviewStarsCont>
+            </WalkerProfileCont>
+          </Cont>
           <FooterCont>
             <FooterBar />
           </FooterCont>
