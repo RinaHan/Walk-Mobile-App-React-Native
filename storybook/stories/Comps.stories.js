@@ -117,9 +117,7 @@ storiesOf('Comps', module)
 // .add('MsgRecieved', () => (
 //     <MsgRecieved/>
 //   ))
-// .add('LocationAge', () => (
-//     <LocationAge/>
-//   ))
+
 // .add('Likes', () => (
 //     <Likes/>
 //   ))
@@ -158,15 +156,18 @@ storiesOf('Comps', module)
 .add('DogInfo', () => (
     <DogInfo/>
   ))
-.add('AvatarEdit', () => (
-    <AvatarEdit/>
+  .add('AvatarEdit', () => (
+    <AvatarEdit />
   ))
   .add('AvatarDogProfile', () => (
-      <AvatarDogProfile/>
-    ))
+    <AvatarDogProfile />
+  ))
   .add('WriteReview', () => (
-      <WriteReview/>
-    ))
+    <WriteReview />
+  ))
+  .add('LocationAge', () => (
+    <LocationAge />
+  ))
 // .add('Description', () => (
 //     <Description/>
 //   ))
@@ -213,6 +214,11 @@ storiesOf('Comps', module)
 /* 
 justifyContent:"center"
 style={{width:300, height:100 }} 
+style={{fontWeight:"bold", fontSize:18}}
+
+import { View, Text, StyleSheet, ScrollView} from "react-native";
+
+
 
 const styles = StyleSheet.create({ 
   app: {

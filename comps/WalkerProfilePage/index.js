@@ -4,6 +4,7 @@ import TopBar from "../TopBar";
 import FooterBar from "../FooterBar";
 import UserBio from "../UserBio";
 import WriteReview from "../WriteReview";
+import LocationAge from "../LocationAge";
 
 const styles = StyleSheet.create({
   app: {
@@ -15,13 +16,9 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor:"red"
   },
-  // writereviewCont: {
-  //   marginTop: 280,
-  //   marginLeft: 10
-  // },
+ 
   footerCont: {
   
-    // marginTop: 600
   }
 });
 
@@ -31,7 +28,7 @@ const WalkerProfilePage = () => {
       <TopBar title="Inbox" />
       <ScrollView>
         <View style={styles.Cont}>
-        
+          <LocationAge/>
           <UserBio />
           <WriteReview />
         
