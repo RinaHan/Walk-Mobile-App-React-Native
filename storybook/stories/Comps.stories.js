@@ -27,6 +27,7 @@ import Input from '../../comps/Input';
 import GoogleButton from '../../comps/GoogleButton';
 import AvatarEdit from '../../comps/Avatar/AvatarEdit';
 import DogPhotos from '../../comps/DogPhotos';
+import AvatarWithName from '../../comps/Avatar/AvatarWithName';
 
 import EventInfo from '../../comps/EventInfo';
 import Dropdown from '../../comps/Dropdown';
@@ -50,19 +51,15 @@ import ContinuePage from '../../comps/ContinueAsPage';
 import DogProfilePage from '../../comps/DogProfilePage';
 
 storiesOf('Comps', module)
- //modified. done
   .add('WalkerProfileTitle', () => (
     <WalkerProfileTitle/>
   ))
-  //modified. done
   .add('UserInfo', () => (
     <UserInfo/>
   ))
   .add('UserBio', () => (
     <UserBio/>
   ))
-  //only checked. need to solve 2 import, ----------->
-  //only checked. many components or tags are invisible
   .add('Texting', () => (
     <Texting/>
     ))
@@ -77,6 +74,9 @@ storiesOf('Comps', module)
         //okay
         .add('Spacer', () => (
           <Spacer/>
+          ))
+        .add('AvatarWithName', () => (
+          <AvatarWithName/>
           ))
           //modified. still need to solve 2 import, ----------->
           // .add('ShareFeedback', () => (
@@ -117,9 +117,7 @@ storiesOf('Comps', module)
 // .add('MsgRecieved', () => (
 //     <MsgRecieved/>
 //   ))
-// .add('LocationAge', () => (
-//     <LocationAge/>
-//   ))
+
 // .add('Likes', () => (
 //     <Likes/>
 //   ))
@@ -158,15 +156,18 @@ storiesOf('Comps', module)
 .add('DogInfo', () => (
     <DogInfo/>
   ))
-.add('AvatarEdit', () => (
-    <AvatarEdit/>
+  .add('AvatarEdit', () => (
+    <AvatarEdit />
   ))
   .add('AvatarDogProfile', () => (
-      <AvatarDogProfile/>
-    ))
+    <AvatarDogProfile />
+  ))
   .add('WriteReview', () => (
-      <WriteReview/>
-    ))
+    <WriteReview />
+  ))
+  .add('LocationAge', () => (
+    <LocationAge />
+  ))
 // .add('Description', () => (
 //     <Description/>
 //   ))
@@ -213,6 +214,11 @@ storiesOf('Comps', module)
 /* 
 justifyContent:"center"
 style={{width:300, height:100 }} 
+style={{fontWeight:"bold", fontSize:18}}
+
+import { View, Text, StyleSheet, ScrollView} from "react-native";
+
+
 
 const styles = StyleSheet.create({ 
   app: {
@@ -233,10 +239,14 @@ AvatarViewProfile.defaultProps = {
     // height: null
 };
 
-
+<View style={styles.app}>
+<TopBar title="Inbox" />
 <ScrollView>
-</ScrollView>
+<View style={styles.container}>
 
+</View>
+</ScrollView>
+<FooterBar style={styles.footerBar} />
 
 */
 ;

@@ -1,38 +1,55 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-// import WriteReview from "./Comps/WriteReview";
-// import UserInfo from "../UserInfo";
+import TopBar from "../TopBar";
 import FooterBar from "../FooterBar";
+import UserBio from "../UserBio";
 import WriteReview from "../WriteReview";
+import LocationAge from "../LocationAge";
+import AvatarWithName from "../Avatar/AvatarWithName";
 
 const styles = StyleSheet.create({
-  walkprofileCont: {
-    flexDirection: "column"
+  app: {
+    height:"100%",
   },
-  // writereviewCont: {
-  //   marginTop: 280,
-  //   marginLeft: 10
-  // },
-  footerCont: {
-  
-    marginTop: 600
-  }
+  Cont: {
+    marginLeft:20,
+    height:"100%",
+    display:"flex",
+    flexDirection: "column",
+    justifyContent:"space-between"
+  },
+  elements: {
+    marginTop:20,
+    marginBottom:10
+  },
 });
 
 const WalkerProfilePage = () => {
   return (
-    <View>
+    <View style={styles.app}>
+      <TopBar 
+      title="Walker Profile" 
+      imageLeft1={require('../../comps/TopBar/leftArrow.png')}
+      imageLeft2={require('../../comps/TopBar/message.png')}
+    />
+      
       <ScrollView>
-      <View style={styles.walkprofileCont}>
-        {/* <UserInfo /> */}
-        <View style={styles.writereviewCont}>
+        <View style={styles.Cont}>
+          <View style={styles.elements}>
+          <AvatarWithName text="Mason K."/>
+          </View>
+          <View style={styles.elements}>
+          <LocationAge/>
+          </View>
+          <View style={styles.elements}>
+          <UserBio />
+          </View>
+          <View style={styles.elements}>
           <WriteReview />
-        </View>
-      </View>
-        <View style={styles.footerCont}>
-          <FooterBar />
+          </View>
         </View>
       </ScrollView>
+          <FooterBar />
     </View>
   );
 };

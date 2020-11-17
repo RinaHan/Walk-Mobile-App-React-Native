@@ -21,7 +21,7 @@ const TextCont = styled.View`
   /* margin-left: 20px; */
   padding-top: 30px;
   width: 255px;
-  height: 133px;
+  height: 220px;
   /* align-items: left; */
   text-align: left;
   font-size:16;
