@@ -2,8 +2,8 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 import FooterBar from "./Comps/FooterBar";
-import WalkerProfile from "./Comps/WalkerProfile";
-import ReviewStars from "./Comps/ReviewStars";
+import DashDog from "./Comps/DashDog";
+import DashOwner from "./Comps/DashOwner";
 import WalkerProfileTitle from "./Comps/WalkerProfileTitle";
 import TopBar from "./Comps/TopBar";
 import MapPlaceholder from "./Comps/MapPlaceholder";
@@ -18,17 +18,17 @@ const LocationText = styled.View`
   margin-bottom: 10px;
 `;
 
-const WalkerTitleCont = styled.View`
-  margin-left: 50px;
-  margin-bottom: 10px;
+const DashOwnerCont = styled.View`
+  padding-left: 5px;
 `;
 
-const ReviewStarsCont = styled.View`
-  bottom: 17%;
-  margin-left: 200px;
+const DashDogCont = styled.View`
+  padding-right: 5px;
 `;
-const WalkerProfileCont = styled.View`
+
+const DashDogOwnerCont = styled.View`
   /* position: relative; */
+  flex-direction: row;
   top: 20%;
 `;
 
@@ -64,7 +64,7 @@ const Cont = styled.View`
   align-items: center;
 `;
 
-const OwnerDashPage = () => {
+const WalkerDashPage = () => {
   return (
     <View>
       <Main>
@@ -75,22 +75,21 @@ const OwnerDashPage = () => {
           <Cont>
             <LocationCont>
               <LocationText>
-                <WalkerProfileTitle text="Walker Location" />
+                <WalkerProfileTitle text="Return Address" />
               </LocationText>
               <MapPlaceholder />
             </LocationCont>
-            <WalkerProfileCont>
-              <WalkerTitleCont>
-                <WalkerProfileTitle />
-              </WalkerTitleCont>
-              <WalkerProfile
-                age="24"
-                bio="Hi there! My name is Ethan and I love all animals. Dogs, cats, birds, you name it. I really love spending time outdoors in nature and ..."
-              />
-              <ReviewStarsCont>
-                <ReviewStars />
-              </ReviewStarsCont>
-            </WalkerProfileCont>
+            <DashDogOwnerCont>
+              <DashDogCont>
+                <DashDog />
+              </DashDogCont>
+              <DashOwnerCont>
+                <DashOwner
+                  owneremail="ethan123@gmail.com"
+                  owneradress="1234 123A Ave Burnaby, BC"
+                />
+              </DashOwnerCont>
+            </DashDogOwnerCont>
           </Cont>
           <FooterCont>
             <FooterBar />
@@ -101,4 +100,4 @@ const OwnerDashPage = () => {
   );
 };
 
-export default OwnerDashPage;
+export default WalkerDashPage;
