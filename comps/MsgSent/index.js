@@ -5,15 +5,18 @@ import { View, Text } from "react-native";
 const MainCont = styled.View`
   /* background-color: red; */
   width: 375px;
-  height: 146px;
+  min-height: 16px;
+  max-height: 120px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  margin-top: 40px;
 `;
 
 const Cont = styled.View`
-  width: 344px;
-  height: 84px;
+  width: 330px;
+  min-height: 16px;
+  max-height: 120px;
   display: flex;
   flex-direction: row;
 `;
@@ -22,31 +25,30 @@ const LeftSide = styled.View`
   flex: 1;
   /* background-color: #bbb; */
   display: flex;
-  align-items: flex-end;
-  padding-right: 10px;
-  
+  align-items: center;
+  padding-right: 6px;
 `;
 
 const RightSide = styled.View`
   flex: 8;
   /* background-color: #bdb; */
-  background: #EAF6F7;
+  background: #eaf6f7;
   border-radius: 0px 6px 6px 6px;
 `;
 
 const ImgCont = styled.View`
   width: 28px;
   height: 28px;
+  border-radius: 14px;
   /* background-color: blue; */
- 
 `;
 const Img = styled.Image`
-  width:100%;
-  height:100%;
-  border-radius: 14px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 `;
 const avatar = require("./selfie.jpg");
-const MsgSent = ({msgSent }) => {
+const MsgSent = ({ msgSent }) => {
   return (
     <View>
       <MainCont>
@@ -56,7 +58,7 @@ const MsgSent = ({msgSent }) => {
           </RightSide>
           <LeftSide>
             <ImgCont>
-            <Img source={avatar} />
+              <Img source={avatar} />
             </ImgCont>
           </LeftSide>
         </Cont>
@@ -66,7 +68,7 @@ const MsgSent = ({msgSent }) => {
 };
 
 MsgSent.defaultProps = {
-  avatar:"selfie.jpg",
-  msgSent:"defaultmessage"
+  avatar: null,
+  msgSent: "defaultmessage"
 };
 export default MsgSent;
