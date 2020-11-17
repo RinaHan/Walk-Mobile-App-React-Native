@@ -6,7 +6,7 @@ import UserInfo from "../UserInfo";
 import Avatar07 from '../../comps/Avatar/Avatar07';
 import ReviewStars from "../ReviewStars";
 
-import global from '../../Pages/globaj';
+// import global from '../../Pages/globaj';
 
 const MainCont = styled.View`
   width:353px;
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const WalkerProfile = ({city, age, bio, name}) => {
+const WalkerProfile = ({}) => {
   return (
     <View style={styles.box}>
       
@@ -223,11 +223,11 @@ const WalkerProfile = ({city, age, bio, name}) => {
 //   );
 // };
 
-WalkerProfile.defaultProps = {
-  city:"Burnaby, BC",
-  age:"23",
-  bio:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  name:"Ethan P",
-  pic:"selfie.jpg"
-};
+// WalkerProfile.defaultProps = {
+//   city:"Burnaby, BC",
+//   age:"23",
+//   bio:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+//   name:"Ethan P",
+//   pic:"selfie.jpg"
+// };
 export default WalkerProfile;
