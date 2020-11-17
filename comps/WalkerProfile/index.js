@@ -153,7 +153,7 @@ const WalkerProfile = ({city, age, bio, name}) => {
       <MainCont style={global.bg}>
         <LeftCont>
           <Location><TitleText>Location</TitleText><RegText>{city}</RegText></Location>
-          <Age><TitleText style={global.header}>Age</TitleText><RegText>{age}</RegText></Age>
+          <Age><TitleText>Age</TitleText><RegText>{age}</RegText></Age>
           <Bio><TitleText>Bio</TitleText><BioCont><RegText>{bio}</RegText></BioCont></Bio>
           <ViewProfile><ViewText>View full profile</ViewText><ImgCont><Img source={rightimg} /></ImgCont></ViewProfile>
         </LeftCont>
