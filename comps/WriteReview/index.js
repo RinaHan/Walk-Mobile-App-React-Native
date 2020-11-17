@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
 import { View, Text, TouchableOpacity } from "react-native";
+import BasicButton from '../WButton/BasicButton';
 
-const Buttontext = styled.Text`
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-`;
+// const Buttontext = styled.Text`
+//   color: #fff;
+//   align-items: center;
+//   justify-content: center;
+//   display: flex;
+// `;
 
-const Buttoncontainer = styled.TouchableOpacity`
-  background: ${(props) => (props.highlight ? "#565555" : "#C4C4C4")};
-  width: 137px;
-  border-radius: 7px;
-  padding: 12px;
-  /* bottom: -300px; */
-`;
+// const Buttoncontainer = styled.TouchableOpacity`
+//   background: ${(props) => (props.highlight ? "#565555" : "#C4C4C4")};
+//   width: 137px;
+//   border-radius: 7px;
+//   padding: 12px;
+//   /* bottom: -300px; */
+// `;
 
 const Startext = styled.Text`
   padding-left: 5px;
@@ -56,6 +57,8 @@ const Reviewcontainer = styled.View`
 
 const Reviewtext = styled.Text`
   margin-bottom: 10px;
+  font-size:18;
+  font-weight:bold;
 `;
 
 const StarImg = styled.Image`
@@ -98,16 +101,22 @@ const WriteReview = () => {
           </Starscontainer>
         </Reviewcontainer>
 
-        <Buttoncontainer
+        {/* <Buttoncontainer
           onPress={() => {
             setHighlight(!highlight);
           }}
           highlight={highlight}
-        >
-          <Buttontext>
+        > */}
+          <BasicButton
+        text="Write a Review"  
+        backgroundColor= "#565555" 
+        height={45}
+        width={137}
+        />
+          {/* <Buttontext>
             <Text>Write a Review</Text>
-          </Buttontext>
-        </Buttoncontainer>
+          </Buttontext> */}
+        {/* </Buttoncontainer> */}
       </Main>
     </View>
   );
@@ -117,4 +126,4 @@ WriteReview.defaultProps = {
   onPress: () => {}
 };
 
-export default WriteReview;
+export default WriteReview; 

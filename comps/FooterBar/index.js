@@ -22,9 +22,9 @@ const Icons = styled.View`
 `;
 
 const Footcontainer = styled.View`
-  background: #fff;
+  /* background: #fff; */
   padding: 15px;
-  width: 375px;
+  /* width: 375px; */
   bottom: 0;
 `;
 

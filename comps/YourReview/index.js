@@ -5,6 +5,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 const Reviewtext = styled.Text`
   font-weight: 700;
   color: #000;
+  font-size:22;
 `;
 
 const Main = styled.View`
@@ -26,7 +27,7 @@ const Starscontainer = styled.View`
 const StarImg = styled.Image`
   width: 50px;
   height: 50px;
-  object-fit: contain;
+  /* object-fit: contain; */
 `;
 
 const unfilled = require("./bigunfilled.png");

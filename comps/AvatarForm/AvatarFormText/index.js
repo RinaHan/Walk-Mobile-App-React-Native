@@ -1,21 +1,23 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, onPress} from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems:"center",
-    // justifyContent:"space-between",
+    justifyContent:"space-between",
   },
   avatar: {
     marginLeft:20
   },
+  touch: {
+    flexDirection: "row",
+    alignItems:"center"
+  },
   textcont: {
-    // alignItems:"center",
     justifyContent:"center",
     marginLeft:10,
-    
-    
+    width:150,
   },
   text1: {
     color: "black",
@@ -31,21 +33,28 @@ const styles = StyleSheet.create({
     marginLeft:70,
     width:15,
     height:15,
-    borderRadius:10
+    borderRadius:10,
+    justifyContent:"flex-end",
+    // position:"absolute"
+    
   },
 });
 
-const AvatarFormText = ({textname, text, backgroundColor}) => {
+const AvatarFormText = ({textname, text, backgroundColor, }) => {
   
   return (
       <View style={styles.container}>
         <View style={styles.avatar}>
         </View>
-        <View style={styles.textcont}>
-        <Text style={styles.text1}>{textname}</Text>
-        <Text style={styles.text2}>{text}</Text>
-        </View>
-        <View style={styles.dotcont} backgroundColor={backgroundColor}></View>
+        <TouchableOpacity onPress={onPress} style={styles.touch}>
+          <View style={styles.textcont}>
+            <Text style={styles.text1}>{textname}</Text>
+            <Text style={styles.text2}>{text}</Text>
+          </View>
+          
+          <View style={styles.dotcont} backgroundColor={backgroundColor}></View>
+          
+        </TouchableOpacity>
       </View>
   );
 };
