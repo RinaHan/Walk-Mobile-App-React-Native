@@ -9,9 +9,11 @@ const Biodesc = styled.Text`
 `;
 
 const Biotitle = styled.Text`
-  font-weight: 500;
+  font-weight: bold;
   color: #000;
   padding-bottom: 5px;
+  font-size:18;
+  
 `;
 
 const TextCont = styled.View`
@@ -20,8 +22,9 @@ const TextCont = styled.View`
   padding-top: 30px;
   width: 255px;
   height: 133px;
-  align-items: left;
+  /* align-items: left; */
   text-align: left;
+  font-size:16;
 `;
 
 const UserBio = () => {

@@ -1,8 +1,9 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 // import WriteReview from "./Comps/WriteReview";
-// import UserInfo from "./Comps/UserInfo";
+// import UserInfo from "../UserInfo";
 import FooterBar from "../FooterBar";
+import WriteReview from "../WriteReview";
 
 const styles = StyleSheet.create({
   walkprofileCont: {
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
   //   marginLeft: 10
   // },
   footerCont: {
-    position: "absolute",
+  
     marginTop: 600
   }
 });
@@ -21,15 +22,17 @@ const styles = StyleSheet.create({
 const WalkerProfilePage = () => {
   return (
     <View>
+      <ScrollView>
       <View style={styles.walkprofileCont}>
         {/* <UserInfo /> */}
-        {/* <View style={styles.writereviewCont}>
+        <View style={styles.writereviewCont}>
           <WriteReview />
-        </View> */}
+        </View>
+      </View>
         <View style={styles.footerCont}>
           <FooterBar />
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };
