@@ -63,6 +63,8 @@ const TextInput = styled.TextInput`
   border-radius: 12px;
   border: 1px solid lightgrey;
 `;
+const plus = require("./plus.png");
+const nextarrow = require("./nextarrow.png");
 const Texting = ({}) => {
   return (
     <View>
@@ -74,7 +76,7 @@ const Texting = ({}) => {
                 alert("Send picture in the chat");
               }}
             >
-              <IconPics source={(require = "./plus.png")} />
+              <IconPics source={plus} />
             </AddCont>
           </Add>
           <Textbox>
@@ -86,7 +88,7 @@ const Texting = ({}) => {
                 alert("Message Sent!");
               }}
             >
-              <IconPics source={(require = "./nextarrow.png")} />
+              <IconPics source={nextarrow} />
             </ArrowCont>
           </NextArrow>
         </Inputs>

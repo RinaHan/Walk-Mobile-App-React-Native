@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components/native";
 import { View } from "react-native";
 
 const PopupCont = styled.View`
   width: 324px;
   height: 254px;
-  /* background-color: red; */
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border:1px solid grey;
+  border: 1px solid grey;
   border-radius: 8px;
- 
 `;
 
 const Exit = styled.View`
@@ -23,14 +22,14 @@ const Exit = styled.View`
   justify-content: center;
 `;
 
-const ImgBox = styled.View`
+const ImgBox = styled.TouchableOpacity`
   width: 17px;
   height: 16px;
-  margin-right:10px;
+  margin-right: 10px;
   /* background-color: blue; */
 `;
 
-const TextDisplay = styled.View`
+const TextDisplay = styled.Text`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,48 +56,66 @@ const InputsCont = styled.View`
   flex-direction: row;
 `;
 
-const TextInput = styled.View`
+const TextIn = styled.View`
   flex: 5;
   height: 45px;
   /* background-color:#BED; */
   display: flex;
   align-items: center;
   justify-content: center;
-  border:1px solid lightgrey;
-  border-radius:12px;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
 `;
 
-const ImgInput = styled.View`
+const ImgInput = styled.TouchableOpacity`
   flex: 1;
   height: 44px;
 `;
 const Close = styled.Image`
-width:100%;
-height:100%;
+  width: 100%;
+  height: 100%;
 `;
 
-const InputT = styled.TextInput`
-  width:100%;
-  height:100%;
+const PopInput = styled.TextInput`
+  width: 100%;
+  height: 100%;
 `;
 
-const Popup = ({}) => {
+const nextarrow = require("./nextarrow.png");
+const close = require("./close.png");
+
+const Popup = () => {
+  const [dm, setDm] = useState("");
   return (
     <View>
       <PopupCont>
         <Exit>
-          <ImgBox>
-          <Close source={require=("./close.png")} />
+          <ImgBox
+            onPress={() => {
+              alert("Take me to feed Page");
+            }}
+          >
+            <Close source={close} />
           </ImgBox>
         </Exit>
         <TextDisplay>Send a Message</TextDisplay>
         <Inputs>
           <InputsCont>
-            <TextInput>
-              <InputT placeholder="Type a Message..." />
-            </TextInput>
-            <ImgInput>
-                <Close source={require=("./nextarrow.png")} />
+            <TextIn>
+              <PopInput
+                placeholder="Type a Message..."
+                onChangeText={(t) => {
+                  alert(t);
+                  setDm(dm);
+                }}
+              />
+            </TextIn>
+            <ImgInput
+              onPress={() => {
+                alert("Send message and Take me to feed page");
+              }}
+            >
+              <Close source={nextarrow} />
             </ImgInput>
           </InputsCont>
         </Inputs>
