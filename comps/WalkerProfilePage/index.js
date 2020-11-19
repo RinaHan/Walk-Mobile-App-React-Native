@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import TopBar from "../TopBar";
-import FooterBar from "../FooterBar";
-import UserBio from "../UserBio";
-import WriteReview from "../WriteReview";
-import LocationAge from "../LocationAge";
-import AvatarWithName from "../Avatar/AvatarWithName";
+import TopBar from "./comps/TopBar";
+import FooterBar from "./comps/FooterBar";
+import UserBio from "./comps/UserBio";
+import WriteReview from "./comps/WriteReview";
+import LocationAge from "./comps/LocationAge";
+import AvatarWithName from "./Avatar28comps/Avatar/AvatarWithName";
 
 const styles = StyleSheet.create({
   app: {
@@ -29,8 +29,8 @@ const WalkerProfilePage = () => {
     <View style={styles.app}>
       <TopBar
         title="Walker Profile"
-        imageLeft1={require('../../comps/TopBar/leftArrow.png')}
-        imageLeft2={require('../../comps/TopBar/message.png')}
+        imageLeft1={require('./comps/TopBar/leftArrow.png')}
+        imageLeft2={require('./comps/TopBar/message.png')}
       />
       <ScrollView>
         <View style={styles.Cont}>
@@ -55,4 +55,3 @@ const WalkerProfilePage = () => {
 
 
 export default WalkerProfilePage;
- 
