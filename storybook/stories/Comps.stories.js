@@ -134,6 +134,9 @@ storiesOf('Comps', module)
 .add('Post', () => (
 <Post/>
 ))
+.add('Popup', () => (
+<Popup/>
+))
 
 
 .add('ReviewStars', () => (
