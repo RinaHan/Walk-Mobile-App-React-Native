@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
 import Title from "../Title";
 import GoogleButton from "../GoogleButton";
-// import Or from "./Comps/Or";
 import FacebookButton from "../FacebookButton";
 
 const SignIn = () => {
