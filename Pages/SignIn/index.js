@@ -1,8 +1,9 @@
+
 import React from "react";
 import { View, Text, Image, StyleSheet} from "react-native";
-import Title from "../Title";
-import GoogleButton from "../GoogleButton";
-import FacebookButton from "../FacebookButton";
+import Title from "./comps/Title";
+import GoogleButton from "./comps/GoogleButton";
+import FacebookButton from "./comps/FacebookButton";
 
 const SignIn = () => {
   return (

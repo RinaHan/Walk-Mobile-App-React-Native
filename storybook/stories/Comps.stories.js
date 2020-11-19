@@ -243,6 +243,15 @@ AvatarViewProfile.defaultProps = {
 </ScrollView>
 <FooterBar style={styles.footerBar} />
 
+
+<Link href="/ResultPage1">
+        <div className="backbutton">
+        <BackButton/>
+        </div>
+        </Link>
+
+
+        
 */
 
 
