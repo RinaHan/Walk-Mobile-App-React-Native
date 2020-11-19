@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView} from "react-native";
-import DogPhotos from '../DogPhotos';
-import FooterBar from '../FooterBar';
-import AvatarDogProfile from "../AvatarForm/AvatarDogProfile";
+import DogPhotos from './comps/DogPhotos';
+import FooterBar from './comps/FooterBar';
+import AvatarDogProfile from "./comps/AvatarForm/AvatarDogProfile";
 
 const styles = StyleSheet.create({
   app: {
@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
     marginBottom:0,
     marginTop:50,
   },
-  
 });
 
 const DogProfilePage = ({}) => {
@@ -31,10 +30,8 @@ const DogProfilePage = ({}) => {
 };
 
 DogProfilePage.defaultProps = {
-    // size: null,
     text: null,
     backgroundColor: null,
-    // height: null
 };
 
 export default DogProfilePage;

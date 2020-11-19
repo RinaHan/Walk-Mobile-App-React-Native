@@ -5,7 +5,7 @@ import FooterBar from "./comps/FooterBar";
 import UserBio from "./comps/UserBio";
 import WriteReview from "./comps/WriteReview";
 import LocationAge from "./comps/LocationAge";
-import AvatarWithName from "./Avatar28comps/Avatar/AvatarWithName";
+import AvatarWithName from "./comps/Avatar/AvatarWithName";
 
 const styles = StyleSheet.create({
   app: {

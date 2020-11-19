@@ -8,16 +8,15 @@ import React from 'react';
 import AvatarWithName from '../../comps/Avatar/AvatarWithName';
 import AvatarDogProfile from '../../comps/AvatarForm/AvatarDogProfile';
 import AddImage from '../../comps/AddImage';
-import ActivatePage from '../../comps/ActivatePage';
 import AvatarEdit from '../../comps/Avatar/AvatarEdit';
 
 
 import Background from '../../comps/Background';
 
-import ContinuePage from '../../comps/ContinueAsPage';
+
 import ContinueAs from '../../comps/ContinueAs';
 
-import DogProfilePage from '../../comps/DogProfilePage';
+
 import Dropdown from '../../comps/Dropdown';
 import DogInfoTitle from '../../comps/DogInfoTitle';
 import DogInfo from '../../comps/DogInfo';
@@ -47,7 +46,7 @@ import Post from '../../comps/Post';
 import Popup from '../../comps/Popup';
 
 import ReviewStars from '../../comps/ReviewStars';
-import RequestPage from '../../comps/RequestPage';
+
 
 import ShareFeedback from '../../comps/ShareFeedback';
 import Spacer from '../../comps/Spacer';
@@ -63,10 +62,11 @@ import WriteReview from '../../comps/WriteReview';
 import YourReview from '../../comps/YourReview';
 
 //-----------Pages
-import SignIn from '../../comps/SignIn';
+
+
 import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import WalkerProfileTitle from '../../comps/WalkerProfileTitle';
-import WalkerProfilePage from '../../comps/WalkerProfilePage';
+
 import UserInfo from '../../comps/UserInfo';
 
 
@@ -87,6 +87,12 @@ storiesOf('Comps', module)
 .add('AvatarWithName', () => (
 <AvatarWithName/>
 ))
+
+.add('ContinueAs', () => (
+  <ContinueAs/>
+  ))
+
+
 .add('DogInfo', () => (
   <DogInfo/>
 ))
@@ -175,32 +181,28 @@ storiesOf('Comps', module)
 
 //--------------Pages----------------------
 
-.add('ActivatePage', () => (
-<ActivatePage/>
-))
-.add('ContinueAs', () => (
-<ContinueAs/>
-))
-.add('ContinuePage', () => (
-  <ContinuePage/>
-))
-.add('DogProfilePage', () => (
-<DogProfilePage/>
-))
-// .add('Feed', () => (
-// <Feed/>
+
+// .add('DogProfilePage', () => (
+//   <DogProfilePage/>
+//   ))
+  
+// .add('ActivatePage', () => (
+// <ActivatePage/>
 // ))
 
-.add('RequestPage', () => (
-<RequestPage/>
-))
+// .add('RequestPage', () => (
+//   <RequestPage/>
+//   ))
+// .add('ContinueAsPage', () => (
+//   <ContinueAsPage/>
+// ))
 
-.add('SignIn', () => (
-  <SignIn/>
-))
-.add('WalkProfilePage', () => (
-<WalkerProfilePage/>
-))
+// .add('SignInPage', () => (
+//   <SignIn/>
+// ))
+// .add('WalkProfilePage', () => (
+// <WalkerProfilePage/>
+// ))
 
 ;
 
