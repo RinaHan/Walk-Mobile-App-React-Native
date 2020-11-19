@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import UserInfo from "../UserInfo";
+import Avatar07 from '../../comps/Avatar/Avatar07';
+import ReviewStars from "../ReviewStars";
 
 import global from "../../Pages/globaj";
 
@@ -146,37 +149,78 @@ const rightimg = require("./right.png");
 const walkerpicture = require("./selfie.jpg");
 
 
+const styles = StyleSheet.create({ 
+  box: {
+    width:353,
+    height:196,
+    backgroundColor:"red",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 26,
+    alignItems:"center",
+    justifyContent:"space-between",
+  },
+  container: {
+    width:"80%",
+    flexDirection:"row",
+    justifyContent:"center",
+  },
+  rightcont: {
+    marginTop:20,
+    height:150,
+    justifyContent:"center",
+    justifyContent:"space-between",
+  },
+});
+
 
 const WalkerProfile = ({city, age, bio, name}) => {
   return (
-    <View >
-      <MainCont style={global.bg}>
-        <LeftCont>
-          <Location><TitleText>Location</TitleText><RegText>{city}</RegText></Location>
-          <Age><TitleText>Age</TitleText><RegText>{age}</RegText></Age>
-          <Bio><TitleText>Bio</TitleText><BioCont><RegText>{bio}</RegText></BioCont></Bio>
-          <ViewProfile><ViewText>View full profile</ViewText><ImgCont><Img source={rightimg} /></ImgCont></ViewProfile>
-        </LeftCont>
-        <RightCont>
-          <Cont>
-            <ProfImgCont><ProfileImage source={walkerpicture} /></ProfImgCont>
-            <Name><Text>{name}</Text></Name>
-            <OtherText>Certified Walker</OtherText>
-            <Rating></Rating>
-          </Cont>
-        </RightCont>
-      </MainCont>
+    <View style={styles.box}>
+      
+        <View style={styles.container}>
+          <View>
+            <UserInfo/>
+            <Text 
+              style={styles.extratext}
+              style={{fontSize:10, marginTop:10}}>View full profile</Text>
+          </View>
+
+          <View style={styles.rightcont}>
+          <Avatar07
+              image1={require('../../comps/Avatar/face3.jpg')}/>
+          <ReviewStars/>
+          </View>
+        </View>
+        
     </View>
+    // <View >
+    //   <MainCont style={global.bg}>
+    //     <LeftCont>
+    //       <Location><TitleText>Location</TitleText><RegText>{city}</RegText></Location>
+    //       <Age><TitleText>Age</TitleText><RegText>{age}</RegText></Age>
+    //       <Bio><TitleText>Bio</TitleText><BioCont><RegText>{bio}</RegText></BioCont></Bio>
+    //       <ViewProfile><ViewText>View full profile</ViewText><ImgCont><Img source={rightimg} /></ImgCont></ViewProfile>
+    //     </LeftCont>
+    //     <RightCont>
+    //       <Cont>
+    //         <ProfImgCont><ProfileImage source={walkerpicture} /></ProfImgCont>
+    //         <Name><Text>{name}</Text></Name>
+    //         <OtherText>Certified Walker</OtherText>
+    //         <Rating></Rating>
+    //       </Cont>
+    //     </RightCont>
+    //   </MainCont>
+    // </View>
   );
 };
 
-WalkerProfile.defaultProps = {
-  city: "Burnaby, BC",
-  age: "23",
-  bio:
-    "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  name: "Ethan P",
-  pic: "selfie.jpg"
-};
+// WalkerProfile.defaultProps = {
+//   city: "Burnaby, BC",
+//   age: "23",
+//   bio:
+//     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+//   name: "Ethan P",
+//   pic: "selfie.jpg"
+// };
 
 export default WalkerProfile;

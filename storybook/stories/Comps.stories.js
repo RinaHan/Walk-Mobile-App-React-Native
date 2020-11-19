@@ -22,6 +22,7 @@ import Popup from '../../comps/Popup';
 import Or from '../../comps/Or';
 import MsgSent from '../../comps/MsgSent';
 import MsgSelection from '../../comps/MsgSelection';
+import MapPlaceholder from '../../comps/MapPlaceholder';
 import LocationAge from '../../comps/LocationAge';
 import Likes from '../../comps/Likes';
 import Input from '../../comps/Input';
@@ -87,6 +88,11 @@ storiesOf('Comps', module)
 .add('MsgSelection', () => (
 <MsgSelection/>
 ))
+
+.add('MapPlaceholder', () => (
+<MapPlaceholder/>
+))
+
 .add('ReviewStars', () => (
 <ReviewStars/>
 ))
