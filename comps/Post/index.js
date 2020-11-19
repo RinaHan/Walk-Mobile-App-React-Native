@@ -120,7 +120,7 @@ const display = require("./Lucky.png");
 const Post = ({text, time, distance}) => {
   return (
     <View>
-      {/* <MainCont>
+      <MainCont>
         <Header>
           <ProfilePic>
             <ImgCont>
@@ -128,7 +128,7 @@ const Post = ({text, time, distance}) => {
             </ImgCont>
           </ProfilePic>
           <ProfileName>
-              <NameText>{text}</NameText>
+              <NameText><Text>text</Text></NameText>
             <ViewProfile><Text>View Profile</Text></ViewProfile>
           </ProfileName>
           <Time><Text>{time}  hr ago</Text></Time>
@@ -149,7 +149,7 @@ const Post = ({text, time, distance}) => {
             <Text>{distance} Km away</Text>
           </Distance>
         </Footer>
-      </MainCont> */}
+      </MainCont>
     </View>
   );
 };

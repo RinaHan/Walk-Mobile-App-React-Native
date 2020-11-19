@@ -98,6 +98,10 @@ storiesOf('Comps', module)
 .add('MapPlaceholder', () => (
 <MapPlaceholder/>
 ))
+.add('Post', () => (
+<Post/>
+))
+
 
 .add('ReviewStars', () => (
 <ReviewStars/>
