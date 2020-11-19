@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, StyleSheet, 
   // TouchableOpacity 
 } from "react-native";
-import Title from "../Title";
-import ContinueAs from "../ContinueAs";
-import BasicButton from "../WButton/BasicButton";
+import Title from "./comps/Title";
+import ContinueAs from "./comps/ContinueAs";
+import BasicButton from "./comps/WButton/BasicButton";
 
 const styles = StyleSheet.create({ 
   app: {
