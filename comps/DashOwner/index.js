@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 const MainCont = styled.View`
   width: 170px;
@@ -17,7 +17,7 @@ const TitleCont = styled.View`
 `;
 const TitleText = styled.Text`
   font-size: 16px;
-  font-weight: bold;
+  font-weight:bold;
 `;
 const InfoCont = styled.View`
   width: 100%;
@@ -117,7 +117,7 @@ const Info = styled.View`
   padding-left: 4px;
 `;
 const TitleText2 = styled.View`
-  font-weight: Bold;
+  /* font-weight: Bold; */
   font-size: 10px;
 `;
 const InfoText = styled.View`
@@ -148,34 +148,34 @@ const DashOwner = ({ ownername, ownerphone, owneremail, owneradress }) => {
             <BottomCont>
               <NameCont>
                 <Title>
-                  <TitleText2>Name</TitleText2>
+                  <TitleText2><Text>Name</Text></TitleText2>
                 </Title>
                 <Info>
-                  <InfoText>{ownername}</InfoText>
+                  <InfoText><Text>{ownername}</Text></InfoText>
                 </Info>
               </NameCont>
               <PhoneCont>
                 <Title>
-                  <TitleText2>Phone</TitleText2>
+                  <TitleText2><Text>Phone</Text></TitleText2>
                 </Title>
                 <Info>
-                  <InfoText>{ownerphone}</InfoText>
+                  <InfoText><Text>{ownerphone}</Text></InfoText>
                 </Info>
               </PhoneCont>
               <EmailCont>
                 <Title>
-                  <TitleText2>Email</TitleText2>
+                  <TitleText2><Text>Email</Text></TitleText2>
                 </Title>
                 <Info>
-                  <InfoText>{owneremail}</InfoText>
+                  <InfoText><Text>{owneremail}</Text></InfoText>
                 </Info>
               </EmailCont>
               <AdressCont>
                 <Title>
-                  <TitleText2>Address</TitleText2>
+                  <TitleText2><Text>Address</Text></TitleText2>
                 </Title>
                 <Info>
-                  <InfoText>{owneradress}</InfoText>
+                  <InfoText><Text>{owneradress}</Text></InfoText>
                 </Info>
               </AdressCont>
             </BottomCont>

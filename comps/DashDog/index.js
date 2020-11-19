@@ -129,7 +129,7 @@ const Title = styled.View`
   justify-content:center;
 `;
 const TitleText2 = styled.View`
-  font-weight: Bold;
+  font-weight:bold;
   font-size: 10px;
 `;
 const Info = styled.View`
@@ -162,23 +162,22 @@ const DashDog = ({dogname, age, breed, likes}) => {
               </ProfPicCont>
               <ProfTextCont>
                 <Name><Text>{dogname}</Text></Name>
-                <ViewProfile><PText>View full profile</PText><ArrowCont><Arrow source={rightarrow}/></ArrowCont></ViewProfile>
+                <ViewProfile><PText><Text>View full profile</Text></PText><ArrowCont><Arrow source={rightarrow}/></ArrowCont></ViewProfile>
               </ProfTextCont>
             </TopCont>
           </TopInfo>
           <BottomInfo>
             <BottomCont>
               <AgeCont>
-                <Title><TitleText2>Age</TitleText2></Title>
-                <Info><InfoText>{age}</InfoText></Info>
+                <Title><TitleText2><Text>Age</Text></TitleText2></Title>
+                <Info><InfoText><Text>{age}</Text></InfoText></Info>
               </AgeCont>
               <BreedCont>
-                <Title><TitleText2>Breed</TitleText2></Title>
-                <Info><InfoText>{breed}</InfoText></Info>
+                <Title><TitleText2><Text>Breed</Text></TitleText2></Title>
+                <Info><InfoText><Text>{breed}</Text></InfoText></Info>
               </BreedCont>
               <LikesCont>
-                <Title><TitleText2>Likes</TitleText2></Title>
-                <Info><InfoText>{likes}</InfoText></Info>
+                <Title><TitleText2><Text>Likes</Text></TitleText2></Title>
               </LikesCont>
             </BottomCont>
           </BottomInfo>
