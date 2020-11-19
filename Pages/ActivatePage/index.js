@@ -1,13 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView} from "react-native";
-import TopBar from '../TopBar';
-import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
-import BasicAvatar from "../Avatar/BasicAvatar";
-import DeclineButton from "../WButton/DeclineButton";
-import ActivateButton from "../WButton/ActivateButton";
-import Spacer from "../Spacer";
-import FooterBar from "../FooterBar";
-import MsgSelection from "../MsgSelection";
+import TopBar from './comps/TopBar';
+import AvatarViewProfile from './comps/AvatarForm/AvatarViewProfile';
+import BasicAvatar from "./comps/Avatar/BasicAvatar";
+import DeclineButton from "./comps/WButton/DeclineButton";
+import ActivateButton from "./comps/WButton/ActivateButton";
+import Spacer from "./comps/Spacer";
+import FooterBar from "./comps/FooterBar";
+import MsgSelection from "./comps/MsgSelection";
 
 const styles = StyleSheet.create({
   app: {
@@ -36,7 +36,7 @@ const ActivatePage = ({}) => {
         <ScrollView>
           <View style={styles.container}>
             <BasicAvatar
-            image1={require('../../comps/Avatar/face3.jpg')}
+            image1={require('./comps/Avatar/face3.jpg')}
             width={64}
             height={64}/>
             <AvatarViewProfile
