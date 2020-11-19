@@ -52,51 +52,70 @@ import ContinuePage from '../../comps/ContinueAsPage';
 import DogProfilePage from '../../comps/DogProfilePage';
 
 storiesOf('Comps', module)
-  .add('WalkerProfileTitle', () => (
-    <WalkerProfileTitle/>
+  
+  
+  .add('AvatarEdit', () => (
+    <AvatarEdit />
   ))
-  .add('UserInfo', () => (
-    <UserInfo/>
+  .add('AvatarDogProfile', () => (
+    <AvatarDogProfile />
   ))
-  .add('UserBio', () => (
-    <UserBio/>
+  .add('AvatarWithName', () => (
+  <AvatarWithName/>
   ))
-  .add('Texting', () => (
-    <Texting/>
-    ))
-    //okay
-    .add('FooterBar', () => (
-      <FooterBar/>
-      ))
-      //okay
-      .add('Title', () => (
-        <Title/>
-        ))
-        //okay
-        .add('Spacer', () => (
-          <Spacer/>
-          ))
-        .add('AvatarWithName', () => (
-          <AvatarWithName/>
-          ))
+  .add('DogInfo', () => (
+    <DogInfo/>
+  ))
+  .add('DogLikes', () => (
+    <DogLikes/>
+  ))
+.add('DogDislikes', () => (
+<DogDislikes/>
+))
+.add('DogPhotos', () => (
+<DogPhotos/>
+))
+.add('FooterBar', () => (
+<FooterBar/>
+))
+.add('FacebookButton', () => (
+<FacebookButton/>
+))
+.add('GoogleButton', () => (
+<GoogleButton/>
+))
+.add('MsgSelection', () => (
+<MsgSelection/>
+))
+.add('ReviewStars', () => (
+<ReviewStars/>
+))
+.add('Spacer', () => (
+<Spacer/>
+))
+  
+  
+.add('Texting', () => (
+<Texting/>
+))
+
+.add('Title', () => (
+<Title/>
+))
+
           //modified. still need to solve 2 import, ----------->
           // .add('ShareFeedback', () => (
             //     <ShareFeedback/>
             //   ))
             // // error break Android, need to modify code
-            .add('ReviewStars', () => (
-              <ReviewStars/>
-              ))
+
               // .add('RequestPage', () => (
                 //     <RequestPage/>
                 //   ))
                 // .add('Posts', () => (
                   //     <Posts/>
                   //   ))
-                          
-// .add('Post', () => (
-//     <Post/>
-//   ))
+
 // .add('Popup', () => (
 //     <Popup/>
 //   ))
@@ -106,15 +125,9 @@ storiesOf('Comps', module)
 // .add('MsgSent', () => (
 //     <MsgSent/>
 //   ))
-.add('MsgSelection', () => (
-    <MsgSelection/>
-  ))
-.add('WriteReview', () => (
-    <WriteReview/>
-  ))
-.add('YourReview', () => (
-    <YourReview/>
-  ))
+
+
+
 // .add('MsgRecieved', () => (
 //     <MsgRecieved/>
 //   ))
@@ -128,50 +141,47 @@ storiesOf('Comps', module)
 // .add('Input', () => (
 //     <Input/>
 //   ))
-.add('GoogleButton', () => (
-    <GoogleButton/>
-  ))
 
-.add('FacebookButton', () => (
-    <FacebookButton/>
-  ))
+
+
 // .add('EventInfo', () => (
 //     <EventInfo/>
 //   ))
 // .add('Dropdown', () => (
 //     <Dropdown/>
 //   ))
-.add('DogLikes', () => (
-    <DogLikes/>
-  ))
-  .add('DogDislikes', () => (
-      <DogDislikes/>
-    ))
-  .add('DogPhotos', () => (
-      <DogPhotos/>
-    ))
+
   
 // .add('DogInfoTitle', () => (
 //     <DogInfoTitle/>
 //   ))
-.add('DogInfo', () => (
-    <DogInfo/>
-  ))
-  .add('AvatarEdit', () => (
-    <AvatarEdit />
-  ))
-  .add('AvatarDogProfile', () => (
-    <AvatarDogProfile />
-  ))
-  .add('WriteReview', () => (
-    <WriteReview />
-  ))
-  .add('LocationAge', () => (
-    <LocationAge />
-  ))
-  .add('LocationAge', () => (
-    <LocationAge />
-  ))
+
+
+.add('LocationAge', () => (
+  <LocationAge />
+))
+
+.add('UserInfo', () => (
+  <UserInfo/>
+))
+.add('UserBio', () => (
+  <UserBio/>
+))
+.add('WalkerProfile', () => (
+  <WalkerProfile/>
+))
+.add('WriteReview', () => (
+  <WriteReview />
+))
+.add('WalkerProfileTitle', () => (
+  <WalkerProfileTitle/>
+))
+.add('WriteReview', () => (
+  <WriteReview/>
+))
+.add('YourReview', () => (
+<YourReview/>
+))
 // .add('Description', () => (
 //     <Description/>
 //   ))
@@ -209,9 +219,11 @@ storiesOf('Comps', module)
 //     <Background/>
 //   ))
 
-  .add('WalkerProfile', () => (
-    <WalkerProfile/>
-  ))
+
+  //뻑남              
+// .add('Post', () => (
+//     <Post/>
+//   ))
 
 
 

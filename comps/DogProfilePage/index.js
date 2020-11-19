@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView} from "react-native";
-import TopBar from '../TopBar';
 import DogPhotos from '../DogPhotos';
 import FooterBar from '../FooterBar';
 import AvatarDogProfile from "../AvatarForm/AvatarDogProfile";
@@ -11,7 +10,7 @@ const styles = StyleSheet.create({
   },
   AvatarDogProfile: {
     marginBottom:0,
-    marginTop:20,
+    marginTop:50,
   },
   
 });
