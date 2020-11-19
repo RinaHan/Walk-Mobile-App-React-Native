@@ -55,21 +55,27 @@ import DogProfilePage from '../../comps/DogProfilePage';
 storiesOf('Comps', module)
   
   
-  .add('AvatarEdit', () => (
-    <AvatarEdit />
-  ))
-  .add('AvatarDogProfile', () => (
-    <AvatarDogProfile />
-  ))
-  .add('AvatarWithName', () => (
-  <AvatarWithName/>
-  ))
-  .add('DogInfo', () => (
-    <DogInfo/>
-  ))
-  .add('DogLikes', () => (
-    <DogLikes/>
-  ))
+.add('AvatarEdit', () => (
+  <AvatarEdit />
+))
+.add('AvatarDogProfile', () => (
+  <AvatarDogProfile />
+))
+.add('AvatarWithName', () => (
+<AvatarWithName/>
+))
+.add('DogInfo', () => (
+  <DogInfo/>
+))
+.add('DogLikes', () => (
+  <DogLikes/>
+))
+.add('DashOwner', () => (
+  <DashOwner/>
+))
+.add('DashDog', () => (
+  <DashDog/>
+))
 .add('DogDislikes', () => (
 <DogDislikes/>
 ))
