@@ -123,6 +123,3 @@ const Popup = ({}) => {
 Popup.defaultProps = {};
 
 export default Popup;
-
-
-

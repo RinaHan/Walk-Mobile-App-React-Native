@@ -102,6 +102,3 @@ const Texting = ({}) => {
 Texting.defaultProps = {};
 
 export default Texting;
-
-
-
