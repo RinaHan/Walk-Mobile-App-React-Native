@@ -11,14 +11,18 @@ import AddImage from '../../comps/AddImage';
 import AvatarEdit from '../../comps/Avatar/AvatarEdit';
 
 
+import Birthday from '../../comps/Birthday';
 import Background from '../../comps/Background';
 
 
 import ContinueAs from '../../comps/ContinueAs';
 
 
+import Description from '../../comps/Description';
+import Dislikes from '../../comps/Dislikes';
 import Dropdown from '../../comps/Dropdown';
-import DogInfoTitle from '../../comps/DogInfoTitle';
+
+
 import DogInfo from '../../comps/DogInfo';
 import DogDislikes from '../../comps/DogDislikes';
 import DogLikes from '../../comps/DogLikes';
@@ -26,15 +30,20 @@ import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
 import DogPhotos from '../../comps/DogPhotos';
 
-// import Feed from '../../comps/Feed';
+
 import FooterBar from '../../comps/FooterBar';
 import FacebookButton from '../../comps/FacebookButton';
 
 import GoogleButton from '../../comps/GoogleButton';
 
+import Input from '../../comps/Input';
+
+
+
 import Likes from '../../comps/Likes';
 import LocationAge from '../../comps/LocationAge';
 
+import MsgRecieved from '../../comps/MsgRecieved';
 import MsgSent from '../../comps/MsgSent';
 import MsgSelection from '../../comps/MsgSelection';
 import MapPlaceholder from '../../comps/MapPlaceholder';
@@ -88,28 +97,43 @@ storiesOf('Comps', module)
 <AvatarWithName/>
 ))
 
+.add('Birthday', () => (
+<Birthday/>
+))
+
 .add('ContinueAs', () => (
   <ContinueAs/>
   ))
 
 
+.add('Description', () => (
+<Description/>
+))
+.add('Dropdown', () => (
+<Dropdown/>
+))
 .add('DogInfo', () => (
-  <DogInfo/>
+<DogInfo/>
 ))
 .add('DogLikes', () => (
-  <DogLikes/>
+<DogLikes/>
 ))
 .add('DashOwner', () => (
-  <DashOwner/>
+<DashOwner/>
 ))
 .add('DashDog', () => (
-  <DashDog/>
+<DashDog/>
 ))
 .add('DogDislikes', () => (
 <DogDislikes/>
 ))
 .add('DogPhotos', () => (
 <DogPhotos/>
+))
+.add('Dislikes', () => (
+<Dislikes
+  maintext="Dislikes"
+/>
 ))
 
 
@@ -126,6 +150,16 @@ storiesOf('Comps', module)
 ))
 .add('MsgSelection', () => (
 <MsgSelection/>
+))
+.add('MsgSent', () => (
+<MsgSent
+msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
+/>
+))
+.add('MsgRecieved', () => (
+<MsgRecieved
+msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
+/>
 ))
 
 .add('MapPlaceholder', () => (
@@ -154,10 +188,22 @@ storiesOf('Comps', module)
 .add('Title', () => (
 <Title/>
 ))
+.add('Input', () => (
+<Input
+   text= "Name"
+   height={37}
+  //  width={200}
+   placeholder=""  />
+))
 
 
 .add('LocationAge', () => (
   <LocationAge />
+))
+.add('Likes', () => (
+  <Likes 
+  maintext="Likes"
+  />
 ))
 
 .add('UserInfo', () => (
@@ -210,54 +256,6 @@ storiesOf('Comps', module)
 ;
 
 
-
-/* 
-justifyContent:"center"
-style={{width:300, height:100 }} 
-style={{fontWeight:"bold", fontSize:18}}
-
-import { View, Text, StyleSheet, ScrollView} from "react-native";
-
-
-
-const styles = StyleSheet.create({ 
-  app: {
-    justifyContent:"center",
-    alignItems:"center",
-    backgroundColor:"red",
-    height:"100%"
-  },
-});
-<BasicAvatar image1={require('../../comps/Avatar/face3.jpg')}/>
-const activehome = require("./activehome.png");
-
-
-AvatarViewProfile.defaultProps = {
-    textname: null,
-    text: null,
-    backgroundColor: null,
-    // height: null
-};
-
-<View style={styles.app}>
-<TopBar title="Inbox" />
-<ScrollView>
-<View style={styles.container}>
-
-</View>
-</ScrollView>
-<FooterBar style={styles.footerBar} />
-
-
-<Link href="/ResultPage1">
-        <div className="backbutton">
-        <BackButton/>
-        </div>
-        </Link>
-
-
-        
-*/
 
 
 
