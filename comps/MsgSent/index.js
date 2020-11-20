@@ -10,7 +10,7 @@ const MainCont = styled.View`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
 `;
 
 const Cont = styled.View`
@@ -33,7 +33,8 @@ const RightSide = styled.View`
   flex: 8;
   /* background-color: #bdb; */
   background: #eaf6f7;
-  border-radius: 0px 6px 6px 6px;
+  border-radius: 6px;
+  padding:10px;
 `;
 
 const ImgCont = styled.View`
@@ -46,6 +47,7 @@ const Img = styled.Image`
   width: 100%;
   height: 100%;
   border-radius: 16px;
+  margin-left:10px;
 `;
 const avatar = require("./selfie.jpg");
 const MsgSent = ({ msgSent }) => {

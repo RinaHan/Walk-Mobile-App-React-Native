@@ -20,7 +20,7 @@ const MainCont = styled.View`
 `;
 
 const Cont = styled.View`
-  width: 273px;
+  width: 280px;
   height: 40px;
   /* background-color:#BDB; */
   display: flex;
@@ -40,7 +40,7 @@ const ImgCont = styled.TouchableOpacity`
 `;
 
 const Options = styled.View`
-  width: 273px;
+  width: 280px;
   height: 80px;
   background-color: #bcd;
   /* display: ${(props) => (props.expand ? "none" : "inline-flex")}; */

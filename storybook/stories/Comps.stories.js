@@ -11,12 +11,14 @@ import AddImage from '../../comps/AddImage';
 import AvatarEdit from '../../comps/Avatar/AvatarEdit';
 
 
+import Birthday from '../../comps/Birthday';
 import Background from '../../comps/Background';
 
 
 import ContinueAs from '../../comps/ContinueAs';
 
 
+import Description from '../../comps/Description';
 import Dislikes from '../../comps/Dislikes';
 import Dropdown from '../../comps/Dropdown';
 
@@ -41,6 +43,7 @@ import Input from '../../comps/Input';
 import Likes from '../../comps/Likes';
 import LocationAge from '../../comps/LocationAge';
 
+import MsgRecieved from '../../comps/MsgRecieved';
 import MsgSent from '../../comps/MsgSent';
 import MsgSelection from '../../comps/MsgSelection';
 import MapPlaceholder from '../../comps/MapPlaceholder';
@@ -94,11 +97,18 @@ storiesOf('Comps', module)
 <AvatarWithName/>
 ))
 
+.add('Birthday', () => (
+<Birthday/>
+))
+
 .add('ContinueAs', () => (
   <ContinueAs/>
   ))
 
 
+.add('Description', () => (
+<Description/>
+))
 .add('Dropdown', () => (
 <Dropdown/>
 ))
@@ -140,6 +150,16 @@ storiesOf('Comps', module)
 ))
 .add('MsgSelection', () => (
 <MsgSelection/>
+))
+.add('MsgSent', () => (
+<MsgSent
+msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
+/>
+))
+.add('MsgRecieved', () => (
+<MsgRecieved
+msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
+/>
 ))
 
 .add('MapPlaceholder', () => (
