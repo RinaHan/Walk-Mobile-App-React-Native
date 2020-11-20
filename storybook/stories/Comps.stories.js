@@ -23,12 +23,14 @@ import Dislikes from '../../comps/Dislikes';
 import Dropdown from '../../comps/Dropdown';
 
 
+import DogInfoTitle from '../../comps/DogInfoTitle';
 import DogInfo from '../../comps/DogInfo';
 import DogDislikes from '../../comps/DogDislikes';
 import DogLikes from '../../comps/DogLikes';
 import DashOwner from '../../comps/DashOwner';
 import DashDog from '../../comps/DashDog';
 import DogPhotos from '../../comps/DogPhotos';
+import EventInfo from '../../comps/EventInfo';
 
 
 import FooterBar from '../../comps/FooterBar';
@@ -130,12 +132,27 @@ storiesOf('Comps', module)
 .add('DogPhotos', () => (
 <DogPhotos/>
 ))
+.add('DogInfoTitle', () => (
+<DogInfoTitle/>
+))
 .add('Dislikes', () => (
 <Dislikes
   maintext="Dislikes"
 />
 ))
 
+.add('EventInfo', () => (
+<EventInfo
+// onPress= "() => {}"
+title="title"
+date= "date"
+number="number"
+time="time"
+detail1="detail1"
+detail2="detail2"
+img="img"
+/>
+))
 
 
 .add('FooterBar', () => (
@@ -168,6 +185,9 @@ msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
 .add('Post', () => (
 <Post/>
 ))
+.add('Posts', () => (
+<Posts/>
+))
 .add('Popup', () => (
 <Popup/>
 ))
@@ -178,6 +198,9 @@ msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
 ))
 .add('Spacer', () => (
 <Spacer/>
+))
+.add('ShareFeedback', () => (
+<ShareFeedback/>
 ))
   
   
