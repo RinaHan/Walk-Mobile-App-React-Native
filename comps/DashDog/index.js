@@ -158,7 +158,7 @@ const DashDog = ({dogname, age, breed, likes}) => {
           <TopInfo>
             <TopCont>
               <ProfPicCont>
-                <ImgCont><Img source={dogpicture} /></ImgCont>
+                <ImgCont><Img source={dogpicture}/></ImgCont>
               </ProfPicCont>
               <ProfTextCont>
                 <Name><Text>{dogname}</Text></Name>

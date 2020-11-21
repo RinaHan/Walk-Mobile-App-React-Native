@@ -77,6 +77,7 @@ import YourReview from '../../comps/YourReview';
 
 import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import WalkerProfileTitle from '../../comps/WalkerProfileTitle';
+import WalkerDashPage from '../../comps/WalkerDashPage';
 
 import UserInfo from '../../comps/UserInfo';
 
@@ -155,69 +156,69 @@ img="img"
 ))
 
 
-.add('FooterBar', () => (
-<FooterBar/>
-))
-.add('FacebookButton', () => (
-<FacebookButton/>
-))
+// .add('FooterBar', () => (
+// <FooterBar/>
+// ))
+// .add('FacebookButton', () => (
+// <FacebookButton/>
+// ))
 
-.add('GoogleButton', () => (
-<GoogleButton/>
-))
-.add('MsgSelection', () => (
-<MsgSelection/>
-))
-.add('MsgSent', () => (
-<MsgSent
-msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
-/>
-))
-.add('MsgRecieved', () => (
-<MsgRecieved
-msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
-/>
-))
+// .add('GoogleButton', () => (
+// <GoogleButton/>
+// ))
+// .add('MsgSelection', () => (
+// <MsgSelection/>
+// ))
+// .add('MsgSent', () => (
+// <MsgSent
+// msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
+// />
+// ))
+// .add('MsgRecieved', () => (
+// <MsgRecieved
+// msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
+// />
+// ))
 
-.add('MapPlaceholder', () => (
-<MapPlaceholder/>
-))
-.add('Post', () => (
-<Post/>
-))
-.add('Posts', () => (
-<Posts/>
-))
-.add('Popup', () => (
-<Popup/>
-))
+// .add('MapPlaceholder', () => (
+// <MapPlaceholder/>
+// ))
+// .add('Post', () => (
+// <Post/>
+// ))
+// .add('Posts', () => (
+// <Posts/>
+// ))
+// .add('Popup', () => (
+// <Popup/>
+// ))
 
 
-.add('ReviewStars', () => (
-<ReviewStars/>
-))
-.add('Spacer', () => (
-<Spacer/>
-))
-.add('ShareFeedback', () => (
-<ShareFeedback/>
-))
+// .add('ReviewStars', () => (
+// <ReviewStars/>
+// ))
+// .add('Spacer', () => (
+// <Spacer/>
+// ))
+// .add('ShareFeedback', () => (
+// <ShareFeedback/>
+// ))
   
   
-.add('Texting', () => (
-<Texting/>
-))
+// .add('Texting', () => (
+// <Texting/>
+// ))
 
-.add('Title', () => (
-<Title/>
-))
-.add('Input', () => (
-<Input
-   text= "Name"
-   height={37}
-  //  width={200}
-   placeholder=""  />
-))
+// .add('Title', () => (
+// <Title/>
+// ))
+// .add('Input', () => (
+// <Input
+//    text= "Name"
+//    height={37}
+//   //  width={200}
+//    placeholder=""  />
+// ))
 
 
 .add('LocationAge', () => (
@@ -254,26 +255,32 @@ msgSent="slajldfjal;djfasoidfjal;flaidjfldafjalidfjaslalfidjlafidjfl"
 //--------------Pages----------------------
 
 
+// .add('ActivatePage', () => (
+// <ActivatePage/>
+// ))
+// .add('ContinueAsPage', () => (
+//   <ContinueAsPage/>
+// ))
 // .add('DogProfilePage', () => (
 //   <DogProfilePage/>
 //   ))
   
-// .add('ActivatePage', () => (
-// <ActivatePage/>
-// ))
 
+// .add('OwnerDashPage', () => (
+//   <OwnerDashPage/>
+//   ))
 // .add('RequestPage', () => (
 //   <RequestPage/>
 //   ))
-// .add('ContinueAsPage', () => (
-//   <ContinueAsPage/>
-// ))
 
 // .add('SignInPage', () => (
 //   <SignIn/>
 // ))
 // .add('WalkProfilePage', () => (
 // <WalkerProfilePage/>
+// ))
+// .add('WalkerDashPage', () => (
+// <WalkerDashPage/>
 // ))
 
 ;
