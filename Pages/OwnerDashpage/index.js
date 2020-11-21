@@ -5,6 +5,7 @@ import DashOwner from "./comps/DashOwner";
 import FooterBar from "./comps/FooterBar";
 import MapPlaceholder from "./comps/MapPlaceholder";
 import TopBar from './comps/TopBar';
+import WalkerProfile from "./comps/WalkerProfile";
 // import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
 
 const styles = StyleSheet.create({
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 360,
     justifyContent:"space-between",
-    marginTop:40
+    marginTop:50,
+    marginBottom:40
   },
   
 });
@@ -38,10 +40,10 @@ const OwnerDashPage = ({}) => {
         <ScrollView>
             <TopBar title="Dashboard" />
           <View style={styles.container}>
-            <MapPlaceholder style={styles.map}/>
+            <MapPlaceholder style={styles.map}
+            text="Return Address"/>
             <View style={styles.dashcont}>
-              <DashDog/>
-              <DashOwner/>
+              <WalkerProfile/>
             </View>
           </View>
         </ScrollView>
@@ -56,5 +58,6 @@ OwnerDashPage.defaultProps = {
     backgroundColor: null,
     // height: null
 };
+
 
 export default OwnerDashPage;
