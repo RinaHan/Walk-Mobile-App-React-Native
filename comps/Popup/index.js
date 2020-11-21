@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, onPress } from "react-native";
 
 const PopupCont = styled.View`
   width: 324px;
@@ -82,14 +82,7 @@ const InputT = styled.TextInput`
   height:100%;
 `;
 
-const styles = StyleSheet.create({ 
-  bold: {
-    // justifyContent:"center",
-    // alignItems:"center",
-    // backgroundColor:"red",
-    // height:"100%"
-  },
-});
+
 
 const nextarrow = require("./nextarrow.png");
 const close = require("./close.png");
@@ -100,18 +93,25 @@ const Popup = ({}) => {
     <View>
       <PopupCont>
         <Exit>
-          <ImgBox>
+          <ImgBox onPress={() => {
+alert("close");
+}}>
           <Close source={close} />
           </ImgBox>
         </Exit>
-        <TextDisplay><Text style={{fontWeight:"bold"}}>Send a Message</Text></TextDisplay>
+        <TextDisplay><Text >Send a Message</Text></TextDisplay>
         <Inputs>
           <InputsCont>
             <TextInput>
               <InputT placeholder="Type a Message..." />
             </TextInput>
-            <ImgInput>
-                <Close source={nextarrow} />
+            
+              <ImgInput
+              onPress={() => {
+                alert("Message Sent!");
+              }}
+            >
+                <Close source={nextarrow}  />
             </ImgInput>
           </InputsCont>
         </Inputs>
