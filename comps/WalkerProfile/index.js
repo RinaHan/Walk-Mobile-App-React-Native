@@ -158,6 +158,14 @@ const styles = StyleSheet.create({
     borderRadius: 26,
     alignItems:"center",
     justifyContent:"space-between",
+    shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 1,
+            },
+            shadowOpacity: 0.29,
+            shadowRadius: 4.65,
+            elevation: 5,
   },
   container: {
     width:"80%",
@@ -168,15 +176,21 @@ const styles = StyleSheet.create({
     marginTop:20,
     height:150,
     justifyContent:"center",
-    justifyContent:"space-between",
+    // justifyContent:"space-between",
   },
+  text: {
+    marginLeft:20,
+    fontWeight:"bold",
+    marginBottom:10
+  }
 });
 
 
 const WalkerProfile = ({city, age, bio, name}) => {
   return (
+    <View>
+      <Text style={styles.text}>Walker Profile</Text>
     <View style={styles.box}>
-      
         <View style={styles.container}>
           <View>
             <UserInfo/>
@@ -190,6 +204,7 @@ const WalkerProfile = ({city, age, bio, name}) => {
               image1={require('../../comps/Avatar/face3.jpg')}/>
           <ReviewStars/>
           </View>
+        </View>
         </View>
         
     </View>
