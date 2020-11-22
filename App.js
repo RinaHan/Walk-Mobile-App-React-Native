@@ -18,35 +18,64 @@
 
 
 import React, { useState } from "react";
-import { View, ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import styled from "styled-components/native";
 
-import Post from "./comps/Post";import AvatarEdit from "./comps/Avatar/AvatarEdit";
-import FooterBar from "./comps/FooterBar";
-
+import Texting from "./comps/Texting";
+import MsgSent from "./comps/MsgSent";
+import MsgRecieved from "./comps/MsgRecieved";
+import TopBar from "./comps/TopBar";
 
 const Main = styled.View`
- height: 100%;
- margin-top:20px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+`;
+const MainCont = styled.View`
+  width: 100%;
+  height: 812px;
+`;
+const FooterCont = styled.View`
+  width: 375px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
 `;
 const Cont = styled.View`
-  margin-bottom:70px;
+  width: 100%;
+  height: 86%;
+  /* overflow-y: scroll; */
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* background-color: blue; */
+  bottom: 70;
+  position: absolute;
 `;
-const Feed = () => {
-  return (
-    <Main>
-      <ScrollView>
-        <Cont>
-          <Post />
-        </Cont>
-        <Cont>
-          <Post />
-        </Cont>
 
-      </ScrollView>
-      <FooterBar />
-    </Main>
+const Chatting = () => {
+  return (
+      <Main>
+          <TopBar imageLeft1={require("./comps/TopBar/leftArrow.png")} />
+       
+        <ScrollView>
+        <MainCont>
+          <Cont>
+            <MsgSent />
+            <MsgRecieved />
+          </Cont>
+
+
+        </MainCont>
+        </ScrollView>
+          <FooterCont>
+            <Texting />
+          </FooterCont>
+      </Main>
   );
 };
 
-export default Feed;
+export default Chatting;

@@ -6,9 +6,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems:"center",
     // justifyContent:"center",
-    height:44,
-    borderBottomColor:"#999",
-    borderBottomWidth: 1,
+    height:54,
+    // backgroundColor:"#dad",
+    borderBottomColor:"#E8E8E8",
+    borderBottomWidth: 2,
     justifyContent:"space-between",
     position:"relative"
   },
