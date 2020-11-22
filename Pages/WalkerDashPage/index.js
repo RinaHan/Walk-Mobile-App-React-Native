@@ -9,7 +9,6 @@ import TopBar from "./Comps/TopBar";
 import MapPlaceholder from "./Comps/MapPlaceholder";
 
 const LocationCont = styled.View`
-  /* position: relative; */
   top: 5%;
 `;
 
@@ -27,7 +26,6 @@ const DashDogCont = styled.View`
 `;
 
 const DashDogOwnerCont = styled.View`
-  /* position: relative; */
   flex-direction: row;
   top: 20%;
 `;
