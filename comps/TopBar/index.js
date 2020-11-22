@@ -63,7 +63,7 @@ const TopBar = ({title, text1, text2, imageLeft1, imageLeft2, imageRight1}) => {
         <TouchableOpacity 
         style={styles.textLeft}
         onPress={onPress}>
-        <Text>candle</Text>
+        <Text>{text1}</Text>
         </TouchableOpacity>
 
         
