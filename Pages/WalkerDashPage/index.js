@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import styled from "styled-components/native";
-import FooterBar from "./Comps/FooterBar";
+import WalkerFooterBar from "./Comps/WalkerFooterBar";
 import DashDog from "./Comps/DashDog";
 import DashOwner from "./Comps/DashOwner";
 import WalkerProfileTitle from "./Comps/WalkerProfileTitle";
@@ -92,7 +92,7 @@ const WalkerDashPage = () => {
             </DashDogOwnerCont>
           </Cont>
           <FooterCont>
-            <FooterBar />
+            <WalkerFooterBar />
           </FooterCont>
         </MainCont>
       </Main>
