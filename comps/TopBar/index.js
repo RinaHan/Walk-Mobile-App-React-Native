@@ -17,11 +17,12 @@ const styles = StyleSheet.create({
     
   },
   title: {
-    position:"absolute",
-    marginLeft:170,
+    // position:"absolute",
+    // marginLeft:170,
     color: "black",
     fontSize:22,
-    fontWeight:"bold"
+    fontWeight:"bold",
+    alignItems:"center"
   },
   textLeft: {
     // position:"absolute",

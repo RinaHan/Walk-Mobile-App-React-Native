@@ -6,11 +6,11 @@ import ReviewStars from "../../ReviewStars";
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    alignItems:"center",
-    justifyContent:"center",
+    // alignItems:"center",
+    // justifyContent:"center",
   },
   avatar: {
-    marginLeft:20
+    // marginLeft:20
   },
 reviewcont: {
     marginLeft:20,
