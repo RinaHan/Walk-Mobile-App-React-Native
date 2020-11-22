@@ -17,4 +17,36 @@
 // export {default} from './storybook'; 
 
 
+import React, { useState } from "react";
+import { View, ScrollView } from "react-native";
+import styled from "styled-components/native";
 
+import Post from "./comps/Post";import AvatarEdit from "./comps/Avatar/AvatarEdit";
+import FooterBar from "./comps/FooterBar";
+
+
+const Main = styled.View`
+ height: 100%;
+ margin-top:20px;
+`;
+const Cont = styled.View`
+  margin-bottom:70px;
+`;
+const Feed = () => {
+  return (
+    <Main>
+      <ScrollView>
+        <Cont>
+          <Post />
+        </Cont>
+        <Cont>
+          <Post />
+        </Cont>
+
+      </ScrollView>
+      <FooterBar />
+    </Main>
+  );
+};
+
+export default Feed;
