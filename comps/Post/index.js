@@ -131,7 +131,9 @@ const Post = ({text, time, distance}) => {
             </Heart>
             
             {/* <Message> */}
-            <TouchableOpacity onPress={onPress}>
+            <TouchableOpacity onPress={() => {
+            alert("Send a Message");
+            }}>
               <IconPics 
               source={messageimg} >
 
