@@ -19,10 +19,13 @@ const DogProfilePage = ({}) => {
   return (
       <View style={styles.app}>
         <ScrollView>
+
           <View style={styles.AvatarDogProfile}>
           <AvatarDogProfile />
           </View>
+          
           <DogPhotos/>
+
         </ScrollView>
         <FooterBar />
       </View>

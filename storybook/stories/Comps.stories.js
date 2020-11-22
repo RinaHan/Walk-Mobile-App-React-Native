@@ -77,7 +77,6 @@ import YourReview from '../../comps/YourReview';
 
 import LeaveReviewPage from '../../comps/LeaveReviewPage';
 import WalkerProfileTitle from '../../comps/WalkerProfileTitle';
-import WalkerDashPage from '../../comps/WalkerDashPage';
 
 import UserInfo from '../../comps/UserInfo';
 
