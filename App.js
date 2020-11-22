@@ -59,13 +59,23 @@ const Cont = styled.View`
 const Chatting = () => {
   return (
       <Main>
-          <TopBar imageLeft1={require("./comps/TopBar/leftArrow.png")} />
+          <TopBar 
+          imageLeft1={require("./comps/TopBar/leftArrow.png")}
+          title="Bob"
+          // text1="text1"
+          // text2="text2"
+          // imageLeft2={require("./comps/TopBar/leftArrow.png")}
+          // imageRight1={require("./comps/TopBar/leftArrow.png")}
+
+          />
        
         <ScrollView>
         <MainCont>
           <Cont>
-            <MsgSent />
-            <MsgRecieved />
+            <MsgSent 
+            msgSent="hi"/>
+            <MsgRecieved 
+            msgRecieve="hello"/>
           </Cont>
 
 

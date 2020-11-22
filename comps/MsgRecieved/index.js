@@ -36,7 +36,7 @@ const RightSide = styled.View`
   flex: 8;
   background-color: #eaf6f7;
   border-radius: 6px;
-  padding:7px;
+  padding:15px;
 `;
 
 const ImgCont = styled.View`
@@ -76,6 +76,6 @@ const MsgRecieved = ({ msgRecieve }) => {
 
 MsgRecieved.defaultProps = {
   avatar: "selfie.jpg",
-  msgRecieve: "defaultmessage"
+  msgRecieve: "de"
 };
 export default MsgRecieved;
