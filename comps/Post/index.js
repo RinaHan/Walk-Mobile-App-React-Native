@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { View, Text} from "react-native";
+import { View, Text, onPress, TouchableOpacity} from "react-native";
 import BasicAvatar from "../Avatar/BasicAvatar";
 
 const MainCont = styled.View`
@@ -68,11 +68,6 @@ const Heart = styled.View`
   height:23px;
   /* background-color:#ABD; */
 `;
-const Message = styled.View`
-  width:23px;
-  height:23px;
-  /* background-color:#ABD; */
-`;
 const Distance = styled.Text`
   flex:3;
   display:flex;
@@ -91,8 +86,8 @@ const ImgCont = styled.View`
   border-radius:20px; */
 `;
 const IconPics = styled.Image`
-  width:100%;
-  height:100%;
+  width:23px;
+  height:23px;
 `;
 const DisplayPic = styled.Image`
   width:100%;
@@ -135,9 +130,16 @@ const Post = ({text, time, distance}) => {
               <IconPics source={likeimg} />
             </Heart>
             
-            <Message>
-              <IconPics source={messageimg} />
-            </Message>
+            {/* <Message> */}
+            <TouchableOpacity onPress={() => {
+            alert("Send a Message");
+            }}>
+              <IconPics 
+              source={messageimg} >
+
+              </IconPics>
+              </TouchableOpacity>
+            {/* </Message> */}
           </Icons>
           <Distance>
             <Text>{distance} Km away</Text>
@@ -153,6 +155,7 @@ Post.defaultProps = {
   time:"2",
   picture:"Lucky.png",
   display:"Lucky.png",
-  distance:"1"
+  distance:"1",
+  onPress: () => {},
 };
 export default Post;

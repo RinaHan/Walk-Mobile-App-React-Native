@@ -26,7 +26,7 @@ const LeftSide = styled.View`
   /* background-color: #bbb; */
   display: flex;
   align-items: center;
-  padding-right: 6px;
+  
 `;
 
 const RightSide = styled.View`
@@ -34,7 +34,7 @@ const RightSide = styled.View`
   /* background-color: #bdb; */
   background: #eaf6f7;
   border-radius: 6px;
-  padding:10px;
+  padding:15px;
 `;
 
 const ImgCont = styled.View`
@@ -71,6 +71,6 @@ const MsgSent = ({ msgSent }) => {
 
 MsgSent.defaultProps = {
   avatar: null,
-  msgSent: "defaultmessage"
+  msgSent: ""
 };
 export default MsgSent;
