@@ -10,6 +10,7 @@ import TopBar from "../../comps/TopBar";
 import AvatarEdit from "../../comps/Avatar/AvatarEdit";
 import FooterBar from "../../comps/FooterBar";
 
+
 const Main = styled.View`
   /* width:375px; */
   /* height:812px; */
@@ -63,7 +64,7 @@ const BasicInfo = styled.View`
 `;
 const HeaderText = styled.Text`
   font-weight: 500;
-  font-size: 14px;
+  font-size: 30px;
   margin-left:20px;
   margin-top:14px;
   /* background-color:#ACA; */
@@ -123,23 +124,27 @@ const WalkerEditProfile = () => {
           <Spacer />
           <BasicInfo>
             <Input text="Name" 
+            height="37px"
             onChangeText={(t)=>{
-              alert(t)
+              // alert(t)
               setName(name);
               }}/>
             <Input text="Age" 
+            height="37px"
             onChangeText={(t)=>{
-              alert(t)
+              // alert(t)
               setAge(age);
             }}/>
             <Input text="Location"
+            height="37px"
             onChangeText={(t)=>{
-              alert(t)
+              // alert(t)
               setLocation(location);
             }}/>
-            <Input text="Bio" height="48px"
+            <Input text="Bio" 
+            height="48px"
             onChangeText={(t)=>{
-              alert(t)
+              // alert(t)
               setBio(bio);
             }}/>
           </BasicInfo>
@@ -148,13 +153,15 @@ const WalkerEditProfile = () => {
             <HeaderText>Personal Information</HeaderText>
             <InputCont>
               <Input text="Email"
+              height="37px"
                 onChangeText={(t)=>{
-                  alert(t)
+                  // alert(t)
                   setEmail(email);
               }}/>
               <Input text="Phone"
+              height="37px"
                 onChangeText={(t)=>{
-                  alert(t)
+                  // alert(t)
                   setPhone(phone);
               }}/>
                 <Bcont>
@@ -169,13 +176,15 @@ const WalkerEditProfile = () => {
               <HeaderText>Emergency Contact Information</HeaderText>
                 <InputCont2>
                   <Input text="Name"
+                  height="37px"
                     onChangeText={(t)=>{
-                      alert(t)
+                      // alert(t)
                       emSetName(emname);
                       }}/>
                   <Input text="Phone"
+                      height="37px"
                     onChangeText={(t)=>{
-                      alert(t)
+                      // alert(t)
                       emSetPhone(emphone);
                       }}/>
                   </InputCont2>
