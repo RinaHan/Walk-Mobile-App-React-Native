@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import styled from "styled-components/native";
-import TopBar from "./Comps/TopBar";
-import EventInfo from "./Comps/EventInfo";
-import FooterBar from "./Comps/FooterBar";
-import Spacer from "./Comps/Spacer";
+import TopBar from "../../comps/TopBar";
+import EventInfo from "../../comps/EventInfo";
+import FooterBar from "../../comps/FooterBar";
+import Spacer from "../../comps/Spacer";
 
 const Header = styled.View``;
 
@@ -16,7 +16,7 @@ const SpacerCont = styled.View`
 const EventsCont = styled.View`
   /* margin-right: 70px;
   margin-top: 20px; */
-  display: none;
+  /* display: none; */
 `;
 
 const FooterCont = styled.View`
@@ -26,7 +26,7 @@ const FooterCont = styled.View`
 `;
 
 const Main = styled.View`
-  width: 375px;
+  /* width: 375px; */
   height: 812px;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ const Cont = styled.View`
   width: 100%;
   height: 86%;
   /* background-color: blue; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,8 +51,8 @@ const Cont = styled.View`
 
 const Events = () => {
   return (
-    <View>
       <Main>
+
         <MainCont>
           <Header>
             <TopBar title="Events" />
@@ -65,12 +65,11 @@ const Events = () => {
               </SpacerCont>
             </EventsCont>
           </Cont>
-          <FooterCont>
+          {/* <FooterCont>
             <FooterBar />
-          </FooterCont>
+          </FooterCont> */}
         </MainCont>
       </Main>
-    </View>
   );
 };
 

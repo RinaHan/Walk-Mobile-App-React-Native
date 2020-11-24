@@ -1,30 +1,17 @@
 import React, { useState } from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import styled from "styled-components/native";
 
-import Description from "./Comps/Description";
-import Dropdown from "./Comps/Dropdown";
-import Input from "./Comps/Input";
-import Likes from "./Comps/Likes";
-import Popup from "./Comps/Popup";
-import Texting from "./Comps/Texting";
-import Post from "./Comps/Post";
-import WalkerProfile from "./Comps/WalkerProfile";
-import MsgSent from "./Comps/MsgSent";
-import MsgSelection from "./Comps/MsgSelection";
-import Birthday from "./Comps/Birthday";
-import MsgRecieved from "./Comps/MsgRecieved";
-import DashDog from "./Comps/DashDog";
-import DashOwner from "./Comps/DashOwner";
-import AddImage from "./Comps/AddImage";
-import Spacer from "./Comps/Spacer";
-import TopBar from "./Comps/TopBar";
-import AvatarWithName from "./Comps/Avatar/AvatarWithName";
-import AvatarEdit from "./Comps/Avatar/AvatarEdit";
-import FooterBar from "./Comps/FooterBar";
-import Avatar06 from "./Comps/Avatar/Avatar06";
-import Dislikes from "./Comps/Dislikes";
-import Province from "./Comps/Province";
+
+import Input from "../../comps/Input";
+import Likes from "../../comps/Likes";
+import AddImage from "../../comps/AddImage";
+import Spacer from "../../comps/Spacer";
+import TopBar from "../../comps/TopBar";
+import FooterBar from "../../comps/FooterBar";
+import Avatar06 from "../../comps/Avatar/Avatar06";
+import Dislikes from "../../comps/Dislikes";
+import Province from "../../comps/Province";
 
 const Main = styled.View`
   width: 375px;
@@ -47,7 +34,7 @@ const Cont = styled.View`
   width: 100%;
   height: 86%;
   /* background-color: blue; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,34 +130,34 @@ const OwnerEditProfile = () => {
               <Input
                 text="Name"
                 onChangeText={(t) => {
-                  alert(t);
+                  // alert(t);
                   setDogName(dogname);
                 }}
               />
               <Input
                 text="Age"
                 onChangeText={(t) => {
-                  alert(t);
+                  // alert(t);
                   setDogAge(dogage);
                 }}
               />
               <Input
                 text="Breed"
                 onChangeText={(t) => {
-                  alert(t);
+                  // alert(t);
                   setDogBreed(dogbreed);
                 }}
               />
             </BasicInfo>
             <Spacer />
             <DogInfo>
-              <TitleText>Dog Information</TitleText>
+              <TitleText><Text>Dog Information</Text></TitleText>
               <InputCont>
                 <Input
                   text="Bio"
                   height="48px"
                   onChangeText={(t) => {
-                    alert(t);
+                    // alert(t);
                     setDogBreed(dogbreed);
                   }}
                 />
@@ -182,19 +169,19 @@ const OwnerEditProfile = () => {
             </DogInfo>
             <Spacer />
             <PersonalInfo>
-              <TitleText>Personal Information</TitleText>
+              <TitleText><Text>Personal Information</Text></TitleText>
               <InputCont2>
                 <Input
                   text="Email"
                   onChangeText={(t) => {
-                    alert(t);
+                    // alert(t);
                     setDogEmail(dogemail);
                   }}
                 />
                 <Input
                   text="Phone"
                   onChangeText={(t) => {
-                    alert(t);
+                    // alert(t);
                     setDogPhone(dogphone);
                   }}
                 />
@@ -202,14 +189,14 @@ const OwnerEditProfile = () => {
                 <Input
                   text="Adress"
                   onChangeText={(t) => {
-                    alert(t);
+                    // alert(t);
                     setDogAdress(dogadress);
                   }}
                 />
                 <Input
                   text="Zip Code"
                   onChangeText={(t) => {
-                    alert(t);
+                    // alert(t);
                     setDogZip(dogzip);
                   }}
                 />
@@ -217,8 +204,8 @@ const OwnerEditProfile = () => {
             </PersonalInfo>
             <Spacer />
             <PostCont>
-              <TitleText>Posts</TitleText>
-              <TitleText2>Add pup pics here!</TitleText2>
+              <TitleText><Text>Posts</Text></TitleText>
+              <TitleText2><Text>Add pup pics here!</Text></TitleText2>
               <AddCont>
                 <AddImage />
               </AddCont>
