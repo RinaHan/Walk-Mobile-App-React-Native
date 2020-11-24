@@ -12,7 +12,6 @@ const MainCont = styled.View`
   width: 273px;
   height: 62px;
   /* background-color:#DDB; */
-  display: flex;
   justify-content: flex-end;
 `;
 
@@ -20,7 +19,6 @@ const Cont = styled.View`
   width: 273px;
   height: 40px;
   /* background-color:#BDB; */
-  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
@@ -40,7 +38,7 @@ const Options = styled.View`
   width: 273px;
   height: 220px;
   background-color: #bcd;
-  display: ${(props) => (props.expand ? "none" : "inline-flex")};
+  display: ${(props) => (props.expand ? "none" : "flex")};
   flex-direction: column;
 `;
 
