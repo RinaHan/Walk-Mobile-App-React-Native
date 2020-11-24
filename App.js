@@ -18,205 +18,143 @@
 
 
 
-
-import React, {useState} from "react";
-import { ScrollView, View } from "react-native";
+import React, { useState } from "react";
+import { View, Text } from "react-native";
 import styled from "styled-components/native";
 
-
-import Input from "../../comps/Input";
-import Birthday from "../../comps/Birthday";
-import Spacer from "../../comps/Spacer";
-import TopBar from "../../comps/TopBar";
-import AvatarEdit from "../../comps/Avatar/AvatarEdit";
-import FooterBar from "../../comps/FooterBar";
-
+// import Input from "../../comps/Input";
+// import TopBar from "../../comps/TopBar";
+// import FooterBar from "../../comps/FooterBar";
+// import Button from "../../comps/Button";
+// import EventTime from "../../comps/EventTime";
+import Input from "./comps/Input";
+import TopBar from "./comps/TopBar";
+import FooterBar from "./comps/FooterBar";
+import BasicButton from "./comps/WButton/BasicButton";
+import EventTime from "./comps/EventTime";
+import WalkerAuthentication from "./Pages/WalkerAuthentication";
+import OwnerEditProfile from "./Pages/OwnerEditProfile";
+import Events from "./Pages/EventPage";
 
 const Main = styled.View`
-  /* width:375px; */
-  /* height:812px; */
-  /* display:flex;
-  flex-direction:column; */
-  /* background-color:red; */
-  /* align-items:center; */
+  width: 375px;
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
 `;
 const MainCont = styled.View`
-  /* width:100%; */
-  height:100%;
+  width: 100%;
+  height: 812px;
 `;
 const FooterCont = styled.View`
-  width:375px;
-  position:absolute;
-  bottom:0;
+  width: 375px;
+  position: absolute;
+  bottom: 0;
 `;
 const Cont = styled.View`
-  /* width:100%; */
-  height:100%;
-  /* background-color:blue; */
-  /* overflow-y:scroll; */
-  /* display:flex;
-  flex-direction:column;
-  align-items:center; */
-`;
-const Top = styled.View`
-  /* width:100%; */
-  height:200px;
-  /* background-color:#DBD; */
-  /* display:flex;
-  flex-direction:column;*/
-  justify-content:center;
-`;
-const PersonalInfo = styled.View`
-  /* width:100%; */
-  height:220px;
-  /* background-color:#CCA; */
-  /* z-index:5; */
-  /* display:flex; */
-  margin-top:10px;
-`;
-const BasicInfo = styled.View`
-  /* width:100%; */
-  height:250px;
-  display:flex;
-  flex-direction:column;
-  background-color:#FFF;
-  align-items:center;
-  justify-content:center;
-`;
-const HeaderText = styled.Text`
-  font-weight: 500;
-  font-size: 30px;
-  margin-left:20px;
-  margin-top:14px;
-  /* background-color:#ACA; */
+  width: 100%;
+  height: 86%;
+  /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: blue; */
+  /* bottom: 70; */
+  position: absolute;
 `;
 const InputCont = styled.View`
-  width:100%;
-  height:202px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  /* background-color:#BBA; */
-  margin-top:30px;
+  width: 80%;
+  margin-right: 75px;
+  height: 260px;
+  /* background-color:#dbd; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;
-const Bcont = styled.View`
-  margin-top:24px;
+const Upload = styled.View`
+  width: 100%;
+  height: 260px;
+  /* background-color:#aad; */
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e8e8e8;
 `;
-const EmergencyInfo = styled.View`
-  /* width:100%; */
-  height:270px;
-  /* background-color:#ECA; */
-  z-index:4;
-  display:flex;
-  margin-top:16px;
+const UpTitle = styled.View`
+  width: 100%;
+  height: 20px;
+  /* background-color:#dad; */
 `;
-const InputCont2 = styled.View`
-  /* width:100%; */
-  height:120px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  /* background-color:red; */
-  margin-top:30px;
+const TitleText = styled.Text``;
+const Image = styled.Image`
+  width: 50px;
+  height: 50px;
 `;
-const Scont = styled.View`
-  margin-top:50px;
-  background-color:#ACA;
+const ImgCont = styled.View`
+  width: 50px;
+  height: 90%;
+  /* background-color:#dad; */
+  justify-content: center;
 `;
-const WalkerEditProfile = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [location, setLocation] = useState("");
-  const [bio, setBio] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [emname, emSetName] = useState("");
-  const [emphone, emSetPhone] = useState("");
+
+const addimage = require("./Pages/AddEvent/addphoto.png");
+const AddEvent = () => {
+  const [eventAdress, setEventAdress] = useState("");
+  const [eventCity, setEventCity] = useState("");
+  // return<WalkerAuthentication/>
+  // return<OwnerEditProfile/>
+  return<Events/>
   return (
     <View>
-    <Main>
-      <MainCont>
-        <TopBar title="Edit Profile" text1="Cancel" text2="Done"/>
-        <ScrollView>
-        <Cont>
-          <Top>
-            <AvatarEdit />
-          </Top>
-          <Spacer />
-          <BasicInfo>
-            <Input text="Name" 
-            height="37px"
-            onChangeText={(t)=>{
-              // alert(t)
-              setName(name);
-              }}/>
-            <Input text="Age" 
-            height="37px"
-            onChangeText={(t)=>{
-              // alert(t)
-              setAge(age);
-            }}/>
-            <Input text="Location"
-            height="37px"
-            onChangeText={(t)=>{
-              // alert(t)
-              setLocation(location);
-            }}/>
-            <Input text="Bio" 
-            height="48px"
-            onChangeText={(t)=>{
-              // alert(t)
-              setBio(bio);
-            }}/>
-          </BasicInfo>
-          <Spacer />
-          <PersonalInfo>
-            <HeaderText>Personal Information</HeaderText>
+      <Main>
+        <MainCont>
+          <TopBar
+            title="Create an Event"
+            // imageLeft1={require("../../Comps/TopBar/leftArrow.png")}
+          />
+          <Cont>
             <InputCont>
-              <Input text="Email"
-              height="37px"
-                onChangeText={(t)=>{
-                  // alert(t)
-                  setEmail(email);
-              }}/>
-              <Input text="Phone"
-              height="37px"
-                onChangeText={(t)=>{
-                  // alert(t)
-                  setPhone(phone);
-              }}/>
-                <Bcont>
-                  <Birthday />
-                </Bcont>
-              </InputCont>
-            </PersonalInfo>
-            <Scont>
-          <Spacer />
-            </Scont>
-            <EmergencyInfo>
-              <HeaderText>Emergency Contact Information</HeaderText>
-                <InputCont2>
-                  <Input text="Name"
-                  height="37px"
-                    onChangeText={(t)=>{
-                      // alert(t)
-                      emSetName(emname);
-                      }}/>
-                  <Input text="Phone"
-                      height="37px"
-                    onChangeText={(t)=>{
-                      // alert(t)
-                      emSetPhone(emphone);
-                      }}/>
-                  </InputCont2>
-              </EmergencyInfo>
+              <Input
+                text="Adress"
+                onChangeText={(t) => {
+                  alert(t);
+                  eventAdress(setEventAdress);
+                }}
+              />
+              <Input
+                text="City"
+                onChangeText={(t) => {
+                  alert(t);
+                  eventCity(setEventCity);
+                }}
+              />
+              <EventTime />
+            </InputCont>
+            <Upload>
+              <UpTitle>
+                <TitleText><Text>Upload Photo</Text></TitleText>
+              </UpTitle>
+              <ImgCont
+                onPress={() => {
+                  alert("Add 1 Photo from Camera Roll to fill Upload const");
+                }}
+              >
+                <Image source={addimage} />
+              </ImgCont>
+            </Upload>
+            <BasicButton />
           </Cont>
-          </ScrollView>
-        <FooterCont><FooterBar /></FooterCont>
-     </MainCont>
+          <FooterCont>
+            <FooterBar />
+          </FooterCont>
+        </MainCont>
       </Main>
     </View>
   );
 };
 
-export default WalkerEditProfile;
+export default AddEvent;
+
+
+

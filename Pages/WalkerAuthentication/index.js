@@ -2,29 +2,13 @@ import React, { useState } from "react";
 import { View } from "react-native";
 import styled from "styled-components/native";
 
-import Description from "./Comps/Description";
-import Dropdown from "./Comps/Dropdown";
-import Input from "./Comps/Input";
-import Likes from "./Comps/Likes";
-import Popup from "./Comps/Popup";
-import Texting from "./Comps/Texting";
-import Post from "./Comps/Post";
-import WalkerProfile from "./Comps/WalkerProfile";
-import MsgSent from "./Comps/MsgSent";
-import MsgSelection from "./Comps/MsgSelection";
-import Birthday from "./Comps/Birthday";
-import MsgRecieved from "./Comps/MsgRecieved";
-import DashDog from "./Comps/DashDog";
-import DashOwner from "./Comps/DashOwner";
-import AddImage from "./Comps/AddImage";
-import Spacer from "./Comps/Spacer";
-import TopBar from "./Comps/TopBar";
-import AvatarWithName from "./Comps/Avatar/AvatarWithName";
-import AvatarEdit from "./Comps/Avatar/AvatarEdit";
-import FooterBar from "./Comps/FooterBar";
-import Avatar06 from "./Comps/Avatar/Avatar06";
-import Province from "./Comps/Province";
-import Button from "./Comps/Button";
+import Dropdown from "../../comps/Dropdown";
+import Input from "../../comps/Input";
+import Birthday from "../../comps/Birthday";
+import Spacer from "../../comps/Spacer";
+import FooterBar from "../../comps/FooterBar";
+import Province from "../../comps/Province";
+import BasicButton from "../../comps/WButton/BasicButton";
 
 const Main = styled.View`
   width: 375px;
@@ -46,7 +30,7 @@ const Cont = styled.View`
   width: 100%;
   height: 92%;
   /* background-color: blue; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,14 +71,14 @@ const WalkerAuthentication = () => {
               <Input
                 text="Phone"
                 onChangeText={(t) => {
-                  alert(t);
+                  // alert(t);
                   phone(setPhone);
                 }}
               />
               <Input
                 text="Email"
                 onChangeText={(t) => {
-                  alert(t);
+                  // alert(t);
                   email(setEmail);
                 }}
               />
@@ -103,7 +87,7 @@ const WalkerAuthentication = () => {
               <Input
                 text="Zip Code"
                 onChangeText={(t) => {
-                  alert(t);
+                  // alert(t);
                   walkerzip(setWalkerZip);
                 }}
               />
@@ -114,18 +98,18 @@ const WalkerAuthentication = () => {
             <Input
               text="Name"
               onChangeText={(t) => {
-                alert(t);
+                // alert(t);
                 emname(emSetName);
               }}
             />
             <Input
               text="Phone"
               onChangeText={(t) => {
-                alert(t);
+                // alert(t);
                 emphone(emSetPhone);
               }}
             />
-            <Button text="Continue" height="44px" backgroundColor="#53B7BE" />
+            <BasicButton text="Continue" height={44} backgroundColor="#53B7BE" />
           </Cont>
           <FooterCont>
             <FooterBar />
