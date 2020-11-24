@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, KeyboardAvoidingView, Platform } from "react-native";
 import styled from "styled-components/native";
 
 
@@ -15,15 +15,13 @@ import Province from "../../comps/Province";
 
 const Main = styled.View`
   width: 375px;
-  height: 812px;
   display: flex;
   flex-direction: column;
   /* background-color: red; */
   /* align-items: center; */
 `;
-const MainCont = styled.View`
+const MainCont = styled.ScrollView`
   width: 100%;
-  height: 812px;
 `;
 const FooterCont = styled.View`
   width: 375px;
@@ -38,10 +36,10 @@ const Cont = styled.View`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom:150px;
 `;
 const Top = styled.View`
   width: 100%;
-  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +47,6 @@ const Top = styled.View`
 `;
 const BasicInfo = styled.View`
   width: 100%;
-  height: 150px;
   /* background-color: #aad; */
   align-items: center;
 `;
@@ -67,12 +64,10 @@ const TitleText2 = styled.Text`
 `;
 const DogInfo = styled.View`
   width: 100%;
-  height: 395px;
   /* background-color: #dba; */
 `;
 const InputCont = styled.View`
   width: 100%;
-  height: 350px;
   /* background-color: #bba; */
   align-items: center;
   margin-top: 10px;
@@ -80,7 +75,6 @@ const InputCont = styled.View`
 `;
 const InputCont2 = styled.View`
   width: 100%;
-  height: 350px;
   /* background-color: #acb; */
   align-items: center;
   margin-top: 10px;
@@ -88,20 +82,17 @@ const InputCont2 = styled.View`
 `;
 const LikesCont = styled.View`
   width: 92%;
-  height: 300px;
   display: flex;
   justify-content: space-evenly;
   /* background-color: #baa; */
 `;
 const PersonalInfo = styled.View`
   width: 100%;
-  height: 380px;
   /* background-color: #baa; */
 `;
 const PostCont = styled.View`
   width: 100%;
   /* background-color: #ada; */
-  height: 240px;
 `;
 const AddCont = styled.View`
   width: 100%;
@@ -117,7 +108,10 @@ const OwnerEditProfile = () => {
   const [dogadress, setDogAdress] = useState("");
   const [dogzip, setDogZip] = useState("");
   return (
-    <View>
+    <KeyboardAvoidingView
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+      style={{flex:1}}
+    >
       <Main>
         <MainCont>
           <TopBar title="Edit Profile" text1="Cancel" text2="Done" />
@@ -211,12 +205,13 @@ const OwnerEditProfile = () => {
               </AddCont>
             </PostCont>
           </Cont>
-          <FooterCont>
+          
+        </MainCont>
+        <FooterCont>
             <FooterBar />
           </FooterCont>
-        </MainCont>
       </Main>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 

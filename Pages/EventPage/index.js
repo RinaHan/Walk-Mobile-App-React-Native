@@ -20,14 +20,14 @@ const EventsCont = styled.View`
 `;
 
 const FooterCont = styled.View`
-  width: 375px;
-  position: absolute;
-  bottom: 0;
+  /* width: 375px; */
+  /* position: absolute;
+  bottom: 0; */
 `;
 
 const Main = styled.View`
   /* width: 375px; */
-  height: 812px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* background-color: red; */
@@ -36,12 +36,12 @@ const Main = styled.View`
 
 const MainCont = styled.View`
   width: 100%;
-  height: 812px;
+  /* height: 812px; */
 `;
 
 const Cont = styled.View`
   width: 100%;
-  height: 86%;
+  /* height: 86%; */
   /* background-color: blue; */
   /* overflow-y: scroll; */
   display: flex;
@@ -65,9 +65,9 @@ const Events = () => {
               </SpacerCont>
             </EventsCont>
           </Cont>
-          {/* <FooterCont>
+          <FooterCont>
             <FooterBar />
-          </FooterCont> */}
+          </FooterCont>
         </MainCont>
       </Main>
   );
