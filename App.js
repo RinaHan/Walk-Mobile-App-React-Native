@@ -20,41 +20,34 @@
 
 
 import React, {useState} from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import styled from "styled-components/native";
 
-import Description from "./Comps/Description";
-import Dropdown from "./Comps/Dropdown";
-import Input from "./Comps/Input";
-import Likes from "./Comps/Likes";
-import Popup from "./Comps/Popup";
-import Texting from "./Comps/Texting";
-import Post from "./Comps/Post";
-import WalkerProfile from "./Comps/WalkerProfile";
-import MsgSent from "./Comps/MsgSent";
-import MsgSelection from "./Comps/MsgSelection";
-import Birthday from "./Comps/Birthday";
-import MsgRecieved from "./Comps/MsgRecieved";
-import DashDog from "./Comps/DashDog";
-import DashOwner from "./Comps/DashOwner";
-import AddImage from "./Comps/AddImage";
-import Spacer from "./Comps/Spacer";
-import TopBar from "./Comps/TopBar";
-import AvatarWithName from "./Comps/Avatar/AvatarWithName";
-import AvatarEdit from "./Comps/Avatar/AvatarEdit";
-import FooterBar from "./Comps/FooterBar";
+
+// import Input from "../../comps/Input";
+// import Birthday from "../../comps/Birthday";
+// import Spacer from "../../comps/Spacer";
+// import TopBar from "../../comps/TopBar";
+// import AvatarEdit from "../../comps/Avatar/AvatarEdit";
+// import FooterBar from "../../comps/FooterBar";
+import Input from "./comps/Input";
+import Birthday from "./comps/Birthday";
+import Spacer from "./comps/Spacer";
+import TopBar from "./comps/TopBar";
+import AvatarEdit from "./comps/Avatar/AvatarEdit";
+import FooterBar from "./comps/FooterBar";
 
 const Main = styled.View`
-  width:375px;
-  height:812px;
-  display:flex;
-  flex-direction:column;
+  /* width:375px; */
+  /* height:812px; */
+  /* display:flex;
+  flex-direction:column; */
   /* background-color:red; */
-  align-items:center;
+  /* align-items:center; */
 `;
 const MainCont = styled.View`
-  width:100%;
-  height:812px;
+  /* width:100%; */
+  height:100%;
 `;
 const FooterCont = styled.View`
   width:375px;
@@ -62,41 +55,42 @@ const FooterCont = styled.View`
   bottom:0;
 `;
 const Cont = styled.View`
-  width:100%;
-  height:86%;
+  /* width:100%; */
+  height:100%;
   /* background-color:blue; */
-  overflow-y:scroll;
-  display:flex;
+  /* overflow-y:scroll; */
+  /* display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items:center; */
 `;
 const Top = styled.View`
-  width:100%;
-  height:194px;
+  /* width:100%; */
+  height:200px;
   /* background-color:#DBD; */
-  display:flex;
-  flex-direction:column;
+  /* display:flex;
+  flex-direction:column;*/
   justify-content:center;
 `;
 const PersonalInfo = styled.View`
-  width:100%;
-  height:202px;
+  /* width:100%; */
+  height:220px;
   /* background-color:#CCA; */
-  z-index:5;
-  display:flex;
+  /* z-index:5; */
+  /* display:flex; */
   margin-top:10px;
 `;
 const BasicInfo = styled.View`
-  width:100%;
-  height:227px;
+  /* width:100%; */
+  height:250px;
   display:flex;
   flex-direction:column;
   background-color:#FFF;
   align-items:center;
+  justify-content:center;
 `;
 const HeaderText = styled.Text`
   font-weight: 500;
-  font-size: 14px;
+  font-size: 30px;
   margin-left:20px;
   margin-top:14px;
   /* background-color:#ACA; */
@@ -114,15 +108,15 @@ const Bcont = styled.View`
   margin-top:24px;
 `;
 const EmergencyInfo = styled.View`
-  width:100%;
-  height:180px;
+  /* width:100%; */
+  height:270px;
   /* background-color:#ECA; */
   z-index:4;
   display:flex;
   margin-top:16px;
 `;
 const InputCont2 = styled.View`
-  width:100%;
+  /* width:100%; */
   height:120px;
   display:flex;
   align-items:center;
@@ -148,6 +142,7 @@ const WalkerEditProfile = () => {
     <Main>
       <MainCont>
         <TopBar title="Edit Profile" text1="Cancel" text2="Done"/>
+        <ScrollView>
         <Cont>
           <Top>
             <AvatarEdit />
@@ -213,6 +208,7 @@ const WalkerEditProfile = () => {
                   </InputCont2>
               </EmergencyInfo>
           </Cont>
+          </ScrollView>
         <FooterCont><FooterBar /></FooterCont>
      </MainCont>
       </Main>

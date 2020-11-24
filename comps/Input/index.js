@@ -56,7 +56,7 @@ const Input = ({ text, placeholder, height, onChangeText, width }) => {
         </InputTitle>
         {/* <Spacer /> */}
         <InputBox  height={height}>
-          <TextInput onChangeText={onChangeText} placeholder={placeholder}  width={width} height={height} multiline/>
+          <TextInput placeholder={placeholder}  width={width} height={height} multiline/>
         </InputBox>
       </InputCont>
     </View>
@@ -67,7 +67,7 @@ Input.defaultProps = {
   text: "default",
   placeholder:"",
   width: "194px",
-  height: "27px",
+  height: "37px",
   onChangeText:()=>{}
 };
 
