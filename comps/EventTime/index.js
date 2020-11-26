@@ -3,22 +3,26 @@ import styled from "styled-components/native";
 import { View } from "react-native";
 
 const MainCont = styled.View`
-  width: 260px;
-  height: 27px;
+  width: 250px;
+  height: 37px;
   /* background-color: red; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 30px 30px;
+  /* justify-content: space-between; */
+  margin-left: 40px;
+  margin-top:5px;
 `;
 const Title = styled.View`
-  flex: 1;
+  /* flex: 1; */
   /* background-color: #bcb; */
+  /* align-items:center; */
+  justify-content:center;
+  
 `;
 const TitleText = styled.Text`
-  font-weight: 500;
+  font-weight: bold;
   font-size: 13px;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 `;
 const Start = styled.View`
   flex: 1;
