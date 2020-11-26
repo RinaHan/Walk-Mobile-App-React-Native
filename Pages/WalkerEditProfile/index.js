@@ -2,11 +2,24 @@ import React, {useState} from "react";
 import { ScrollView, View } from "react-native";
 import styled from "styled-components/native";
 
-
+import Description from "../../comps/Description";
+import Dropdown from "../../comps/Dropdown";
 import Input from "../../comps/Input";
+import Likes from "../../comps/Likes";
+import Popup from "../../comps/Popup";
+import Texting from "../../comps/Texting";
+import Post from "../../comps/Post";
+import WalkerProfile from "../../comps/WalkerProfile";
+import MsgSent from "../../comps/MsgSent";
+import MsgSelection from "../../comps/MsgSelection";
 import Birthday from "../../comps/Birthday";
+import MsgRecieved from "../../comps/MsgRecieved";
+import DashDog from "../../comps/DashDog";
+import DashOwner from "../../comps/DashOwner";
+import AddImage from "../../comps/AddImage";
 import Spacer from "../../comps/Spacer";
 import TopBar from "../../comps/TopBar";
+import AvatarWithName from "../../comps/Avatar/AvatarWithName";
 import AvatarEdit from "../../comps/Avatar/AvatarEdit";
 import FooterBar from "../../comps/FooterBar";
 

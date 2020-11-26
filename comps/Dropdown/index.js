@@ -30,7 +30,7 @@ const Cont = styled.View`
   padding-right: 8px;
   padding-left: 8px;
   background-color: #ffffff;
-  border: 1px solid lightgrey;
+  border:1px solid #e3e3e3;
 `;
 
 const ImgCont = styled.TouchableOpacity`
@@ -43,14 +43,16 @@ const Options = styled.View`
   width: 280px;
   height: 80px;
   background-color: #bcd;
-  /* display: ${(props) => (props.expand ? "none" : "inline-flex")}; */
+  position:relative;
+  display: ${(props) => (props.expand ? "none" : "flex")};
   flex-direction: column;
+  border:1px solid #e3e3e3;
 `;
 
 const Country = styled.TouchableOpacity`
   flex: 1;
   background-color: #ffffff;
-  border: 1px solid lightgrey;
+  
   display: flex;
   justify-content: center;
   padding-left: 4px;
@@ -68,16 +70,20 @@ const styles = StyleSheet.create({
   },
 });
 
-
 const downarrowimg = require("./downarrow.png");
-const Dropdown = ({ text, country }) => {
+
+const Dropdown = ({ text }) => {
   const [expand, setExpand] = useState(true);
   const [tCountry, setCountry] = useState("");
 
-  useEffect(() => {
-    setCountry(country);
-  }, [country]);
-
+  const HandleCanada = ()=>{
+    setCountry("Canada");
+    setExpand(!expand);
+  }
+  const HandleUsa = ()=>{
+    setCountry("Unites States");
+    setExpand(!expand);
+  }
   return (
     <View>
       <Component>
@@ -97,14 +103,14 @@ const Dropdown = ({ text, country }) => {
         <Options expand={expand}>
           <Country
             onPress={() => {
-              setCountry("Canada");
+              HandleCanada();
             }}
           >
             <Text>Canada</Text>
           </Country>
           <Country
             onPress={() => {
-              setCountry("United States");
+              HandleUsa();
             }}
           >
             <Text>United States</Text>

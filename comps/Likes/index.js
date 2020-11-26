@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
 
 
 const Likes = ({ maintext}) => {
-  const [dislikeone, setDislikeOne] = useState("");
-  const [disliketwo, setDislikeTwo] = useState("");
-  const [dislikethree, setDislikeThree] = useState("");
+  const [likeOne, setlikeOne] = useState("");
+  const [likeTwo, setlikeTwo] = useState("");
+  const [likeThree, setlikeThree] = useState("");
   return (
     <View>
       <MainCont>
@@ -59,19 +59,19 @@ const Likes = ({ maintext}) => {
           <OpOne>
           <Input1 placeholder="Type something..." onChangeText={(t)=>{
               alert(t)
-              setDislikeOne(dislikeone);
+              setlikeOne(likeOne);
             }}/>
           </OpOne>
           <OpOne>
           <Input1 placeholder="Type something..." onChangeText={(t)=>{
               alert(t)
-              setDislikeTwo(disliketwo);
+              setlikeTwo(likeTwo);
             }}/>
           </OpOne>
           <OpOne>
             <Input1 placeholder="Type something..." onChangeText={(t)=>{
               alert(t)
-              setDislikeThree(dislikethree);
+              setlikeThree(likeThree);
             }}/>
           </OpOne>
         </RightSide>

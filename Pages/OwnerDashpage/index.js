@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView} from "react-native";
-import DashDog from "./comps/DashDog";
-import DashOwner from "./comps/DashOwner";
-import FooterBar from "./comps/FooterBar";
-import MapPlaceholder from "./comps/MapPlaceholder";
-import TopBar from './comps/TopBar';
-import WalkerProfile from "./comps/WalkerProfile";
+import DashDog from "../../comps/DashDog";
+import DashOwner from "../../comps/DashOwner";
+import FooterBar from "../../comps/FooterBar";
+import MapPlaceholder from "../../comps/MapPlaceholder";
+import TopBar from '../../comps/TopBar';
+import WalkerProfile from "../../comps/WalkerProfile";
 // import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
 
 const styles = StyleSheet.create({

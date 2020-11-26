@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 360,
     justifyContent:"space-between",
-    marginTop:40
+    marginTop:40,
   },
   
 });

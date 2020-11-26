@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
-import {View, Text} from "react-native";
+import {View, Text, TouchableOpacity} from "react-native";
+
 
 const MainCont = styled.View`
   width:166px;
@@ -8,7 +9,6 @@ const MainCont = styled.View`
   display:flex;
   flex-direction:column;
   /* margin:30px 30px; */
-  /* background-color:#BBD; */
 `;
 const TitleCont = styled.View`
   width:100%;
@@ -21,7 +21,6 @@ const TitleText = styled.Text`
 const InfoCont = styled.View`
   width:100%;
   height:243px;
-  /* background-color:#DBD; */
   display:flex;
   flex-direction:column;
   border-radius: 10px;
@@ -29,19 +28,16 @@ const InfoCont = styled.View`
 `;
 const TopInfo = styled.View`
   flex:3;
-  /* background-color:#CBD; */
   justify-content:center;
 `;
 const TopCont = styled.View`
   width:100%;
   height:50px;
-  /* background-color:#BBD; */
   display:flex;
   flex-direction:row;
 `;
 const ProfPicCont = styled.View`
   flex:3;
-  /* background-color:#ABC; */
   display:flex;
   align-items:center;
   justify-content:center;
@@ -49,7 +45,6 @@ const ProfPicCont = styled.View`
 const ImgCont = styled.View`
   width:49px;
   height:49px;
-  /* background-color:#BAC; */
 `;
 const Img = styled.Image`
   width:100%;
@@ -58,22 +53,19 @@ const Img = styled.Image`
 `;
 const ProfTextCont = styled.View`
   flex:4;
-  /* background-color:#BAC; */
   display:flex;
   flex-direction:column;
 `;
 const Name = styled.View`
   flex:1;
-  /* background-color:#DAC; */
 `;
-const ViewProfile = styled.View`
+const ViewProfile = styled.TouchableOpacity`
   flex:1;
-  /* background-color:#AAC; */
   display:flex;
   flex-direction:row;
 `;
-const PText = styled.View`
-  font-size:8px;
+const PText = styled.Text`
+  font-size:10px;
   color: #53B7BE;
 `;
 const ArrowCont = styled.View`
@@ -87,69 +79,75 @@ const Arrow = styled.Image`
 `;
 const BottomInfo = styled.View`
   flex:4;
-  /* background-color:#DCC; */
   display:flex;
   align-items:center;
   justify-content:flex-start;
 `;
 const BottomCont = styled.View`
-  /* background-color:#DAC; */
-  width:80%;
-  height:60%;
+  width:100%;
+  height:80%;
   display:flex;
   flex-direction:column;
 `;
 const AgeCont = styled.View`
   flex:1;
-  /* background-color:#BBB; */
   width:100%;
   display:flex;
   flex-direction:row;
 `;
 const BreedCont = styled.View`
   flex:1;
-  /* background-color:#AAA; */
   width:100%;
   display:flex;
   flex-direction:row;
 `;
 const LikesCont = styled.View`
   flex:1;
-  /* background-color:#CCC; */
   width:100%;
   display:flex;
   flex-direction:row;
+  justify-content:center;
+`;
+const DisplayLikes = styled.View`
+  width:80%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  align-content:space-around;
 `;
 const Title = styled.View`
   height:100%;
   flex:2;
-  /* background-color:#CCC; */
   display:flex;
-  align-items:center;
   justify-content:center;
 `;
-const TitleText2 = styled.View`
+const TitleText2 = styled.Text`
   font-weight:bold;
-  font-size: 10px;
+  font-size: 12px;
 `;
 const Info = styled.View`
   height:100%;
   flex:5;
-  /* background-color:#CAC; */
   align-items:flex-start;
   justify-content:center;
   padding-left:4px;
 `;
-const InfoText = styled.View`
+const InfoText = styled.Text`
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   color: #565555;
 `;
+const NameText = styled.Text`
+font-weight: 500;
+font-size: 18px;
+`;
 
-const dogpicture = require("./Lucky.png");
+
 const rightarrow = require("./right.png");
 
-const DashDog = ({dogname, age, breed, likes}) => {
+//get dogname, age, breed from OwnerEditProfile
+//get likeOne, likeTwo, likeThree from ./Comps/Likes
+const DashDog = ({dogname, dogpicture, age, breed, likeOne, likeTwo, likeThree}) => {
   return (
     <View>
       <MainCont>
@@ -161,8 +159,14 @@ const DashDog = ({dogname, age, breed, likes}) => {
                 <ImgCont><Img source={dogpicture}/></ImgCont>
               </ProfPicCont>
               <ProfTextCont>
-                <Name><Text>{dogname}</Text></Name>
-                <ViewProfile><PText><Text>View full profile</Text></PText><ArrowCont><Arrow source={rightarrow}/></ArrowCont></ViewProfile>
+                <Name><NameText>{dogname}</NameText></Name>
+                <ViewProfile onPress={() => {
+                    alert("Take me to OwnerProfilePage")
+                }
+                  }>
+                  <PText><Text>View full profile</Text></PText>
+                  <ArrowCont><Arrow source={rightarrow}/></ArrowCont>
+                  </ViewProfile>
               </ProfTextCont>
             </TopCont>
           </TopInfo>
@@ -178,6 +182,11 @@ const DashDog = ({dogname, age, breed, likes}) => {
               </BreedCont>
               <LikesCont>
                 <Title><TitleText2><Text>Likes</Text></TitleText2></Title>
+                <DisplayLikes>
+                  <InfoText>{likeOne}</InfoText>
+                  <InfoText>{likeTwo}</InfoText>
+                  <InfoText>{likeThree}</InfoText>
+                </DisplayLikes>
               </LikesCont>
             </BottomCont>
           </BottomInfo>
@@ -188,10 +197,10 @@ const DashDog = ({dogname, age, breed, likes}) => {
 };
 
 DashDog.defaultProps = {
-  picture:"Lucky.png",
   dogname:"Lucky",
   age:"6",
   breed:"Golden Retriever",
-  likes:"Swimming"
+  dogpicture: require("./Lucky.png")
+  
 };
 export default DashDog;
