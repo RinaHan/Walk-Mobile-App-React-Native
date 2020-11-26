@@ -78,21 +78,20 @@ const ButtonCont = styled.View`
 `;
 
 const addimage = require("./Pages/AddEvent/addphoto.png");
+const left = require("./comps/TopBar/leftArrow.png");
+
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
-
-
-const DogProfileResultPage = ({}) => {
  
-return <Province />
-
+  return<OwnerEditProfile/>
   return (
       <Main>
         {/* <MainCont> */}
           <TopBar
             title="Create an Event"
-            // imageLeft1={require("../../Comps/TopBar/leftArrow.png")}
+            imageLeft1={left}
+
           />
           <ScrollView>
 
