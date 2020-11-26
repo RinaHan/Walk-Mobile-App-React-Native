@@ -103,8 +103,8 @@ const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
   // return<WalkerAuthentication/>
-  return<OwnerEditProfile/>
-  // return<Events/>
+  // return<OwnerEditProfile/>
+  return<Events/>
   return (
     <View>
       <Main>
