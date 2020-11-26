@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import {View} from "react-native";
+import {View, TouchableOpacity} from "react-native";
 
 const MainCont = styled.View`
   width:271px;
@@ -13,7 +13,7 @@ const MainCont = styled.View`
   justify-content:space-between;
   align-content:space-between;
 `;
-const AddBox = styled.View`
+const AddBox = styled.TouchableOpacity`
   width:69px;
   height:55px;
   background-color: #C4C4C4;
@@ -31,12 +31,13 @@ const Img = styled.Image`
   height:100%;
 `;
 
+
 const union = require("./Union.png");
 const AddImage = ({}) => {
   return (
     <View>
       <MainCont>
-        <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
+        <AddBox ><ImgCont><Img source={union} /></ImgCont></AddBox>
         <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
         <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>
         <AddBox><ImgCont><Img source={union} /></ImgCont></AddBox>

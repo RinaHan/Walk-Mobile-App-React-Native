@@ -31,7 +31,7 @@ import WalkerAuthentication from "./Pages/WalkerAuthentication";
 import OwnerEditProfile from "./Pages/OwnerEditProfile";
 import Events from "./Pages/EventPage";
 import WalkerDashPage from "./Pages/WalkerDashPage";
-// import AddEvent from "./Pages/AddEvent";
+
 
 const Main = styled.View`
   display: flex;
@@ -81,8 +81,12 @@ const addimage = require("./Pages/AddEvent/addphoto.png");
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
+
+
+const DogProfileResultPage = ({}) => {
  
-  
+return <Province />
+
   return (
       <Main>
         {/* <MainCont> */}
