@@ -38,10 +38,7 @@ const ImgCont = styled.TouchableOpacity`
 
 const Options = styled.View`
   width: 273px;
-
   height: 280px;
-  border: 1px solid #EEEEEE;
-
   display: ${(props) => (props.expand ? "none" : "flex")};
   flex-direction: column;
 `;
@@ -53,10 +50,12 @@ const Country = styled.TouchableOpacity`
   justify-content: center;
   padding-left: 4px;
 `;
-
 const Arrow = styled.Image`
   width: 100%;
   height: 100%;
+`;
+const TitleText = styled.Text`
+font-weight: 500;
 `;
 const downarrowimg = require("./downarrow.png");
 const Province = ({ text, province }) => {
@@ -108,7 +107,7 @@ const Province = ({ text, province }) => {
     <View>
       <Component>
         <MainCont>
-          <Text>Province</Text>
+          <TitleText>Province</TitleText>
           <Cont>
             <Text>{tProvince}</Text>
             <ImgCont

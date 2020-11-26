@@ -37,12 +37,6 @@ import AddImage from "./comps/AddImage";
 import WalkerProfilePage from "./Pages/WalkerProfilePage";
 import OwnerDashPage from "./Pages/OwnerDashpage";
 import WalkerDashPage from "./Pages/WalkerDashPage";
-import WalkerEditProfile from "./Pages/WalkerEditProfile";
-import Dropdown from "./comps/Dropdown";
-import Birthday from "./comps/Birthday";
-import Province from "./comps/Province"
-;
-
 
 
 const Main = styled.View`
@@ -112,14 +106,21 @@ const addimage = require("./Pages/AddEvent/addphoto.png");
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
-  return<WalkerAuthentication/>
+
+  // return<WalkerAuthentication/>
+//   return<OwnerEditProfile/>
+  // return<Events/>
+  // return<WalkerDashPage/>
+
+//   return<WalkerAuthentication/>
   // return<OwnerEditProfile/>
   // return<Events/>
   // return<WalkerDashPage/>
 
 const DogProfileResultPage = ({}) => {
-  //delete
+ 
 return <Province />
+
 
   return (
     <View>
@@ -171,6 +172,9 @@ return <Province />
 };
 
 export default AddEvent;
+
+
+
 
 
 
