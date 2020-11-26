@@ -22,28 +22,15 @@ import React, { useState } from "react";
 import { View, Text } from "react-native";
 import styled from "styled-components/native";
 
-// import Input from "../../comps/Input";
-// import TopBar from "../../comps/TopBar";
-// import FooterBar from "../../comps/FooterBar";
-// import Button from "../../comps/Button";
-// import EventTime from "../../comps/EventTime";
 import Input from "./comps/Input";
 import TopBar from "./comps/TopBar";
 import FooterBar from "./comps/FooterBar";
 import BasicButton from "./comps/WButton/BasicButton";
-import BasicAvatar from "./comps/Avatar/BasicAvatar";
-import DogLikes from "./comps/DogLikes";
-import DogDislikes from "./comps/DogDislikes";
-import AddImage from "./comps/AddImage";
-import WalkerProfilePage from "./Pages/WalkerProfilePage";
-import OwnerDashPage from "./Pages/OwnerDashpage";
+import EventTime from "./comps/EventTime";
+import WalkerAuthentication from "./Pages/WalkerAuthentication";
+import OwnerEditProfile from "./Pages/OwnerEditProfile";
+import Events from "./Pages/EventPage";
 import WalkerDashPage from "./Pages/WalkerDashPage";
-import WalkerEditProfile from "./Pages/WalkerEditProfile";
-import Dropdown from "./comps/Dropdown";
-import Birthday from "./comps/Birthday";
-import Province from "./comps/Province"
-;
-
 
 const Main = styled.View`
   width: 375px;
@@ -107,11 +94,14 @@ const ImgCont = styled.View`
   justify-content: center;
 `;
 
-
-const DogProfileResultPage = ({}) => {
-  //delete
-return <Province />
-
+const addimage = require("./Pages/AddEvent/addphoto.png");
+const AddEvent = () => {
+  const [eventAdress, setEventAdress] = useState("");
+  const [eventCity, setEventCity] = useState("");
+  // return<WalkerAuthentication/>
+  return<OwnerEditProfile/>
+  // return<Events/>
+  // return<WalkerDashPage/>
   return (
     <View>
       <Main>
@@ -162,6 +152,9 @@ return <Province />
 };
 
 export default AddEvent;
+
+
+
 
 
 

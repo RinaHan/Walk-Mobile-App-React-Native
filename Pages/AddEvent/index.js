@@ -89,6 +89,7 @@ const ImgCont = styled.View`
   justify-content: center;
 `;
 
+const left = require("../../comps/TopBar/LeftArrow.png");
 const addimage = require("./addphoto.png");
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
@@ -100,7 +101,7 @@ const AddEvent = () => {
         <MainCont>
           <TopBar
             title="Create an Event"
-            imageLeft1={require("../../Comps/TopBar/leftArrow.png")}
+            imageLeft1={left}
           />
           <Cont>
             <InputCont>

@@ -32,7 +32,6 @@ const Cont = styled.View`
   width: 100%;
   height: 86%;
   /* background-color: blue; */
-  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,8 +46,8 @@ const Top = styled.View`
 `;
 const BasicInfo = styled.View`
   width: 100%;
-  /* background-color: #aad; */
   align-items: center;
+  align-content:space-between;
 `;
 const TitleText = styled.Text`
   font-weight: 500;
@@ -64,14 +63,16 @@ const TitleText2 = styled.Text`
 `;
 const DogInfo = styled.View`
   width: 100%;
-  /* background-color: #dba; */
+  height:380px;
 `;
 const InputCont = styled.View`
   width: 100%;
   /* background-color: #bba; */
   align-items: center;
-  margin-top: 10px;
+  height:200px;
   z-index: 2;
+  margin-top:14px;
+  align-content:space-between;
 `;
 const InputCont2 = styled.View`
   width: 100%;
@@ -82,13 +83,13 @@ const InputCont2 = styled.View`
 `;
 const LikesCont = styled.View`
   width: 92%;
-  display: flex;
+  height:300px;
   justify-content: space-evenly;
-  /* background-color: #baa; */
+
 `;
 const PersonalInfo = styled.View`
   width: 100%;
-  /* background-color: #baa; */
+  margin-top:10px;
 `;
 const PostCont = styled.View`
   width: 100%;
@@ -99,6 +100,7 @@ const AddCont = styled.View`
   align-items: center;
   margin-top: 20px;
 `;
+
 const OwnerEditProfile = () => {
   const [dogname, setDogName] = useState("");
   const [dogage, setDogAge] = useState("");
@@ -123,6 +125,7 @@ const OwnerEditProfile = () => {
             <BasicInfo>
               <Input
                 text="Name"
+                height="35px"
                 onChangeText={(t) => {
                   // alert(t);
                   setDogName(dogname);
@@ -130,6 +133,7 @@ const OwnerEditProfile = () => {
               />
               <Input
                 text="Age"
+                height="35px"
                 onChangeText={(t) => {
                   // alert(t);
                   setDogAge(dogage);
@@ -137,6 +141,7 @@ const OwnerEditProfile = () => {
               />
               <Input
                 text="Breed"
+                height="35px"
                 onChangeText={(t) => {
                   // alert(t);
                   setDogBreed(dogbreed);
@@ -156,8 +161,12 @@ const OwnerEditProfile = () => {
                   }}
                 />
                 <LikesCont>
-                  <Likes />
-                  <Dislikes />
+                  <Likes 
+                  maintext="Likes"
+                  />
+                  <Dislikes 
+                      maintext="Dislikes"
+                  />
                 </LikesCont>
               </InputCont>
             </DogInfo>
@@ -167,21 +176,25 @@ const OwnerEditProfile = () => {
               <InputCont2>
                 <Input
                   text="Email"
+                  height="35px"
                   onChangeText={(t) => {
                     // alert(t);
                     setDogEmail(dogemail);
                   }}
                 />
                 <Input
-                  text="Phone"
+                  text="Phone" height="35px"
                   onChangeText={(t) => {
                     // alert(t);
                     setDogPhone(dogphone);
                   }}
                 />
+               
                 <Province text="Province" />
+           
                 <Input
                   text="Adress"
+                  height="35px"
                   onChangeText={(t) => {
                     // alert(t);
                     setDogAdress(dogadress);
@@ -189,11 +202,13 @@ const OwnerEditProfile = () => {
                 />
                 <Input
                   text="Zip Code"
+                  height="35px"
                   onChangeText={(t) => {
                     // alert(t);
                     setDogZip(dogzip);
                   }}
                 />
+                    
               </InputCont2>
             </PersonalInfo>
             <Spacer />
