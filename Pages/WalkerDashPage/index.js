@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView} from "react-native";
-import DashDog from "./comps/DashDog";
-import DashOwner from "./comps/DashOwner";
-import FooterBar from "./comps/FooterBar";
-import MapPlaceholder from "./comps/MapPlaceholder";
-import TopBar from './comps/TopBar';
+import DashDog from "../../comps/DashDog";
+import DashOwner from "../../comps/DashOwner";
+import FooterBar from "../../comps/FooterBar";
+import MapPlaceholder from "../../comps/MapPlaceholder";
+import TopBar from '../../comps/TopBar';
 // import AvatarViewProfile from '../AvatarForm/AvatarViewProfile';
 
 const styles = StyleSheet.create({
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 360,
     justifyContent:"space-between",
-    marginTop:40
+    marginTop:40,
   },
   
 });

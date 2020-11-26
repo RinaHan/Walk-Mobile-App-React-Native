@@ -27,6 +27,14 @@ import BasicAvatar from "./comps/Avatar/BasicAvatar";
 import DogLikes from "./comps/DogLikes";
 import DogDislikes from "./comps/DogDislikes";
 import AddImage from "./comps/AddImage";
+import WalkerProfilePage from "./Pages/WalkerProfilePage";
+import OwnerDashPage from "./Pages/OwnerDashpage";
+import WalkerDashPage from "./Pages/WalkerDashPage";
+import WalkerEditProfile from "./Pages/WalkerEditProfile";
+import Dropdown from "./comps/Dropdown";
+import Birthday from "./comps/Birthday";
+import Province from "./comps/Province"
+;
 
 const styles = StyleSheet.create({
   app: {
@@ -63,7 +71,8 @@ const styles = StyleSheet.create({
 });
 
 const DogProfileResultPage = ({}) => {
- 
+  //delete
+return <Province />
   return (
 <View style={styles.app}>
   <TopBar

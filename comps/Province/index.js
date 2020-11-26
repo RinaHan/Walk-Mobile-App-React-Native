@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components/native";
-import { View, Text, Image } from "react-native";
+import { View, Text, ScrollView} from "react-native";
 
 const Component = styled.View`
-  /* margin:30px 30px; */
   width: 273px;
-  /* background-color:red; */
 `;
 
 const MainCont = styled.View`
   width: 273px;
   height: 62px;
-  /* background-color:#DDB; */
   display: flex;
   justify-content: flex-end;
 `;
@@ -19,7 +16,6 @@ const MainCont = styled.View`
 const Cont = styled.View`
   width: 273px;
   height: 40px;
-  /* background-color:#BDB; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,16 +34,15 @@ const ImgCont = styled.TouchableOpacity`
 
 const Options = styled.View`
   width: 273px;
-  height: 220px;
-  background-color: #bcd;
-  display: ${(props) => (props.expand ? "none" : "inline-flex")};
+  height: 280px;
+  border: 1px solid #EEEEEE;
+  display: ${(props) => (props.expand ? "none" : "flex")};
   flex-direction: column;
 `;
 
 const Country = styled.TouchableOpacity`
-  flex: 1;
+  height:30px;
   background-color: #ffffff;
-  border: 1px solid lightgrey;
   display: flex;
   justify-content: center;
   padding-left: 4px;
@@ -62,15 +57,52 @@ const Province = ({ text, province }) => {
   const [expand, setExpand] = useState(true);
   const [tProvince, setProvince] = useState("");
 
-  useEffect(() => {
-    setProvince(province);
-  }, [province]);
+  const HandleBC = ()=>{
+    setProvince("British Columbia");
+    setExpand(!expand);
+  }
+  const HandleAB = ()=>{
+    setProvince("Alberta");
+    setExpand(!expand);
+  }
+  const HandleMA = ()=>{
+    setProvince("Manitoba");
+    setExpand(!expand);
+  }
+  const HandleSA = ()=>{
+    setProvince("Saskatchewan");
+    setExpand(!expand);
+  }
+  const HandleON = ()=>{
+    setProvince("Ontario");
+    setExpand(!expand);
+  }
+  const HandleQB = ()=>{
+    setProvince("Quebec");
+    setExpand(!expand);
+  }
+  const HandleNL = ()=>{
+    setProvince("Newfoundland & Labrador");
+    setExpand(!expand);
+  }
+  const HandleNB = ()=>{
+    setProvince("New Brunswick");
+    setExpand(!expand);
+  }
+  const HandleNS = ()=>{
+    setProvince("Nova Scotia");
+    setExpand(!expand);
+  }
+  const HandlePEI = ()=>{
+    setProvince("PEI");
+    setExpand(!expand);
+  }
 
   return (
     <View>
       <Component>
         <MainCont>
-          <Text>{text}</Text>
+          <Text>Province</Text>
           <Cont>
             <Text>{tProvince}</Text>
             <ImgCont
@@ -83,76 +115,56 @@ const Province = ({ text, province }) => {
           </Cont>
         </MainCont>
         <Options expand={expand}>
-          <Country
-            onPress={() => {
-              setProvince("British Columbia");
-            }}
-          >
+          <ScrollView>
+          <Country onPress={() => { HandleBC();
+          }}>
             <Text>British Columbia</Text>
           </Country>
-          <Country
-            onPress={() => {
-              setProvince("Alberta");
-            }}
-          >
+          <Country 
+          onPress={() => { HandleAB();
+          }}>
             <Text>Alberta</Text>
           </Country>
           <Country
-            onPress={() => {
-              setProvince("Saskatchewan");
-            }}
-          >
+            onPress={() => {HandleSA();
+            }} >         
             <Text>Saskatchewan</Text>
           </Country>
-          <Country
-            onPress={() => {
-              setProvince("Manitoba");
-            }}
-          >
+          <Country onPress={() => {HandleMA();
+            }}>
             <Text>Manitoba</Text>
           </Country>
           <Country
-            onPress={() => {
-              setProvince("Ontario");
-            }}
-          >
+            onPress={() => {HandleON();}}>
             <Text>Ontario</Text>
           </Country>
           <Country
-            onPress={() => {
-              setProvince("Quebec");
-            }}
-          >
+            onPress={() => {HandleQB(); }}>
             <Text>Quebec</Text>
           </Country>
           <Country
-            onPress={() => {
-              setProvince("NL & L");
-            }}
-          >
+            onPress={() => {HandleNL();}}>
             <Text>NL & L</Text>
           </Country>
-          <Country
-            onPress={() => {
-              setProvince("New Brunswick");
-            }}
-          >
-            <Text>Ontario</Text>
+          <Country onPress={() => { HandleNB();
+          }}>
+            <Text>New Brunswick</Text>
           </Country>
           <Country
             onPress={() => {
-              setProvince("PEI");
+              HandlePEI();
             }}
           >
             <Text>PEI</Text>
           </Country>
           <Country
             onPress={() => {
-              setProvince("Nova Scotia");
+              HandleNS();
             }}
           >
             <Text>Nova Scotia</Text>
           </Country>
+          </ScrollView>
         </Options>
       </Component>
     </View>
