@@ -1,3 +1,4 @@
+
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import TopBar from "../../comps/TopBar";
@@ -6,7 +7,7 @@ import UserBio from "../../comps/UserBio";
 import WriteReview from "../../comps/WriteReview";
 import LocationAge from "../../comps/LocationAge";
 import AvatarWithName from "../../comps/Avatar/AvatarWithName";
-//Change back to ./
+
 
 const styles = StyleSheet.create({ 
   app: {

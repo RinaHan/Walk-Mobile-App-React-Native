@@ -16,12 +16,20 @@
 // // export default App;
 // export {default} from './storybook'; 
 
-import React from "react";
-import { View, Text, StyleSheet, ScrollView} from "react-native";
-import TopBar from './comps/TopBar';
-import DogPhotos from './comps/DogPhotos';
-import FooterBar from './comps/FooterBar';
-import AvatarDogProfile from "./comps/AvatarForm/AvatarDogProfile";
+
+
+import React, { useState } from "react";
+import { View, Text } from "react-native";
+import styled from "styled-components/native";
+
+// import Input from "../../comps/Input";
+// import TopBar from "../../comps/TopBar";
+// import FooterBar from "../../comps/FooterBar";
+// import Button from "../../comps/Button";
+// import EventTime from "../../comps/EventTime";
+import Input from "./comps/Input";
+import TopBar from "./comps/TopBar";
+import FooterBar from "./comps/FooterBar";
 import BasicButton from "./comps/WButton/BasicButton";
 import BasicAvatar from "./comps/Avatar/BasicAvatar";
 import DogLikes from "./comps/DogLikes";
@@ -36,89 +44,124 @@ import Birthday from "./comps/Birthday";
 import Province from "./comps/Province"
 ;
 
-const styles = StyleSheet.create({
-  app: {
-    height:"100%",
-  },
-  container:{
-    marginTop:20,
-    height:"100%"
-  },
-  AvatarCont: {
-    // marginBottom:0,
-    // marginTop:10,
-    marginLeft:30,
-    flexDirection:"row"
-  },
-  detailcont: {
-    justifyContent:"center",
-    alignItems:"center",
-    marginLeft:20
-  },
-  name: {
-    fontSize:17,
-  },
-  age: {
-    fontSize:16,
-    marginBottom:10
-  },
-  textCont: {
-    flexDirection:"row",
-    height:140,
-    alignItems:"center",
-    justifyContent:"center"
-  }
-});
+
+const Main = styled.View`
+  width: 375px;
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+`;
+const MainCont = styled.View`
+  width: 100%;
+  height: 812px;
+`;
+const FooterCont = styled.View`
+  width: 375px;
+  position: absolute;
+  bottom: 0;
+`;
+const Cont = styled.View`
+  width: 100%;
+  height: 86%;
+  /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: blue; */
+  /* bottom: 70; */
+  position: absolute;
+`;
+const InputCont = styled.View`
+  width: 80%;
+  margin-right: 75px;
+  height: 260px;
+  /* background-color:#dbd; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+const Upload = styled.View`
+  width: 100%;
+  height: 260px;
+  /* background-color:#aad; */
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+`;
+const UpTitle = styled.View`
+  width: 100%;
+  height: 20px;
+  /* background-color:#dad; */
+`;
+const TitleText = styled.Text``;
+const Image = styled.Image`
+  width: 50px;
+  height: 50px;
+`;
+const ImgCont = styled.View`
+  width: 50px;
+  height: 90%;
+  /* background-color:#dad; */
+  justify-content: center;
+`;
+
 
 const DogProfileResultPage = ({}) => {
   //delete
 return <Province />
-  return (
-<View style={styles.app}>
-  <TopBar
-    title="Dog Profile"
-    imageLeft1={require("./comps/TopBar/leftArrow.png")}
-    imageLeft2={require("./comps/TopBar/message.png")}
-  />
-  <ScrollView>
-    <View style={styles.container}>
-      <View style={styles.AvatarCont}>
-        <BasicAvatar
-          image1={require('./comps/Avatar/dog3.jpg')}
-          width={137}
-          height={137}
-        />
-        <View style={styles.detailcont}>
-          <Text style={styles.name}>Golden Golden</Text>
-          <Text style={styles.age}>age7</Text>
-          <BasicButton 
-            text="Send Walk Request"  
-            backgroundColor= "#38BC64" 
-            height={31}
-            width={153}
-            size={14}
-          />
-        </View>
-      </View>
-      <View style={styles.textCont}>
-        <DogLikes/>
-        <DogDislikes/>
-      </View>
-      <DogPhotos/>
-    </View>
-          
-          
 
-        </ScrollView>
-        <FooterBar />
-      </View>
+  return (
+    <View>
+      <Main>
+        <MainCont>
+          <TopBar
+            title="Create an Event"
+            // imageLeft1={require("../../Comps/TopBar/leftArrow.png")}
+          />
+          <Cont>
+            <InputCont>
+              <Input
+                text="Adress"
+                onChangeText={(t) => {
+                  alert(t);
+                  eventAdress(setEventAdress);
+                }}
+              />
+              <Input
+                text="City"
+                onChangeText={(t) => {
+                  alert(t);
+                  eventCity(setEventCity);
+                }}
+              />
+              <EventTime />
+            </InputCont>
+            <Upload>
+              <UpTitle>
+                <TitleText><Text>Upload Photo</Text></TitleText>
+              </UpTitle>
+              <ImgCont
+                onPress={() => {
+                  alert("Add 1 Photo from Camera Roll to fill Upload const");
+                }}
+              >
+                <Image source={addimage} />
+              </ImgCont>
+            </Upload>
+            <BasicButton />
+          </Cont>
+          <FooterCont>
+            <FooterBar />
+          </FooterCont>
+        </MainCont>
+      </Main>
+    </View>
   );
 };
 
-DogProfileResultPage.defaultProps = {
-    text: null,
-    backgroundColor: null,
-};
+export default AddEvent;
 
-export default DogProfileResultPage;
+
 

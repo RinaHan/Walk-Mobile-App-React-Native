@@ -9,14 +9,18 @@ const Component = styled.View`
 const MainCont = styled.View`
   width: 273px;
   height: 62px;
+
   display: flex;
+
   justify-content: flex-end;
 `;
 
 const Cont = styled.View`
   width: 273px;
   height: 40px;
+
   display: flex;
+
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
@@ -34,8 +38,10 @@ const ImgCont = styled.TouchableOpacity`
 
 const Options = styled.View`
   width: 273px;
+
   height: 280px;
   border: 1px solid #EEEEEE;
+
   display: ${(props) => (props.expand ? "none" : "flex")};
   flex-direction: column;
 `;
