@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View } from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
 import Dropdown from "../../comps/Dropdown";
@@ -11,49 +11,84 @@ import Province from "../../comps/Province";
 import BasicButton from "../../comps/WButton/BasicButton";
 
 const Main = styled.View`
-  width: 375px;
-  height: 812px;
+  /* width: 375px;
+  height: 812px; */
   /* background-color: red; */
-  align-items: center;
-  margin: 30px 30px;
+  height:100%;
+  
+
 `;
-const MainCont = styled.View`
-  width: 100%;
-  height: 812px;
-`;
-const FooterCont = styled.View`
-  width: 375px;
-  position: absolute;
-  bottom: 0;
-`;
+
 const Cont = styled.View`
-  width: 100%;
-  height: 92%;
-  /* background-color: blue; */
-  /* overflow-y: scroll; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+align-items: center;
+  /* width: 100%; */
+  /* height: 50%; */
+  
+  /* flex-direction: column; */
+  /* align-items: center; */
 `;
+
+
+
 const TitleText = styled.Text`
   font-size: 24px;
   color: #53b7be;
-  margin-top: 60px;
+  margin-top: 50px;
 `;
+
+const InputCont = styled.View`
+`;
+
+const styles = StyleSheet.create({ 
+  country: {
+    marginTop:30,
+    // justifyContent:"center",
+    // alignItems:"center",
+    // backgroundColor:"red",
+    // height:"100%"
+  },
+  InputCont: {
+    marginTop:30,
+  },
+  Province: {
+    marginTop:30
+  },
+  zip: {
+    marginTop:30,
+  },
+  zipinput: {
+    width:50,
+  },
+  birth: {
+    marginTop:30,
+  },
+  spacer: {
+    marginTop:50,
+    marginBottom:20,
+    // width:"100%"
+    // height:10,
+  }, 
+  emergencyname: {
+    marginTop:30,
+  },
+  emergencyphone: {
+    marginTop:30,
+
+  },
+  button: {
+    marginTop:30
+  }
+});
+
 const TitleText2 = styled.Text`
   font-size: 24px;
   color: #53b7be;
   margin-top: 30px;
 `;
-const InputCont = styled.View`
-  width: 100%;
-  height: 570px;
-  /* background-color: #bdb; */
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  z-index: 4;
-`;
+
+
+
+
 
 const WalkerAuthentication = () => {
   const [phone, setPhone] = useState("");
@@ -62,61 +97,103 @@ const WalkerAuthentication = () => {
   const [emname, emSetName] = useState("");
   const [emphone, emSetPhone] = useState("");
   return (
-    <View>
       <Main>
-        <MainCont>
+        {/* <MainCont> */}
+        <ScrollView>
           <Cont>
             <TitleText>Dog Walker Application</TitleText>
-            <InputCont>
+            
+            <InputCont  style={styles.InputCont}>
+              <Text>Phone</Text>
               <Input
-                text="Phone"
+                height={37}
                 onChangeText={(t) => {
                   // alert(t);
                   phone(setPhone);
                 }}
               />
+              <Text>Email</Text>
               <Input
-                text="Email"
+                height={37}
                 onChangeText={(t) => {
                   // alert(t);
                   email(setEmail);
                 }}
               />
-              <Dropdown />
-              <Province text="Province" />
-              <Input
-                text="Zip Code"
+            </InputCont>
+
+              <View style={styles.country}>
+                <Dropdown />
+              </View>
+
+              <View style={styles.Province}>
+                <Province text="Province" />
+              </View>
+
+              <View style={styles.zip}>
+                <Text>Zip Code</Text>
+              <Input  style={styles.zipinput}
+                height={37}
                 onChangeText={(t) => {
                   // alert(t);
                   walkerzip(setWalkerZip);
-                }}
-              />
-              <Birthday />
-            </InputCont>
+                }}></Input>
+              </View>
+              </Cont>
+              <View  style={styles.spacer}>
             <Spacer />
-            <TitleText2>Emergency Contact</TitleText2>
-            <Input
-              text="Name"
-              onChangeText={(t) => {
-                // alert(t);
-                emname(emSetName);
-              }}
-            />
-            <Input
-              text="Phone"
+            </View>
+            <Cont>
+              <TitleText2>Emergency Contact</TitleText2>
+              
+              <View style={styles.emergencyname}>
+              <Text>Name</Text>
+              <Input
+                // text="Name"
+                onChangeText={(t) => {
+                  // alert(t);
+                  emname(emSetName);
+                }}
+                />
+              </View>
+
+
+             
+
+              <View style={styles.emergencyphone}>
+              <Text>Phone</Text>
+              <Input
+              // text="Phone"
               onChangeText={(t) => {
                 // alert(t);
                 emphone(emSetPhone);
               }}
-            />
-            <BasicButton text="Continue" height={44} backgroundColor="#53B7BE" />
+              />
+              </View>
+
+              <View style={styles.button}>
+              <BasicButton 
+              text="Continue" 
+              height={44} 
+              width={200}
+              backgroundColor="#53B7BE" />
+              </View>
+
+
+
+              <View style={styles.birth}>
+              <Birthday />
+              </View>
+           
+
+            
           </Cont>
-          <FooterCont>
+          </ScrollView>
+         
             <FooterBar />
-          </FooterCont>
-        </MainCont>
+         
+        {/* </MainCont> */}
       </Main>
-    </View>
   );
 };
 
