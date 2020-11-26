@@ -5,52 +5,37 @@ import BasicButton from "../WButton/BasicButton"
 
 const EventCont = styled.View`
   /* align-items:center; */
-  justify-content:center;
+  /* justify-content:center; */
   display: flex;
- 
+  /* width:200px; */
 `;
-
 
 const Buttonbox = styled.TouchableOpacity`
   background: ${(props) => (props.highlight ? "#959494" : "#53B7BE")};
   border-radius: 4px;
-  width: 107px;
-  padding: 10px;
+  width: 140px;
+  padding: 5px;
   margin-top: 8px;
-  margin-left: 30px;
+  align-items:center;
+
 `;
 
 const Buttontext = styled.Text` 
-  color: #fff;
+color: #fff;
 font-size:16px;
-  margin-left:5px;
 `;
 
-const Details = styled.Text`
-  display: flex;
-  /* justify-content: left; */
-  /* align-items: left; */
-  font-size:13;
-  margin-top: 5px;
+const Details = styled.View`
+  width:150px;
+  margin-top: 10px;
   margin-bottom: 5px;
   flex-direction: column;
 `;
 
-const styles = StyleSheet.create({ 
-  details: {
-    // alignItems:"left"
-  },
-  // buttontext: {
-  // color:
-  // }
-});
 
 const AttendCont = styled.View`
   display: flex;
   flex-direction: row;
-  /* justify-content: left; */
-  /* align-items: left; */
-  /* padding: 5px; */
 `;
 
 const Paw = styled.View`
@@ -60,12 +45,6 @@ const Paw = styled.View`
   justify-content:center;
   align-items:center;
   margin-left: 5px;
-
-  /* img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
 `;
 
 const PawImg = styled.Image`
@@ -83,13 +62,16 @@ const Number = styled.Text`
 
 const Subhead = styled.Text`
   color: #53b7be;
-  padding-top: 5px;
+  margin:5px 0;
   font-size:13px;
+  font-weight:bold;
+  width:160px;
 `;
 
 const Title = styled.Text`
   font-weight: bold;
   font-size:18px;
+  width:150px;
 `;
 
 const ImageCont = styled.View``;
@@ -103,7 +85,7 @@ const Column = styled.View`
   /* align-items: left; */
 `;
 
-const paw = require("./paw.png");
+const paw = require("../../Public/paw.png");
 const derbyreach = require("./derby-reach.png");
 const queenelizabeth = require("./queen-elizabeth.png");
 const rockypoint = require("./rocky-point.png");
@@ -121,7 +103,6 @@ const EventInfo = ({
   const [highlight, setHighlight] = useState(false);
 
   return (
-    <View>
       <EventCont>
         <ImageCont>
           <EventImg source={img} />
@@ -141,18 +122,16 @@ const EventInfo = ({
               <PawImg source={paw} />
             </Paw>
           </AttendCont>
-          <Details style={styles.details}>
+          
+          <Details>
             <Text>{time}</Text>
+            
             <Text>{detail1}</Text>
+           
+          
             <Text>{detail2}</Text>
+           
           </Details>
-          {/* <BasicButton
-          text="Interested"  
-          backgroundColor= "#38BC64" 
-          height={27}
-          width={107}
-          size={16}
-          /> */}
           <Buttonbox
             onPress={() => {
               setHighlight(!highlight);
@@ -160,12 +139,12 @@ const EventInfo = ({
             highlight={highlight}
           >
             <Buttontext>
-              <Text  style={styles.buttontext}>{highlight ? text : "Going"}</Text>
+              <Text>{highlight ? text : "Going"}</Text>
             </Buttontext>
           </Buttonbox>
+
         </Column>
       </EventCont>
-    </View>
   );
 };
 
