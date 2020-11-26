@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
 
   },
   button: {
-    marginTop:30
+    marginTop:50,
+    marginBottom:50
   }
 });
 
@@ -107,14 +108,16 @@ const WalkerAuthentication = () => {
               <Text>Phone</Text>
               <Input
                 height={37}
+                width={275}
                 onChangeText={(t) => {
                   // alert(t);
                   phone(setPhone);
                 }}
-              />
+                />
               <Text>Email</Text>
               <Input
                 height={37}
+                width={275}
                 onChangeText={(t) => {
                   // alert(t);
                   email(setEmail);
@@ -134,10 +137,18 @@ const WalkerAuthentication = () => {
                 <Text>Zip Code</Text>
               <Input  style={styles.zipinput}
                 height={37}
+                width={275}
                 onChangeText={(t) => {
                   // alert(t);
                   walkerzip(setWalkerZip);
                 }}></Input>
+
+
+              <View style={styles.birth}>
+              <Birthday />
+              </View>
+
+
               </View>
               </Cont>
               <View  style={styles.spacer}>
@@ -149,7 +160,8 @@ const WalkerAuthentication = () => {
               <View style={styles.emergencyname}>
               <Text>Name</Text>
               <Input
-                // text="Name"
+              height={37}
+                width={275}
                 onChangeText={(t) => {
                   // alert(t);
                   emname(emSetName);
@@ -163,7 +175,8 @@ const WalkerAuthentication = () => {
               <View style={styles.emergencyphone}>
               <Text>Phone</Text>
               <Input
-              // text="Phone"
+              height={37}
+              width={275}
               onChangeText={(t) => {
                 // alert(t);
                 emphone(emSetPhone);
@@ -175,15 +188,13 @@ const WalkerAuthentication = () => {
               <BasicButton 
               text="Continue" 
               height={44} 
-              width={200}
+              width={275}
               backgroundColor="#53B7BE" />
               </View>
 
 
 
-              <View style={styles.birth}>
-              <Birthday />
-              </View>
+              
            
 
             

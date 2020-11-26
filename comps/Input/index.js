@@ -30,9 +30,10 @@ const Spacer = styled.View`
 `;
 const InputBox = styled.View`
   display: flex;
-  width:194px;
-  /* background-color:#DDD; */
+  /* width:124px; */
+  background-color:#fff;
   height:${props=>props.height ? props.height : "27px"};
+  width:${props=>props.width ? props.width : "120px"};
 `;
 const TextInput = styled.TextInput`
   width:100%;
@@ -55,8 +56,8 @@ const Input = ({ text, placeholder, height, onChangeText, width }) => {
           <Text style={styles.text}>{text}</Text>
         </InputTitle>
         {/* <Spacer /> */}
-        <InputBox  height={height}>
-          <TextInput onChangeText={onChangeText} placeholder={placeholder}  width={width} height={height} multiline/>
+        <InputBox  height={height}  width={width}>
+          <TextInput onChangeText={onChangeText} placeholder={placeholder} height={height} multiline/>
         </InputBox>
       </InputCont>
     </View>
@@ -64,9 +65,9 @@ const Input = ({ text, placeholder, height, onChangeText, width }) => {
 };
 
 Input.defaultProps = {
-  text: "default",
+  text: "",
   placeholder:"",
-  width: "194px",
+  // width: "274px",
   height: "27px",
   onChangeText:()=>{}
 };

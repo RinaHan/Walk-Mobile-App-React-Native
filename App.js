@@ -19,7 +19,7 @@
 
 
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import styled from "styled-components/native";
 
 import Input from "./comps/Input";
@@ -30,63 +30,34 @@ import EventTime from "./comps/EventTime";
 import WalkerAuthentication from "./Pages/WalkerAuthentication";
 import OwnerEditProfile from "./Pages/OwnerEditProfile";
 import Events from "./Pages/EventPage";
-import BasicAvatar from "./comps/Avatar/BasicAvatar";
-import DogLikes from "./comps/DogLikes";
-import DogDislikes from "./comps/DogDislikes";
-import AddImage from "./comps/AddImage";
-import WalkerProfilePage from "./Pages/WalkerProfilePage";
-import OwnerDashPage from "./Pages/OwnerDashpage";
 import WalkerDashPage from "./Pages/WalkerDashPage";
 
 
 const Main = styled.View`
-  width: 375px;
-  height: 812px;
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
-`;
-const MainCont = styled.View`
-  width: 100%;
-  height: 812px;
-`;
-const FooterCont = styled.View`
-  width: 375px;
-  position: absolute;
-  bottom: 0;
+  height:100%;
 `;
 const Cont = styled.View`
-  width: 100%;
-  height: 86%;
-  /* overflow-y: scroll; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: blue; */
-  /* bottom: 70; */
-  position: absolute;
+  height: 100%;
+
 `;
 const InputCont = styled.View`
-  width: 80%;
-  margin-right: 75px;
-  height: 260px;
-  /* background-color:#dbd; */
-  display: flex;
+  height: 300px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  
 `;
 const Upload = styled.View`
   width: 100%;
-  height: 260px;
-  /* background-color:#aad; */
-  margin-top: 40px;
+  height: 230px;
   display: flex;
   align-items: center;
   border: 1px solid #e8e8e8;
 `;
 const UpTitle = styled.View`
-  width: 100%;
-  height: 20px;
+  /* width: 100%; */
+  /* height: 20px; */
   /* background-color:#dad; */
 `;
 const TitleText = styled.Text``;
@@ -95,59 +66,78 @@ const Image = styled.Image`
   height: 50px;
 `;
 const ImgCont = styled.View`
-  width: 50px;
   height: 90%;
-  /* background-color:#dad; */
   justify-content: center;
 `;
-
+const ButtonCont = styled.View`
+  /* height: 90%; */
+  justify-content: center;
+  align-items:center;
+  margin-top:20px;
+  margin-bottom:20px;
+`;
 
 const addimage = require("./Pages/AddEvent/addphoto.png");
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
 
-  // return<WalkerAuthentication/>
-//   return<OwnerEditProfile/>
-  // return<Events/>
-  // return<WalkerDashPage/>
-
-//   return<WalkerAuthentication/>
-  // return<OwnerEditProfile/>
-  // return<Events/>
-  // return<WalkerDashPage/>
 
 const DogProfileResultPage = ({}) => {
  
 return <Province />
 
-
   return (
-    <View>
       <Main>
-        <MainCont>
+        {/* <MainCont> */}
           <TopBar
             title="Create an Event"
             // imageLeft1={require("../../Comps/TopBar/leftArrow.png")}
           />
+          <ScrollView>
+
           <Cont>
             <InputCont>
               <Input
-                text="Adress"
+                text="Title"
+                height={37}
+                width={200}
                 onChangeText={(t) => {
                   alert(t);
                   eventAdress(setEventAdress);
                 }}
               />
+              
               <Input
-                text="City"
+                text="Date"
+                height={37}
+                width={200}
                 onChangeText={(t) => {
                   alert(t);
                   eventCity(setEventCity);
                 }}
               />
+              <Input
+                text="Location"
+                height={37}
+                width={200}
+                onChangeText={(t) => {
+                  alert(t);
+                  eventCity(setEventCity);
+                }}
+              />
+              <Input
+                text="Detail"
+                height={37}
+                width={200}
+                onChangeText={(t) => {
+                  alert(t);
+                  eventAdress(setEventAdress);
+                }}
+              />
               <EventTime />
             </InputCont>
+
             <Upload>
               <UpTitle>
                 <TitleText><Text>Upload Photo</Text></TitleText>
@@ -160,21 +150,24 @@ return <Province />
                 <Image source={addimage} />
               </ImgCont>
             </Upload>
-            <BasicButton />
+
+        <ButtonCont>
+        <BasicButton 
+        text="Add Event"  
+        backgroundColor= "#53B7BE" 
+        height={46}
+        width={137}
+        size={16}
+        />
+        </ButtonCont>
           </Cont>
-          <FooterCont>
+          
+                </ScrollView>
             <FooterBar />
-          </FooterCont>
-        </MainCont>
+     
+        {/* </MainCont> */}
       </Main>
-    </View>
   );
 };
 
 export default AddEvent;
-
-
-
-
-
-

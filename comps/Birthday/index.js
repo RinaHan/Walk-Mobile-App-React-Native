@@ -4,28 +4,29 @@ import { View, Text, ScrollView } from "react-native";
 import { tsConstructorType } from "@babel/types";
 
 const MainCont = styled.View`
-  width: 304px;
-  height: 80%;
+  width: 275px;
+  /* height: 80%; */
  
   /* background-color:#DBD; */
   /* margin:30px 30px; */
- justify-content:center;
+ /* justify-content:center; */
  
 `;
 const Cont = styled.View`
   width:100%;
-  height:93%;
+  /* height:93%; */
 
   flex-direction:row;
 `;
 const Month = styled.View`
   flex:3;
-  /* background-color:#DCD; */
+  margin-right:5;
+  background-color: #FFFFFF;
   align-items:center;
   flex-direction:column;
 `;
 const ChildMonth = styled.View`
-  width: 108px;
+  width: 100px;
   height: 34px;
 
   border: 1px solid #E5E5E5;
@@ -38,7 +39,6 @@ const ChildMonth = styled.View`
 const MonthDrop = styled.ScrollView`
   width:108px;
   height:280px;
-  /* background-color:#BCB; */
   display:${props=>props.expandM ? "none" : "flex"};
   flex-direction:column;
   background-color: #FFFFFF;
@@ -51,7 +51,8 @@ const MonthOption = styled.TouchableOpacity`
 `;
 const Day = styled.ScrollView`
   flex:2;
-  /* background-color:#DAD; */
+  margin-right:10;
+  background-color: #FFFFFF;
 `;
 const ChildDay = styled.View`
   width: 66px;

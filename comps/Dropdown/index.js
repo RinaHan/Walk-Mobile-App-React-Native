@@ -20,7 +20,7 @@ const MainCont = styled.View`
 `;
 
 const Cont = styled.View`
-  width: 280px;
+  width: 275px;
   height: 40px;
   /* background-color:#BDB; */
   display: flex;
@@ -40,7 +40,7 @@ const ImgCont = styled.TouchableOpacity`
 `;
 
 const Options = styled.View`
-  width: 280px;
+  width: 275px;
   height: 80px;
   background-color: #bcd;
   position:relative;
@@ -65,8 +65,8 @@ const Arrow = styled.Image`
 
 const styles = StyleSheet.create({ 
   text: {
-    fontSize:20,
-    marginBottom:5
+    // fontSize:20,
+    // marginBottom:5
   },
 });
 
