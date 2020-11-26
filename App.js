@@ -22,11 +22,6 @@ import React, { useState } from "react";
 import { View, Text } from "react-native";
 import styled from "styled-components/native";
 
-// import Input from "../../comps/Input";
-// import TopBar from "../../comps/TopBar";
-// import FooterBar from "../../comps/FooterBar";
-// import Button from "../../comps/Button";
-// import EventTime from "../../comps/EventTime";
 import Input from "./comps/Input";
 import TopBar from "./comps/TopBar";
 import FooterBar from "./comps/FooterBar";
@@ -35,6 +30,7 @@ import EventTime from "./comps/EventTime";
 import WalkerAuthentication from "./Pages/WalkerAuthentication";
 import OwnerEditProfile from "./Pages/OwnerEditProfile";
 import Events from "./Pages/EventPage";
+import WalkerDashPage from "./Pages/WalkerDashPage";
 
 const Main = styled.View`
   width: 375px;
@@ -102,9 +98,10 @@ const addimage = require("./Pages/AddEvent/addphoto.png");
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
-  // return<WalkerAuthentication/>
+  return<WalkerAuthentication/>
   // return<OwnerEditProfile/>
-  return<Events/>
+  // return<Events/>
+  // return<WalkerDashPage/>
   return (
     <View>
       <Main>
