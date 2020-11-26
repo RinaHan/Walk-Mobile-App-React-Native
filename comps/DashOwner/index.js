@@ -66,8 +66,7 @@ const Img = styled.Image`
   border-radius: 24px;
 `;
 const BottomCont = styled.View`
-  /* background-color:#DAC; */
-  width: 80%;
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -102,7 +101,7 @@ const AdressCont = styled.View`
 `;
 const Title = styled.View`
   height: 100%;
-  flex: 2;
+  flex: 3;
   /* background-color:#CCC; */
   display: flex;
   align-items: center;
@@ -111,23 +110,23 @@ const Title = styled.View`
 const Info = styled.View`
   height: 100%;
   flex: 5;
-  /* background-color:#CAC; */
   align-items: flex-start;
   justify-content: center;
   padding-left: 4px;
 `;
-const TitleText2 = styled.View`
-  /* font-weight: Bold; */
-  font-size: 10px;
+const TitleText2 = styled.Text`
+  font-weight:bold;
+  font-size: 12px;
 `;
-const InfoText = styled.View`
+const InfoText = styled.Text`
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   color: #565555;
 `;
 
-const ownerpicture = require("./ethan.jpeg");
-const DashOwner = ({ ownername, ownerphone, owneremail, owneradress }) => {
+//get ownername, ownerphone, owneremail, owneradress from OwnerEditProfile
+
+const DashOwner = ({ ownername, ownerphone, owneremail, owneradress, ownerpicture }) => {
   return (
     <View>
       <MainCont>
@@ -191,6 +190,7 @@ DashOwner.defaultProps = {
   ownername: "Ethan",
   ownerphone: "604.435.3456",
   owneremail: "ian@mycomp.com",
-  owneradress: "2020 Steel st."
+  owneradress: "2020 Steel st.",
+  ownerpicture: require("./ethan.jpeg"),
 };
 export default DashOwner;

@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components/native";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+import { tsConstructorType } from "@babel/types";
 
 const MainCont = styled.View`
   width: 304px;
   height: 80%;
-  display: flex;
+ 
   /* background-color:#DBD; */
   /* margin:30px 30px; */
  justify-content:center;
@@ -14,74 +15,71 @@ const MainCont = styled.View`
 const Cont = styled.View`
   width:100%;
   height:93%;
-  display:flex;
+
   flex-direction:row;
 `;
 const Month = styled.View`
   flex:3;
   /* background-color:#DCD; */
-  display:flex;
   align-items:center;
   flex-direction:column;
 `;
 const ChildMonth = styled.View`
   width: 108px;
   height: 34px;
-  background-color: #FFFFFF;
+
   border: 1px solid #E5E5E5;
   border-radius: 4px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
+  flex-direction:row;
+  align-content:space-between;
+  align-items:center;
+
 `;
-const MonthDrop = styled.View`
+const MonthDrop = styled.ScrollView`
   width:108px;
   height:280px;
   /* background-color:#BCB; */
-  display:${props=>props.expandM ? "none" : "inline-flex"};
+  display:${props=>props.expandM ? "none" : "flex"};
   flex-direction:column;
+  background-color: #FFFFFF;
 `;
-const MonthOption = styled.View`
-  flex:1;
+const MonthOption = styled.TouchableOpacity`
+  height:30px;
   background-color: white;
   border:.5px solid lightgrey;
+  justify-content:center;
 `;
-const Day = styled.View`
+const Day = styled.ScrollView`
   flex:2;
   /* background-color:#DAD; */
-  display:flex;
-  align-items:center;
 `;
 const ChildDay = styled.View`
   width: 66px;
   height: 34px;
-  background-color: #FFFFFF;
   border: 1px solid #E5E5E5;
   border-radius: 4px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
+  flex-direction:row;
+  align-content:space-between;
+  align-items:center;
 `;
-const DayDrop = styled.View`
+const DayDrop = styled.ScrollView`
   width:66px;
   height:280px;
-  /* background-color:#BCB; */
-  display:${props=>props.expandD ? "none" : "inline-flex"};
+  background-color:#BCB;
+  display:${props=>props.expandD ? "none" : "flex"};
   flex-direction:column;
-  /* overflow-y:scroll; */
   background-color: #FFFFFF;
 `;
-const DayOption = styled.View`
+const DayOption = styled.TouchableOpacity`
   height:30px;
   background-color: #FFFFFF;
   border:.5px solid lightgrey;
-  display:flex;
   justify-content:center;
 `;
 const Year = styled.View`
   flex:3;
   /* background-color:#FCD; */
-  display:flex;
+
   align-items:center;
 `;
 const ChildYear = styled.View`
@@ -90,51 +88,78 @@ const ChildYear = styled.View`
   background-color: #FFFFFF;
   border: 1px solid #E5E5E5;
   border-radius: 4px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
+  flex-direction:row;
+  align-items:center;
+  align-content:space-between;
 `;
-const YearDrop = styled.View`
+const YearDrop = styled.ScrollView`
   width:108px;
   height:280px;
   /* background-color:#BCB; */
-  display:${props=>props.expandY ? "none" : "inline-flex"};
+  display:${props=>props.expandY ? "none" : "flex"};
   flex-direction:column;
-  /* overflow-y:scroll; */
+
   background-color: #FFFFFF;
  
 `;
-const YearOption = styled.View`
+const YearOption = styled.TouchableOpacity`
   width:108px;
   height:30px;
   background-color: #FFFFFF;
   border:.5px solid lightgrey;
-  display:flex;
+ 
   justify-content:center;
 `;
 const ImgCont = styled.TouchableOpacity`
   width:15px;
   height:8px;
-  margin-right:8px;
-  margin-top:6px;
+  right:5px;
+  position:absolute;
 `;
 const Arrow = styled.Image`
 width:100%;
 height:100%;
 `;
 const downarrow = require("./downarrow.png");
-const Birthday = ({onPress}) => {
+const Birthday = ({onPress, month}) => {
   const [expandM, setExpandM] = useState(true)
   const [expandD, setExpandD] = useState(true)
   const [expandY, setExpandY] = useState(true)
-  
+
+  const months = ["January", "february", "march", "april", "may", "june", "july", "august",
+   "september", "october", "november", "december"];
+  const days = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+  "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23",
+  "24","25","26","27","28","29","30","31",];
+  const years = ["2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992",
+  "1991","1990","1989","1987","1986","1985","1984","1983","1982","1981","1980","1979","1978",
+  "1977","1976","1975","1974","1973","1972","1971","1970","1969","1968","1967","1966","1965",];
+  const [tMonth, setMonth] = useState("");
+  const [tDay, setDay] = useState("");
+  const [tYear, setYear] = useState("");
+
+const HandleMonth = (month_str)=>{
+  setMonth(month_str);
+  setExpandM(!expandM);
+}
+const HandleDay = (day_str)=>{
+  setDay(day_str);
+  setExpandD(!expandD);
+}
+const HandleYear = (year_str)=>{
+  setYear(year_str);
+  setExpandY(!expandY);
+}
+
   return (
     <View>
       <MainCont>
         <Text>Birthday</Text>
         <Cont>
         <Month>
+          <ScrollView>
           <ChildMonth>
+            <Text>{tMonth}</Text>
             <ImgCont onPress={()=>{
               setExpandM(!expandM);
             }}>
@@ -142,22 +167,19 @@ const Birthday = ({onPress}) => {
             </ImgCont>
           </ChildMonth>
           <MonthDrop expandM={expandM}>
-            <MonthOption><Text>January</Text></MonthOption>
-            <MonthOption><Text>February</Text></MonthOption>
-            <MonthOption><Text>March</Text></MonthOption>
-            <MonthOption><Text>April</Text></MonthOption>
-            <MonthOption><Text>May</Text></MonthOption>
-            <MonthOption><Text>June</Text></MonthOption>
-            <MonthOption><Text>July</Text></MonthOption>
-            <MonthOption><Text>August</Text></MonthOption>
-            <MonthOption><Text>September</Text></MonthOption>
-            <MonthOption><Text>October</Text></MonthOption>
-            <MonthOption><Text>November</Text></MonthOption>
-            <MonthOption><Text>December</Text></MonthOption>
+            {months.map((o,i)=>{
+              return <MonthOption key={i}
+              onPress={HandleMonth.bind(this, o)}
+              
+              ><Text>{o}</Text></MonthOption>
+            })}        
           </MonthDrop>
+          </ScrollView>
         </Month>
         <Day>
+           <ScrollView>
           <ChildDay>
+          <Text>{tDay}</Text>
             <ImgCont onPress={()=>{
               setExpandD(!expandD);
             }}>
@@ -165,41 +187,17 @@ const Birthday = ({onPress}) => {
             </ImgCont>
           </ChildDay>
           <DayDrop expandD={expandD}>
-            <DayOption><Text>1</Text></DayOption>
-            <DayOption><Text>2</Text></DayOption>
-            <DayOption><Text>3</Text></DayOption>
-            <DayOption><Text>4</Text></DayOption>
-            <DayOption><Text>5</Text></DayOption>
-            <DayOption><Text>6</Text></DayOption>
-            <DayOption><Text>7</Text></DayOption>
-            <DayOption><Text>8</Text></DayOption>
-            <DayOption><Text>9</Text></DayOption>
-            <DayOption><Text>10</Text></DayOption>
-            <DayOption><Text>11</Text></DayOption>
-            <DayOption><Text>12</Text></DayOption>
-            <DayOption><Text>13</Text></DayOption>
-            <DayOption><Text>14</Text></DayOption>
-            <DayOption><Text>15</Text></DayOption>
-            <DayOption><Text>16</Text></DayOption>
-            <DayOption><Text>17</Text></DayOption>
-            <DayOption><Text>18</Text></DayOption>
-            <DayOption><Text>19</Text></DayOption>
-            <DayOption><Text>20</Text></DayOption>
-            <DayOption><Text>21</Text></DayOption>
-            <DayOption><Text>22</Text></DayOption>
-            <DayOption><Text>23</Text></DayOption>
-            <DayOption><Text>24</Text></DayOption>
-            <DayOption><Text>25</Text></DayOption>
-            <DayOption><Text>26</Text></DayOption>
-            <DayOption><Text>27</Text></DayOption>
-            <DayOption><Text>28</Text></DayOption>
-            <DayOption><Text>29</Text></DayOption>
-            <DayOption><Text>30</Text></DayOption>
-            <DayOption><Text>31</Text></DayOption>
+          {days.map((o,i)=>{
+              return <DayOption key={i}
+              onPress={HandleDay.bind(this, o)}
+              ><Text>{o}</Text></DayOption>
+            })}        
           </DayDrop>
+            </ScrollView>
         </Day>
         <Year>
           <ChildYear>
+            <Text>{tYear}</Text>
             <ImgCont onPress={()=>{
               setExpandY(!expandY);
             }}>
@@ -207,33 +205,11 @@ const Birthday = ({onPress}) => {
             </ImgCont>
           </ChildYear>
           <YearDrop expandY={expandY}>
-            <YearOption><Text>2002</Text></YearOption>
-            <YearOption><Text>2001</Text></YearOption>
-            <YearOption><Text>2000</Text></YearOption>
-            <YearOption><Text>1999</Text></YearOption>
-            <YearOption><Text>1998</Text></YearOption>
-            <YearOption><Text>1997</Text></YearOption>
-            <YearOption><Text>1996</Text></YearOption>
-            <YearOption><Text>1995</Text></YearOption>
-            <YearOption><Text>1994</Text></YearOption>
-            <YearOption><Text>1993</Text></YearOption>
-            <YearOption><Text>1992</Text></YearOption>
-            <YearOption><Text>1991</Text></YearOption>
-            <YearOption><Text>1990</Text></YearOption>
-            <YearOption><Text>1989</Text></YearOption>
-            <YearOption><Text>1987</Text></YearOption>
-            <YearOption><Text>1986</Text></YearOption>
-            <YearOption><Text>1985</Text></YearOption>
-            <YearOption><Text>1984</Text></YearOption>
-            <YearOption><Text>1983</Text></YearOption>
-            <YearOption><Text>1982</Text></YearOption>
-            <YearOption><Text>1981</Text></YearOption>
-            <YearOption><Text>1980</Text></YearOption>
-            <YearOption><Text>1979</Text></YearOption>
-            <YearOption><Text>1978</Text></YearOption>
-            <YearOption><Text>1977</Text></YearOption>
-            <YearOption><Text>1976</Text></YearOption>
-            <YearOption><Text>1975</Text></YearOption>
+              {years.map((o,i)=> {
+                return <YearOption key={i}
+                onPress={HandleYear.bind(this, o)}
+                ><Text>{o}</Text></YearOption>
+              })}
           </YearDrop>
         </Year>
         </Cont>
