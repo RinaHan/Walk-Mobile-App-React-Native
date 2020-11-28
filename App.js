@@ -22,6 +22,9 @@ import React, { useState } from "react";
 import { View, Text, ScrollView } from "react-native";
 import styled from "styled-components/native";
 
+
+import Feed from "./Pages/Feed";
+import RequestPage from "./Pages/RequestPage";
 import Input from "./comps/Input";
 import TopBar from "./comps/TopBar";
 import FooterBar from "./comps/FooterBar";
@@ -31,6 +34,7 @@ import WalkerAuthentication from "./Pages/WalkerAuthentication";
 import OwnerEditProfile from "./Pages/OwnerEditProfile";
 import Events from "./Pages/EventPage";
 import WalkerDashPage from "./Pages/WalkerDashPage";
+import ActivatePage from "./Pages/ActivatePage";
 
 
 const Main = styled.View`
@@ -84,7 +88,10 @@ const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
   const [eventCity, setEventCity] = useState("");
  
-  return<OwnerEditProfile/>
+  // return<OwnerEditProfile/>
+  // return<RequestPage/>
+  return<Feed/>
+  // return<ActivatePage/>
   return (
       <Main>
         {/* <MainCont> */}

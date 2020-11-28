@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView} from "react-native";
-import TopBar from './comps/TopBar';
-import AvatarFormText from './comps/AvatarForm/AvatarFormText';
-import BasicAvatar from "./comps/Avatar/BasicAvatar";
-import Spacer from "./comps/Spacer";
-import FooterBar from "./comps/FooterBar";
-import MsgSelection from "./comps/MsgSelection";
+import TopBar from '../../comps/TopBar';
+import AvatarFormText from '../../comps/AvatarForm/AvatarFormText';
+import BasicAvatar from "../../comps/Avatar/BasicAvatar";
+import Spacer from "../../comps/Spacer";
+import FooterBar from "../../comps/FooterBar";
+import MsgSelection from "../../comps/MsgSelection";
 
 const styles = StyleSheet.create({
   container: {
@@ -32,7 +32,40 @@ const RequestPage = ({}) => {
         <View>
           <View style={styles.avatarcont}>
             <BasicAvatar
-              image1={require('./comps/Avatar/face1.jpg')}
+              image1={require('../../comps/Avatar/face11.jpg')}
+              width={64}
+              height={64} />
+            <AvatarFormText
+              textname={"Bob S."}
+              text={"Such great weather today!"}
+              backgroundColor={"#53B7BE"}
+            />
+          </View>
+          <View style={styles.spacer}>
+            <Spacer />
+          </View>
+        </View>
+        <View>
+          <View style={styles.avatarcont}>
+            <BasicAvatar
+              image1={require('../../comps/Avatar/face13.jpg')}
+              width={64}
+              height={64} />
+            <AvatarFormText
+              textname={"Bob S."}
+              text={"I'm gonna let you know:) Thanks"}
+              backgroundColor={"#53B7BE"}
+            />
+          </View>
+          <View style={styles.spacer}>
+            <Spacer />
+          </View>
+        </View>
+
+        <View>
+          <View style={styles.avatarcont}>
+            <BasicAvatar
+              image1={require('../../comps/Avatar/face9.jpg')}
               width={64}
               height={64} />
             <AvatarFormText

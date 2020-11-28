@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { View, ScrollView } from "react-native";
 import styled from "styled-components/native";
 
-import Post from "./comps/Post";import AvatarEdit from "./comps/Avatar/AvatarEdit";
-import FooterBar from "./comps/FooterBar";
+import Post from "../../comps/Post";
+import AvatarEdit from "../../comps/Avatar/AvatarEdit";
+import FooterBar from "../../comps/FooterBar";
 
 
 const Main = styled.View`
@@ -22,10 +23,14 @@ const Feed = () => {
     <Main>
       <ScrollView>
         <Cont>
-          <Post />
+          <Post 
+          display={require('../../comps/Avatar/face11.jpg')}
+          />
         </Cont>
         <Cont>
-          <Post />
+          <Post 
+           display={require('../../comps/Avatar/face12.jpg')}
+           />
         </Cont>
 
       </ScrollView>
@@ -35,3 +40,4 @@ const Feed = () => {
 };
 
 export default Feed;
+
