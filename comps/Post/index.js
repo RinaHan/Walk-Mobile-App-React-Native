@@ -96,8 +96,8 @@ const DisplayPic = styled.Image`
 const messageimg = require("./message.png");
 const likeimg = require("./like.png");
 const profilepicture = require("./Lucky.png");
-const display = require("./Lucky.png");
-const Post = ({text, time, distance}) => {
+// const display = require("./Lucky.png");
+const Post = ({text, time, distance, display}) => {
   return (
     <View>
       <MainCont>
@@ -153,7 +153,7 @@ const Post = ({text, time, distance}) => {
 Post.defaultProps = {
   text:"Lucky",
   time:"2",
-  picture:"Lucky.png",
+  picture:null,
   display:"Lucky.png",
   distance:"1",
   onPress: () => {},

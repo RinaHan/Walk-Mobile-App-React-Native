@@ -57,7 +57,8 @@ const ButtonCont = styled.View`
 `;
 
 const addimage = require("../../Pages/AddEvent/addphoto.png");
-const addimage = require("../../comps/TopBar/addphoto.png");
+const left = require("../../comps/TopBar/leftArrow.png");
+
 
 const AddEvent = () => {
   const [eventAdress, setEventAdress] = useState("");
