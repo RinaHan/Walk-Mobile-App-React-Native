@@ -97,7 +97,7 @@ const messageimg = require("./message.png");
 const likeimg = require("./like.png");
 const profilepicture = require("./Lucky.png");
 // const display = require("./Lucky.png");
-const Post = ({text, time, distance, display}) => {
+const Post = ({text, time, distance, display, AvatarImage}) => {
   return (
     <View>
       <MainCont>
@@ -105,7 +105,7 @@ const Post = ({text, time, distance, display}) => {
           <ProfilePic>
             <ImgCont>
               <BasicAvatar
-                image1={require('./Lucky.png')}
+                image1={AvatarImage}
                 width={40}
                 height={40}
               />
