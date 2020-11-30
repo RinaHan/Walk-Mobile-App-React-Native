@@ -8,16 +8,24 @@ import Spacer from "../../comps/Spacer";
 
 
 const MainCont = styled.View`
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
+  /* background-color:red; */
+  /* margin-left:20; */
+  
+  /* align-items:center; */
+  /* justify-content:center; */
 `;
 
 const Cont = styled.View`
+/* width:80%; */
+/* justify-content:center; */
+align-items:center;
 `;
 
 const Section = styled.View`
- margin-top:10px;
-  justify-content:center;
+ margin-top:20px;
+  /* justify-content:center; */
 flex-direction:row;
 `;
 
@@ -25,21 +33,22 @@ const EventsCont = styled.View`
   
   justify-content:center;
   width:170px;
+  align-items:center;
 `;
 
 const SpacerCont = styled.View`
-  margin-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const EventImg = styled.View`
 `;
 
 const DisplayPic = styled.Image`
-  width:200px;
-  height:230px;
-  justify-content:center;
-  align-items:center;
+  width:180px;
+  height:200px;
+  /* justify-content:center; */
+  /* align-items:center; */
 `;
 
 const place0 = require("../../Public/rocky-point.png");
@@ -54,6 +63,7 @@ const Events = ({}) => {
       <ScrollView>
 
         <Cont>
+
           <Section>
           <EventsCont>
             <EventInfo
@@ -65,14 +75,17 @@ const Events = ({}) => {
               detail2="At the park"
             />
           </EventsCont>
+
           <EventImg>
             <DisplayPic source={place0} />
           </EventImg>
           </Section>
+        </Cont>
+
         <SpacerCont>
           <Spacer />
         </SpacerCont>
-        </Cont>
+
 
         <Cont>
           <Section>
@@ -90,10 +103,10 @@ const Events = ({}) => {
             <DisplayPic source={place1} />
           </EventImg>
           </Section>
+        </Cont>
         <SpacerCont>
           <Spacer />
         </SpacerCont>
-        </Cont>
 
         <Cont>
           <Section>
@@ -111,10 +124,10 @@ const Events = ({}) => {
             <DisplayPic source={place2} />
           </EventImg>
           </Section>
+        </Cont>
         <SpacerCont>
           <Spacer />
         </SpacerCont>
-        </Cont>
         
       </ScrollView>
       <FooterBar />

@@ -57,6 +57,7 @@ import Post from '../../comps/Post';
 import Popup from '../../comps/Popup';
 
 import ReviewStars from '../../comps/ReviewStars';
+import Review from '../../comps/Review';
 
 
 import ShareFeedback from '../../comps/ShareFeedback';
@@ -220,6 +221,9 @@ img="img"
 // ))
 
 
+.add('Review', () => (
+  <Review />
+))
 .add('LocationAge', () => (
   <LocationAge />
 ))
