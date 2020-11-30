@@ -23,6 +23,7 @@ import { View, Text, ScrollView } from "react-native";
 import styled from "styled-components/native";
 
 
+
 import Feed from "./Pages/Feed";
 import RequestPage from "./Pages/RequestPage";
 import Input from "./comps/Input";
@@ -35,6 +36,7 @@ import OwnerEditProfile from "./Pages/OwnerEditProfile";
 import Events from "./Pages/EventPage";
 import WalkerDashPage from "./Pages/WalkerDashPage";
 import ActivatePage from "./Pages/ActivatePage";
+import WalkerProfilePage from "./Pages/WalkerProfilePage";
 
 
 const Main = styled.View`
@@ -90,7 +92,8 @@ const AddEvent = () => {
  
   // return<OwnerEditProfile/>
   // return<RequestPage/>
-  return<Feed/>
+  return<Events/>
+  // return<Feed/>
   // return<ActivatePage/>
   return (
       <Main>

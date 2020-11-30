@@ -6,7 +6,7 @@ import BasicButton from "../WButton/BasicButton"
 const EventCont = styled.View`
   /* align-items:center; */
   /* justify-content:center; */
-  display: flex;
+  /* display: flex; */
   /* width:200px; */
 `;
 
@@ -14,9 +14,10 @@ const Buttonbox = styled.TouchableOpacity`
   background: ${(props) => (props.highlight ? "#959494" : "#53B7BE")};
   border-radius: 4px;
   width: 140px;
-  padding: 5px;
+ height:30px;
   margin-top: 8px;
   align-items:center;
+  justify-content:center;
 
 `;
 
@@ -26,7 +27,7 @@ font-size:16px;
 `;
 
 const Details = styled.View`
-  width:150px;
+  /* width:150px; */
   margin-top: 10px;
   margin-bottom: 5px;
   flex-direction: column;
@@ -34,16 +35,16 @@ const Details = styled.View`
 
 
 const AttendCont = styled.View`
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
 `;
 
 const Paw = styled.View`
   width: 30px;
   height: 30px;
-  display: flex;
-  justify-content:center;
-  align-items:center;
+  /* display: flex; */
+  /* justify-content:center; */
+  /* align-items:center; */
   margin-left: 5px;
 `;
 
@@ -65,7 +66,7 @@ const Subhead = styled.Text`
   margin:5px 0;
   font-size:13px;
   font-weight:bold;
-  width:160px;
+  /* width:160px; */
 `;
 
 const Title = styled.Text`
