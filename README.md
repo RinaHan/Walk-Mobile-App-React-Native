@@ -3,22 +3,20 @@
 - [Walk demo video is here!](http://bit.ly/3nKmUeD)
 
 - Academic project | Sept - Dec 2020
-- After the semester, updated code from December 2020
 
-**-Images-**
+**-Pages-**
+
+<img height="380" width="Auto" src="https://user-images.githubusercontent.com/55810731/103147293-e7406680-4708-11eb-8d53-dfef7619a38e.png" />
+<img height="380" width="Auto" src="https://user-images.githubusercontent.com/55810731/103147297-f1626500-4708-11eb-8c90-1b831da44544.png" />
+<img height="380" width="Auto" src="https://user-images.githubusercontent.com/55810731/103147307-03dc9e80-4709-11eb-813c-b801782f7b06.png" />
+
 
 
   
 **-Task-**
 -	Created a dog walking volunteer application for the community with React-Native
--	
-**-Criteria-**
-**-Summary-**
-**-Functionality-**
-**-Design-**
-**-Run Locally-**
+
+  
 **-Tech Stack-**
 - React
-- Next.js
 - React Native
-- Node
