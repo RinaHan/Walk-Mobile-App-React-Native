@@ -19,9 +19,8 @@
 
   
 **-Task-**
--	Created a dog walking volunteer application for the community with React-Native
+-	Created a dog walking volunteer application for the community with React-Native as a team of 3
 
   
 **-Tech Stack-**
-- React
 - React Native
