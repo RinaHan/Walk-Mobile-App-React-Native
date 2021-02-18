@@ -1,7 +1,5 @@
 # Walk Mobile App (React Native)
 
-**-Demo-**
-- [Walk demo video is here!](http://bit.ly/3nKmUeD)
 
 **-Summary-**
 - Academic project | Sept - Dec 2020
