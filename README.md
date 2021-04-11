@@ -32,4 +32,4 @@ Academic project | Sept - Dec 2020
 
   
 ### `Tech Stack`
-- React Native
+- React Native, Android Studio
