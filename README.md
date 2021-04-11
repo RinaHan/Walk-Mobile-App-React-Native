@@ -2,7 +2,11 @@
 
 
 ### `Summary`
-- Academic project | Sept - Dec 2020
+Academic project | Sept - Dec 2020
+
+- Lead Front-end Developer: Rina
+- Front-end Developer: Ian, Veryna
+- UI Designer: Veryna
 
 
 ### `Demo`
